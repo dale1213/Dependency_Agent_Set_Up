@@ -170,3 +170,4 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 LLM_repo/venv/
+LLM_repo/.env
