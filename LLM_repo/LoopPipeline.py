@@ -11,11 +11,18 @@ import pandas as pd
 import logging
 import re
 import tiktoken 
+import time
+import uuid
+
+
+from datetime import datetime
+
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from context.RepositoryContext import RepositoryContext
 
 
 logging.basicConfig(
-    level=logging.DEBUG,
+    level=logging.ERROR,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
@@ -33,19 +40,40 @@ client = OpenAI(api_key=api_key)
 # LLM helper functions
 ##############################
 
-def call_llm(messages, model="gpt-3.5-turbo"):
+def call_llm(messages, system_message=None, model="gpt-3.5-turbo", context: RepositoryContext = None):
     """
-    Sends a request to the LLM and logs the input and output.
+    Call the LLM model with given messages and optional context.
+    
+    Args:
+        messages (list): List of message dictionaries with 'role' and 'content' keys
+        model (str, optional): The LLM model to use. Defaults to "gpt-3.5-turbo"
+        context (RepositoryContext, optional): Repository context object to store chat history. Defaults to None
+        
+    Returns:
+        str: The LLM response text
     """
-    logger.info("Sending LLM request with the following messages:")
-    logger.debug(json.dumps(messages, indent=2))
+    logger.info("Sending LLM request")
+    
+    
+    # Combine chat history with new messages if context exists
+    if context:
+        # Get the new user message if it exists
+        new_message = next((msg for msg in messages if msg['role'] == 'user'), None)
+        # Generate messages using context, including chat history and new message
+        messages = context.generate_messages(message=new_message, system_message=system_message)
+    
+    
+    # Send request to LLM
     response = client.chat.completions.create(
         model=model,
         messages=messages
     )
     output = response.choices[0].message.content.strip()
-    logger.info("Received LLM response:")
-    logger.debug(output)
+    
+    # Log the request and response
+    if context:
+        context.add_chat_message('assistant', output)
+    
     return output
 
 def prefilter_text(text):
@@ -241,7 +269,7 @@ def split_readme_into_chunks(README, max_token_limit=16000):
 # Existing Functions (File-based)
 ##############################
 
-def get_command_lines_from_readme(README):
+def get_command_lines_from_readme(README, context: RepositoryContext = None):
     """
     Extracts command-line instructions from large README text by:
     - Splitting into chunks if necessary
@@ -276,12 +304,12 @@ def get_command_lines_from_readme(README):
 
 
         messages = [
-            {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": prompt}
         ]
 
         try:
-            extracted_chunk = call_llm(messages)  # Call the LLM to extract commands
+            extracted_chunk = call_llm(messages, context=context)
+            print("In get_command_lines_from_readme, the context['chat_history'] is: ", context.get_full_context()['chat_history'])
             cleaned_chunk = extracted_chunk.replace("```bash", "").replace("```", "").strip()
             extracted_commands.append(cleaned_chunk)
         except Exception as e:
@@ -294,49 +322,170 @@ def get_command_lines_from_readme(README):
 
     return final_commands
 
-def run_commands_live(command_text, timeout=60):
+def validate_json_response(response):
     """
-    Executes shell commands dynamically, ensuring processes terminate properly.
+    Validates that the response is a valid JSON with required fields.
+    Returns the parsed JSON if valid, raises ValueError if not.
     """
-    commands = command_text.strip().splitlines()
-    log_history = ""
+    try:
+        data = json.loads(response)
+        required_fields = [
+            "exploration_command",
+            "executable_command",
+            "verified_dependency_setup",
+            "analysis"
+        ]
+        for field in required_fields:
+            if field not in data:
+                raise ValueError(f"Missing required field: {field}")
+        return data
+    except json.JSONDecodeError:
+        raise ValueError("Response is not valid JSON")
+
+def explore_and_verify_setup(repo_dir, context: RepositoryContext):
+    """
+    Let agent freely explore the repository and verify the setup through multiple interactions.
     
-    for cmd in commands:
-        if not cmd.strip():
-            continue
+    Args:
+        repo_dir: Repository directory path
+        context: RepositoryContext object containing chat history
+    
+    Returns:
+        bool: True if setup is verified
+    """
+    exploration_prompt =  """You MUST respond in the following JSON format ONLY. Any non-JSON response will be rejected:
 
-        log_history += f"\n---\nRunning command: {cmd}\n"
-        yield log_history  # Streaming output
+        {
+            "exploration_command": "next exploration command or null if ready to verify",
+            "executable_command": "verification command or null if still exploring",
+            "verified_dependency_setup": true/false,
+            "analysis": "detailed explanation of:
+                        - what you found
+                        - why you chose this command
+                        - what you plan to check next"
+        }
 
+        RULES:
+        1. Your response MUST be valid JSON
+        2. DO NOT include any text outside the JSON structure
+        3. DO NOT include any explanations or markdown
+        4. DO NOT use triple backticks
+        5. The JSON must contain all fields shown above
+        
+        You can use these commands to explore:
+        - ls [-la] [path]: List directory contents
+        - pwd: Show current directory
+        - cat [file]: View file contents
+        - find . -name [pattern]: Search for files
+        - python/python3 -c "import [package]": Test if a package is installed
+
+        OBJECTIVES:
+        1. Explore the repository structure
+        2. Identify main executable files
+        3. Check if required dependencies are installed
+        4. Find and verify configuration files
+        5. Locate test files or example scripts
+
+        STRATEGY:
+        1. Start with basic directory exploration (ls, pwd)
+        2. Look for key files:
+           - requirements.txt, setup.py, package.json
+           - main executable files
+           - configuration files
+        3. Test dependencies if found
+        4. Try to run tests or example scripts
+        5. When confident, provide a verification command
+
+        IMPORTANT:
+        - Keep commands safe (no modifications)
+        - One command per response
+        - Set verified_dependency_setup=true only when you've confirmed everything works
+    """
+    
+
+    while True:
+        # Get agent's next action
+        user_prompt = {
+            "role": "user",
+            "content": """Analyze the current state and provide your next action in VALID JSON format.
+                    Remember:
+                    1. Your response must be pure JSON
+                    2. Include all required fields:
+                    - exploration_command
+                    - executable_command
+                    - verified_dependency_setup
+                    - analysis
+                    3. Do not include any text outside the JSON structure
+                    4. Do not use markdown or code blocks"""
+        }
+        
         try:
-            process = subprocess.Popen(
-                cmd, shell=True,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
-                text=True
+            response = call_llm(
+                messages=[user_prompt],
+                system_message=exploration_prompt,
+                context=context
             )
-
-            try:
-                stdout, stderr = process.communicate(timeout=timeout)  # Ensure it doesn’t hang
-                log_history += stdout
-                log_history += stderr
-
-                if process.returncode != 0:
-                    log_history += f"\n❌ Command failed with exit code {process.returncode}\n"
-                    yield log_history
-                    break
-            except subprocess.TimeoutExpired:
-                process.kill()  # Force stop if taking too long
-                log_history += f"\n❌ Timeout: Command took longer than {timeout} seconds.\n"
-                yield log_history
-                break
-
+            
+            # Validate and parse the JSON response
+            action = validate_json_response(response)
+            
+            # If agent wants to explore more
+            if action["exploration_command"]:
+                process = subprocess.Popen(
+                    action["exploration_command"],
+                    shell=True,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    text=True,
+                    cwd=repo_dir
+                )
+                stdout, stderr = process.communicate()
+                
+                # Add the result to context
+                context.add_chat_message(
+                    "user",
+                    f"Command output:\n{stdout}\n{stderr}"
+                )
+                continue
+                
+            # If agent found an executable to test
+            if action["executable_command"]:
+                process = subprocess.Popen(
+                    action["executable_command"],
+                    shell=True,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    text=True,
+                    cwd=repo_dir
+                )
+                stdout, stderr = process.communicate(timeout=60)
+                
+                # Add the result to context
+                context.add_chat_message(
+                    "user",
+                    f"Verification command output:\n{stdout}\n{stderr}"
+                )
+                
+                # Return the final verification result
+                return action["verified_dependency_setup"]
+                
+            # If agent couldn't find anything to verify
+            if not action["exploration_command"] and not action["executable_command"]:
+                return False
+                
+        except ValueError as e:
+            # If JSON validation fails, add error to context and retry
+            context.add_chat_message(
+                "user",
+                f"Error: Invalid response format. Please provide valid JSON. Details: {str(e)}"
+            )
+            continue
         except Exception as e:
-            log_history += f"\n❌ Exception while executing: {str(e)}\n"
-            yield log_history
-            break
-
-    yield log_history
+            context.add_chat_message(
+                "user",
+                f"Error during execution: {str(e)}"
+            )
+            return False
 
 def run_ls(working_dir):
     """
@@ -423,19 +572,6 @@ def run_executable(executable_command, working_dir):
         yield log_history
 
 
-def run_commands_with_extraction(file):
-    """
-    1. Extract commands from the README via GPT
-    2. Yield live output as commands run
-    """
-    commands = get_command_lines_from_readme(file)
-    if (not commands or "No file uploaded" in commands or
-        "not supported" in commands or "No readable text" in commands):
-        logger.warning("No valid commands extracted from the file.")
-        yield commands
-        return
-
-    yield from run_commands_live(commands)
 
 ##############################
 # New Functions for GitHub URL-based Execution
@@ -443,16 +579,25 @@ def run_commands_with_extraction(file):
 
 def clone_repo(github_url):
     """
-    Clones the GitHub repository into a temporary directory.
+    Clones the GitHub repository into a directory under /home/ec2-user.
     Returns the path to the cloned repository.
     """
-    temp_dir = tempfile.mkdtemp()
-    cmd = f"git clone {github_url} {temp_dir}"
+    base_dir = "/home/ec2-user/repo_temp/repos"
+    os.makedirs(base_dir, exist_ok=True)
+    
+    repo_name = github_url.split('/')[-1]
+    unique_id = f"{int(time.time())}_{uuid.uuid4().hex[:8]}"
+    repo_dir = os.path.join(base_dir, f"{repo_name}_{unique_id}")
+    
+    cmd = f"git clone {github_url} {repo_dir}"
     result = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    
     if result.returncode != 0:
-        shutil.rmtree(temp_dir)
+        if os.path.exists(repo_dir):
+            shutil.rmtree(repo_dir)
         raise Exception(f"Failed to clone repository: {result.stderr}")
-    return temp_dir
+    
+    return repo_dir
 
 def get_command_lines_from_text(text):
     """
@@ -478,6 +623,123 @@ def get_command_lines_from_text(text):
     cleaned_commands = extracted_commands.replace("```bash", "").replace("```", "").strip()
     return cleaned_commands
 
+def execute_and_analyze_command(command, repo_dir, context: RepositoryContext):
+    """
+    Execute a single command and let GPT analyze the output.
+    """
+    log_output = ""
+    try:
+        
+        process = subprocess.Popen(
+            command, 
+            shell=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            cwd=repo_dir
+        )
+        stdout, stderr = process.communicate(timeout=300)
+        log_output = stdout + stderr
+        print("The log output is: ", log_output)
+        if process.returncode != 0:
+            print(f"Command failed with return code: {process.returncode}")
+            
+        # Update system message in context
+        system_prompt = """You are a helpful assistant that analyzes command outputs and suggests next steps.
+            When analyzing command failures:
+            1. For directory operations (cd, ls, etc):
+            - First try to list directory contents
+            - Then suggest creating directory if needed
+            2. For port conflicts:
+            - Suggest using a different port
+            - Or provide command to kill existing process
+            3. Mark as critical_failure only if:
+            - Required files are missing and can't be created
+            - Dependencies can't be installed
+            - System resources are unavailable
+            4. Mark dependency_setup as true ONLY when ALL of these are completed:
+            - Virtual environment is created AND activated (if needed)
+            - ALL required packages are installed (pip, conda, npm, etc.)
+            - ALL configuration files are in place
+            - No remaining dependency-related commands in the instruction list
+            
+            IMPORTANT: dependency_setup must be false if:
+            - There are any remaining package installation commands (pip, conda, etc.)
+            - Any installation command failed
+            - Not all commands in the original command list have been executed
+            - The final verification command hasn't been run successfully
+            """
+        
+        # Create user message
+        user_message = {
+            "role": "user",
+            "content": f"""
+                Analyze this command output and suggest the next command to run:
+                Command executed: {command}
+                Output:
+                {log_output}
+
+                Respond in this JSON format:
+                {{
+                    "success": true/false,
+                    "critical_failure": true/false,
+                    "dependency_setup": true/false,
+                    "analysis": "brief analysis of what happened",
+                    "next_command": "executable shell command or null if no further action needed",
+                    "alternative_command": "executable shell command or null if no alternative needed"
+                }}
+
+                Remember: 
+                1. For next_command and alternative_command, only provide actual executable shell commands, not descriptions.
+                2. Set dependency_setup to true only when all dependencies are properly installed and environment is ready.
+
+                Example of good responses:
+                {{
+                    "success": true,
+                    "critical_failure": false,
+                    "dependency_setup": true,
+                    "analysis": "Successfully installed all required packages",
+                    "next_command": null,
+                    "alternative_command": null
+                }}
+                {{
+                    "success": false,
+                    "critical_failure": false,
+                    "dependency_setup": false,
+                    "analysis": "The cd command failed because directory doesn't exist",
+                    "next_command": null,
+                    "alternative_command": "ls -la"
+                }}
+                {{
+                    "success": false,
+                    "critical_failure": false,
+                    "dependency_setup": false,
+                    "analysis": "Failed to install pandas package. This might be due to Python version incompatibility or missing system dependencies.",
+                    "next_command": "python --version",
+                    "alternative_command": "pip install pandas==1.2.0"
+                }}
+            """
+        }
+        
+        # Call LLM with the user message
+        response = call_llm([user_message], system_message=system_prompt, context=context)
+        analysis = json.loads(response)
+        
+        context.add_chat_message('assistant', response)
+        
+        analysis = json.loads(response)
+        
+        return (
+            analysis["success"], 
+            log_output, 
+            analysis.get("next_command"),
+            analysis.get("critical_failure", False),
+            analysis.get("alternative_command"),
+            analysis.get("dependency_setup", False)
+        )
+    except Exception as e:
+        return (False, f"Error executing command: {str(e)}\n{log_output}", None, True, None, False)
+
 def run_from_github(github_url, README):
     """
     Clones a GitHub repository, reads the README file, extracts command-line instructions,
@@ -485,6 +747,10 @@ def run_from_github(github_url, README):
     """
     log_history = ""  # Initialize log accumulator
     repo_dir = None 
+    verification_done = False
+    # Set up context
+    context = RepositoryContext(github_url)
+    
     # Step 1: Clone the repository
     try:
         log_history += f"Cloning repository: {github_url}\n"
@@ -493,61 +759,86 @@ def run_from_github(github_url, README):
         log_history += f"Repository cloned to {repo_dir}\n"
         yield log_history
    
-
         # Step 2: Extract command-line instructions using GPT
         log_history += "Extracting command lines from README...\n"
         yield log_history
-        commands = get_command_lines_from_readme(README)
+        commands = get_command_lines_from_readme(README, context=context)
         log_history += f"22222Extracted commands:\n{commands}\n"
+        
+        # Add chat history after command extraction
+        log_history += "\n=== LLM Chat History ===\n"
+        for msg in context.context['chat_history']:
+            log_history += f"{msg['role'].upper()}: {msg['content']}\n"
+        log_history += "=== End Chat History ===\n"
         yield log_history
 
-        # Step 3: Execute the commands live and stream output
-        log_history += "Executing extracted commands...\n"
-        yield log_history
-        for output in run_commands_live(commands):
-            log_history += output  # Append output dynamically
-            yield log_history  # Yield the full updated log
-
-        # Step 4: Run 'ls -la' in the repository to capture its contents
-        log_history += "Listing repository contents with 'ls -la'...\n"
-        yield log_history
-        ls_output = run_ls(repo_dir)
-        log_history += f"ls output:\n{ls_output}\n"
-        yield log_history
-
-        # Step 5: Ask ChatGPT for the executable command(s) based on the ls output
-        log_history += "Extracting executable command from ls output...\n"
-        yield log_history
-        executable_command = get_executable_command_from_ls(ls_output)
-        log_history += f"Extracted executable command(s):\n{executable_command}\n"
-        yield log_history
-
-        if not executable_command:
-            log_history += "❌ Could not determine an executable command from ls output.\n"
+        # Execute commands in a loop with GPT analysis
+        command_list = commands.strip().split('\n')
+        current_command = 0
+        print("The command list is: ", command_list)
+        
+        while current_command < len(command_list):
+            cmd = command_list[current_command].strip()
+            if not cmd:
+                current_command += 1
+                continue
+                
+            log_history += f"\n---\nExecuting command: {cmd}\n"
             yield log_history
-            shutil.rmtree(repo_dir)
-            return
-
-        # Step 6: Run the extracted executable command(s) in the repository directory
-        log_history += "Running the executable command(s)...\n"
-        yield log_history
-        for output in run_executable(executable_command, working_dir=repo_dir):
-            yield output
-
-        # Step 7: Final verification: Check whether the executable actually ran successfully
-        if "✅ Executable command ran successfully." in log_history:
-            log_history += "\n✅ Final Verification: The executable command ran successfully.\n"
-        else:
-            log_history += "\n❌ Final Verification: The executable command did not run successfully.\n"
+            
+            success, output, next_cmd, critical_failure, alternative_cmd, dependency_set_up = execute_and_analyze_command(cmd, repo_dir, context)
+            log_history += output
+            
+            # Add chat history after each command analysis
+            log_history += "\n=== Command Analysis Chat History ===\n"
+            recent_messages = context.context['chat_history'][-2:]
+            for msg in recent_messages:
+                log_history += f"{msg['role'].upper()}: {msg['content']}\n"
+            log_history += "=== End Analysis History ===\n"
+            
+            # Check if dependencies are set up
+            if dependency_set_up and not verification_done:
+                log_history += "\n🔍 Starting repository exploration and verification...\n"
+                yield log_history
+                
+                verified = explore_and_verify_setup(repo_dir, context)
+                verification_done = True
+                
+                if verified:
+                    log_history += "\n✅ Final Verification: Dependencies are correctly set up and working.\n"
+                else:
+                    log_history += "\n⚠️ Final Verification failed: Dependencies might not be fully functional.\n"
+                
+                yield log_history
+            
+            if not success:
+                if alternative_cmd:
+                    log_history += f"⚠️ Command failed. Trying alternative command: {alternative_cmd}\n"
+                    command_list.insert(current_command + 1, alternative_cmd)
+                elif critical_failure:
+                    log_history += "❌ Critical failure. Stopping execution.\n"
+                    yield log_history
+                    break
+                else:
+                    log_history += "⚠️ Command failed but continuing execution.\n"
+                
+            if next_cmd:
+                command_list.insert(current_command + 1, next_cmd)
+                
+            current_command += 1
+            yield log_history
+        
+        # Store the chat history
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        with open(f"chat_history/chat_history_{timestamp}.txt", "w") as f:
+            f.write(json.dumps(context.context['chat_history']))
         yield log_history
 
     except Exception as e:
         log_history += f"❌ Error cloning repository: {str(e)}\n"
         yield log_history
 
-    # Cleanup the cloned repository
     finally:
-        # Ensure the repository is deleted even if an error occurs
         if repo_dir:
             shutil.rmtree(repo_dir, ignore_errors=True)
             log_history += f"\n🧹 Cleaned up repository: {repo_dir}\n"
@@ -574,9 +865,10 @@ def process_single_repo(url, readme):
     """
     Runs run_from_github for a single repository and returns a tuple (url, (final_log, success_bool)).
     """
+    print("Process single repo, url:", url)
     log = run_from_github(url, readme)
     final_log = get_final_log(log)
-    success = "\n✅ Final Verification: The executable command ran successfully.\n" in final_log
+    success = "\n✅ Final Verification: Dependencies are correctly set up and working.\n" in final_log
     return url, [final_log, success]
 
 def process_repos(repo_dict, max_workers=4):
@@ -598,7 +890,7 @@ def process_repos(repo_dict, max_workers=4):
             readme = value[0] if isinstance(value, list) else value
             future = executor.submit(process_single_repo, url, readme)
             future_to_url[future] = url
-        executor.shutdown(wait=True) 
+            
         # Collect results as they complete.
         for future in as_completed(future_to_url):
             try:
@@ -608,6 +900,8 @@ def process_repos(repo_dict, max_workers=4):
                 # In case of error, store the error message in the results.
                 url = future_to_url[future]
                 results[url] = (f"Error processing repo: {str(e)}", False)
+                
+                
     return results
 
 
@@ -623,9 +917,9 @@ def save_results_to_file(results, filename):
         json.dump(results, f, indent=4, ensure_ascii=False)
 
 
-if __name__ == "__main__":
-    with open('LLM_repo/repo_set/simple_repos.json', 'r', encoding='utf-8') as f:
-        repo_dict = json.load(f)
-    repo_dict = dict(list(repo_dict.items())[:10])
-    results = process_repos(repo_dict)
-    save_results_to_file(results, "results.json")
+with open('repo_set/simple_repos.json', 'r', encoding='utf-8') as f:
+    repo_dict = json.load(f)
+print("Repo set loaded:", repo_dict)
+repo_dict = dict(list(repo_dict.items())[:10])
+results = process_repos(repo_dict)
+save_results_to_file(results, "results.json")
