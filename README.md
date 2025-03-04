@@ -13,8 +13,8 @@ This tool automatically analyzes GitHub repositories by extracting command-line 
 
 1. **Clone the Repository**:
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone git@github.com:dale1213/Dependency_Agent_Set_Up.git
+   cd Dependency_Agent_Set_Up
    ```
 
 2. **Install Dependencies**:
