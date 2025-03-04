@@ -31,6 +31,8 @@ This tool automatically analyzes GitHub repositories by extracting command-line 
    **Note:** Make sure to protect your API key and do not commit it to version control.
 
 ## Code Structure
+![image](https://github.com/user-attachments/assets/e44a2178-6c44-49b3-81ef-76a743c33f87)
+
 
 ### Main Components
 
@@ -54,19 +56,6 @@ This tool automatically analyzes GitHub repositories by extracting command-line 
   - `chat_history/`: Stores LLM analysis chat logs
   - `command_history/`: Stores command execution histories
 
-### Core Functions
-
-- **Repository Processing**:
-  - `run_from_github()`: Clones and processes a repository from a GitHub URL
-  - `process_repos()`: Processes multiple repositories in parallel
-  
-- **Command Execution**:
-  - `execute_and_analyze_command()`: Executes commands and displays real-time output
-  - `explore_and_verify_setup()`: Explores repository setup and verifies the environment
-  
-- **LLM Analysis**:
-  - `call_llm()`: Calls the OpenAI API for analysis
-  - Provides detailed feedback on command execution results
 
 ## How to Use
 
