@@ -1,0 +1,61 @@
+{
+    "summary": {
+        "total_repositories": 2,
+        "success_count": 0,
+        "failure_count": 2,
+        "success_rate": 0.0,
+        "failure_rate": 1.0
+    },
+    "cluster_distribution": {
+        "COMMAND:Invalid command issues": 1,
+        "COMMAND:Timeout issues": 1
+    },
+    "issue_repositories": {
+        "COMMAND": {
+            "Invalid command issues": [
+                "https://github.com/cudbg/Kitana-e2e"
+            ],
+            "Timeout issues": [
+                "https://github.com/dale1213/2020-Coding-Challenge"
+            ]
+        }
+    },
+    "identified_patterns": [
+        "'Manually' used as a shell command",
+        "Command 'python3 server.py' timed out after 60 seconds"
+    ],
+    "cluster_categories": {
+        "ENVIRONMENT": [
+            "Python interpreter issues",
+            "Permission and sudo issues",
+            "Path and file location issues",
+            "System configuration issues"
+        ],
+        "DEPENDENCY": [
+            "Missing package issues",
+            "Version compatibility issues",
+            "Installation failures",
+            "Dependency conflict issues"
+        ],
+        "COMMAND": [
+            "Syntax errors",
+            "Invalid command issues",
+            "Timeout issues",
+            "Python code in shell context",
+            "Command sequence issues"
+        ],
+        "RESOURCE": [
+            "Disk space issues",
+            "Memory-related issues",
+            "Network connectivity issues",
+            "System resource limitations"
+        ],
+        "AGENT": [
+            "Prompt engineering issues",
+            "LLM response format errors",
+            "Expected behavior misinterpretation",
+            "Agent logic errors",
+            "Natural language response instead of structured data"
+        ]
+    }
+}

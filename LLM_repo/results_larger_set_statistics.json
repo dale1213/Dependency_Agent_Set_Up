@@ -1,0 +1,299 @@
+{
+    "summary": {
+        "total_repositories": 40,
+        "success_count": 2,
+        "failure_count": 38,
+        "success_rate": 0.05,
+        "failure_rate": 0.95
+    },
+    "cluster_distribution": {
+        "AGENT:LLM response format errors": 2,
+        "DEPENDENCY:Missing package issues": 7,
+        "DEPENDENCY:Installation failures": 8,
+        "ENVIRONMENT:Python interpreter issues": 8,
+        "COMMAND:Syntax errors": 5,
+        "AGENT:Agent logic errors": 4,
+        "ENVIRONMENT:Permission and sudo issues": 1,
+        "COMMAND:Invalid command issues": 3,
+        "COMMAND:Timeout issues": 1,
+        "DEPENDENCY:Permission and sudo issues": 1
+    },
+    "issue_repositories": {
+        "AGENT": {
+            "LLM response format errors": [
+                "https://github.com/GantMan/nsfw_model",
+                "https://github.com/v587su/Timestamp"
+            ],
+            "Agent logic errors": [
+                "https://github.com/dolph/keystone-deploy",
+                "https://github.com/yhw-yhw/SHOW",
+                "https://github.com/mikeckennedy/docker-build-fastapi-app-april-2021",
+                "https://github.com/jzbjyb/FLARE"
+            ]
+        },
+        "DEPENDENCY": {
+            "Missing package issues": [
+                "https://github.com/chrisprasanna/Exercise_Recognition_AI",
+                "https://github.com/mtayseer/infoq-downloader",
+                "https://github.com/genforce/genforce",
+                "https://github.com/RozhakXD/Zefoy",
+                "https://github.com/ckraczkowsky91/flask-admin-flask-security",
+                "https://github.com/tko22/flask-boilerplate",
+                "https://github.com/LinkedInLearning/quantum-computing-fundamentals-2833097"
+            ],
+            "Installation failures": [
+                "https://github.com/sonictk/maya_cpp_reference_docset",
+                "https://github.com/Desamod/GoblinMineBot",
+                "https://github.com/etdey/gdl90",
+                "https://github.com/nianlonggu/WhisperSeg",
+                "https://github.com/Kong/kong-python-pdk",
+                "https://github.com/paracosm17/dnevnikru",
+                "https://github.com/stfbnc/fathon",
+                "https://github.com/revelc/pyaccumulo"
+            ],
+            "Permission and sudo issues": [
+                "https://github.com/zkan/microservices-with-docker"
+            ]
+        },
+        "ENVIRONMENT": {
+            "Python interpreter issues": [
+                "https://github.com/theycallmeswift/BreakfastSerial",
+                "https://github.com/sangmin-git/LMC-Memory",
+                "https://github.com/Shetty073/amazon-top-deals-python",
+                "https://github.com/Sunlight-Rim/SQLbit",
+                "https://github.com/UsamaKashif/CambridgePastPapersDownloader",
+                "https://github.com/nicodv/django-uwsgi-nginx",
+                "https://github.com/maudzung/CenterNet3D-PyTorch",
+                "https://github.com/kimlimjustin/google-form-clone"
+            ],
+            "Permission and sudo issues": [
+                "https://github.com/EO-College/tomography_tutorial"
+            ]
+        },
+        "COMMAND": {
+            "Syntax errors": [
+                "https://github.com/AkBotZ/Link-Shortener-Bot",
+                "https://github.com/zapier/profiling-python-like-a-boss",
+                "https://github.com/berkgoksel/sysref",
+                "https://github.com/mattmakai/slack-starterbot",
+                "https://github.com/adammck/djtokeninput"
+            ],
+            "Invalid command issues": [
+                "https://github.com/thankyou-opensource/thankyou-open-source",
+                "https://github.com/menloparklab/falcon-langchain",
+                "https://github.com/wagonhelm/TF_ObjectDetection_API"
+            ],
+            "Timeout issues": [
+                "https://github.com/SudoSuu/SnapchatUsernameChecker"
+            ]
+        }
+    },
+    "identified_patterns": [
+        [
+            "Error code: 400 - {'error': {'message': \"This model's maximum context length is 16385 tokens. However, your messages resulted in 71394 tokens. Please reduce the length of the messages.\", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}",
+            "https://github.com/mikeckennedy/docker-build-fastapi-app-april-2021"
+        ],
+        [
+            "Error code: 400 - {'error': {'message': \"Invalid 'messages[1].content': string too long. Expected a string with maximum length 1048576, but got a string with length 14219297 instead.\", 'type': 'invalid_request_error', 'param': 'messages[1].content', 'code': 'string_above_max_length'}}",
+            "https://github.com/jzbjyb/FLARE"
+        ],
+        [
+            "Coverage tool 'coverage' command not found",
+            "https://github.com/etdey/gdl90"
+        ],
+        [
+            "Invalid shell command with unexpected tokens",
+            "https://github.com/mattmakai/slack-starterbot"
+        ],
+        [
+            "Python command not found",
+            "https://github.com/kimlimjustin/google-form-clone"
+        ],
+        [
+            "Expecting ',' delimiter: line 12 column 5 (char 572)",
+            "https://github.com/GantMan/nsfw_model"
+        ],
+        [
+            "Error code: 400 - {'error': {'message': \"This model's maximum context length is 16385 tokens. However, your messages resulted in 23628 tokens. Please reduce the length of the messages.\", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}",
+            "https://github.com/dolph/keystone-deploy"
+        ],
+        [
+            "Invalid option flag '-' interpreted by the shell",
+            "https://github.com/zapier/profiling-python-like-a-boss"
+        ],
+        [
+            "Python command not found",
+            "https://github.com/mtayseer/infoq-downloader"
+        ],
+        [
+            "No tests found to run in the specified directory",
+            "https://github.com/Desamod/GoblinMineBot"
+        ],
+        [
+            "Python interpreter not found",
+            "https://github.com/sangmin-git/LMC-Memory"
+        ],
+        [
+            "'python' command not found",
+            "https://github.com/Shetty073/amazon-top-deals-python"
+        ],
+        [
+            "Trying to run a URL as a shell command",
+            "https://github.com/thankyou-opensource/thankyou-open-source"
+        ],
+        [
+            "SyntaxError due to using an old release of 'beautifulsoup'",
+            "https://github.com/sonictk/maya_cpp_reference_docset"
+        ],
+        [
+            "ModuleNotFoundError",
+            "https://github.com/nianlonggu/WhisperSeg"
+        ],
+        [
+            "Syntax error near unexpected token 'newline'",
+            "https://github.com/AkBotZ/Link-Shortener-Bot"
+        ],
+        [
+            "'apt' command not found",
+            "https://github.com/LinkedInLearning/quantum-computing-fundamentals-2833097"
+        ],
+        [
+            "Required 'srun' command not found",
+            "https://github.com/genforce/genforce"
+        ],
+        [
+            "Non-executable text used as a command",
+            "https://github.com/wagonhelm/TF_ObjectDetection_API"
+        ],
+        [
+            "Command 'null' not found",
+            "https://github.com/menloparklab/falcon-langchain"
+        ],
+        [
+            "'apt-get: command not found' error",
+            "https://github.com/RozhakXD/Zefoy"
+        ],
+        [
+            "Expecting ',' delimiter: line 12 column 5 (char 564)",
+            "https://github.com/v587su/Timestamp"
+        ],
+        [
+            "Error code: 400 - {'error': {'message': \"This model's maximum context length is 16385 tokens. However, your messages resulted in 17993 tokens. Please reduce the length of the messages.\", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}",
+            "https://github.com/yhw-yhw/SHOW"
+        ],
+        [
+            "Permission denied error when trying to connect to the Docker daemon socket",
+            "https://github.com/zkan/microservices-with-docker"
+        ],
+        [
+            "Command 'python3 snapchat.py' timed out after 60 seconds",
+            "https://github.com/SudoSuu/SnapchatUsernameChecker"
+        ],
+        [
+            "Missing 'python' executable",
+            "https://github.com/maudzung/CenterNet3D-PyTorch"
+        ],
+        [
+            "'python' command not found",
+            "https://github.com/UsamaKashif/CambridgePastPapersDownloader"
+        ],
+        [
+            "Anaconda not found in the PATH",
+            "https://github.com/chrisprasanna/Exercise_Recognition_AI"
+        ],
+        [
+            "Unexpected behavior in command execution",
+            "https://github.com/menloparklab/falcon-langchain"
+        ],
+        [
+            "No such file or directory",
+            "https://github.com/ckraczkowsky91/flask-admin-flask-security"
+        ],
+        [
+            "Missing package manager command",
+            "https://github.com/nicodv/django-uwsgi-nginx"
+        ],
+        [
+            "Critical failure due to missing 'apt-get' command",
+            "https://github.com/EO-College/tomography_tutorial"
+        ],
+        [
+            "'python' command not found",
+            "https://github.com/Sunlight-Rim/SQLbit"
+        ],
+        [
+            "Ignored invalid distribution",
+            "https://github.com/paracosm17/dnevnikru"
+        ],
+        [
+            "Invalid syntax for defining complex field with widget settings in a shell environment",
+            "https://github.com/adammck/djtokeninput"
+        ],
+        [
+            "Syntax error near unexpected token '<'",
+            "https://github.com/berkgoksel/sysref"
+        ],
+        [
+            "Failed to clone repository as it was not found",
+            "https://github.com/ckraczkowsky91/flask-admin-flask-security"
+        ],
+        [
+            "Python interpreter not found on the system",
+            "https://github.com/theycallmeswift/BreakfastSerial"
+        ],
+        [
+            "Package manager 'apt-get' not found",
+            "https://github.com/tko22/flask-boilerplate"
+        ],
+        [
+            "Missing package manager",
+            "https://github.com/Shetty073/amazon-top-deals-python"
+        ],
+        [
+            "Command not found",
+            "https://github.com/nianlonggu/WhisperSeg"
+        ],
+        [
+            "Thrift package installation error",
+            "https://github.com/revelc/pyaccumulo"
+        ],
+        [
+            "FileNotFoundError for 'directory' in 'kong-python-pluginserver'",
+            "https://github.com/Kong/kong-python-pdk"
+        ]
+    ],
+    "cluster_categories": {
+        "ENVIRONMENT": [
+            "Python interpreter issues",
+            "Permission and sudo issues",
+            "Path and file location issues",
+            "System configuration issues"
+        ],
+        "DEPENDENCY": [
+            "Missing package issues",
+            "Version compatibility issues",
+            "Installation failures",
+            "Dependency conflict issues"
+        ],
+        "COMMAND": [
+            "Syntax errors",
+            "Invalid command issues",
+            "Timeout issues",
+            "Python code in shell context",
+            "Command sequence issues"
+        ],
+        "RESOURCE": [
+            "Disk space issues",
+            "Memory-related issues",
+            "Network connectivity issues",
+            "System resource limitations"
+        ],
+        "AGENT": [
+            "Prompt engineering issues",
+            "LLM response format errors",
+            "Expected behavior misinterpretation",
+            "Agent logic errors",
+            "Natural language response instead of structured data"
+        ]
+    }
+}

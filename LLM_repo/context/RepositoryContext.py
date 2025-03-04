@@ -54,9 +54,38 @@ class RepositoryContext:
         # Restore correct chronological order
         self.context['chat_history'] = list(reversed(preserved_messages))
     
-    def generate_messages(self, message=None, system_message=None):
+    def _truncate_message_content(self, message, max_length=1048000):
         """
-        Generate message list for OpenAI API
+        Truncate message content if it exceeds max length.
+        """
+        if len(message['content']) <= max_length:
+            return message
+        
+        marker = "[Skipped due to length constraints]"
+        marker_length = len(marker)
+        keep_length = max_length - marker_length
+        head_length = keep_length // 2
+        tail_length = keep_length - head_length
+        
+        truncated_content = message['content'][:head_length] + marker + message['content'][-tail_length:]
+        return {
+            'role': message['role'],
+            'content': truncated_content,
+            'timestamp': message.get('timestamp')
+        }
+
+    def generate_messages(self, message=None, system_message=None, max_total_length=6000000):
+        """
+        Generate message list for OpenAI API, ensuring messages don't exceed length limits
+        both individually and in total.
+        
+        Args:
+            message: New message to add
+            system_message: System message to use (if None, use context's system message)
+            max_total_length: Maximum total length of all messages in characters
+            
+        Returns:
+            List of messages suitable for API call
         """
         if system_message:
             current_system = {
@@ -66,16 +95,48 @@ class RepositoryContext:
         else:
             current_system = self.context['system_message']
             
-        messages = [current_system]
+        # Always include system message
+        system_msg = self._truncate_message_content(current_system)
+        total_length = len(system_msg['content'])
+        messages = [system_msg]
         
-        if self.context['chat_history']:
-            messages.extend(self.context['chat_history'])
-            
+        # If we have a new message, make sure it's included
+        new_msg = None
         if message:
-            messages.append(message)
+            new_msg = self._truncate_message_content(message)
+            total_length += len(new_msg['content'])
+        
+        # Add history from newest to oldest until we hit the limit
+        history_messages = []
+        if self.context['chat_history']:
+            for hist_msg in reversed(self.context['chat_history']):
+                truncated_msg = self._truncate_message_content(hist_msg)
+                msg_length = len(truncated_msg['content'])
                 
+                # If adding this message would exceed the limit, skip it
+                if total_length + msg_length > max_total_length:
+                    # Add a marker message to show history was truncated
+                    if not history_messages:
+                        history_messages.append({
+                            'role': 'system',
+                            'content': '[Earlier conversation history was omitted due to length constraints]'
+                        })
+                    break
+                    
+                history_messages.append(truncated_msg)
+                total_length += msg_length
+        
+        # Add history in correct order (oldest first)
+        messages.extend(reversed(history_messages))
+        
+        # Add the new message at the end if we have one
+        if new_msg:
+            messages.append(new_msg)
+        
+        # Store in context
         self.context['messages'] = messages
         
+        # Add new message to history if needed
         if message:
             self.context['chat_history'].append({
                 'role': message['role'],

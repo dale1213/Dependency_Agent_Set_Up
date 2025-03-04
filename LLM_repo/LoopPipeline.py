@@ -36,9 +36,24 @@ if not api_key:
 
 client = OpenAI(api_key=api_key)
 
+MAX_MESSAGE_LENGTH = 1048000
+
 ##############################
 # LLM helper functions
 ##############################
+def truncate_text_middle(text, max_length=MAX_MESSAGE_LENGTH, skip_marker="[Skipped due to length constraints]"):
+    """
+    If the text length exceeds max_length, truncate the text in the middle,
+    """
+    if len(text) <= max_length:
+        return text
+    marker_length = len(skip_marker)
+    # The remaining characters that can be kept
+    keep_length = max_length - marker_length
+    # Keep half of the characters from the head and the tail
+    head_length = keep_length // 2
+    tail_length = keep_length - head_length
+    return text[:head_length] + skip_marker + text[-tail_length:]
 
 def call_llm(messages, system_message=None, model="gpt-3.5-turbo", context: RepositoryContext = None):
     """
@@ -54,14 +69,22 @@ def call_llm(messages, system_message=None, model="gpt-3.5-turbo", context: Repo
     """
     logger.info("Sending LLM request")
     
-    
     # Combine chat history with new messages if context exists
     if context:
         # Get the new user message if it exists
         new_message = next((msg for msg in messages if msg['role'] == 'user'), None)
         # Generate messages using context, including chat history and new message
-        messages = context.generate_messages(message=new_message, system_message=system_message)
-    
+        # Use a safe limit for total message length (leave room for response)
+        max_total_length = MAX_MESSAGE_LENGTH * 0.9  # 90% of the limit to leave room for response
+        messages = context.generate_messages(
+            message=new_message, 
+            system_message=system_message,
+            max_total_length=max_total_length
+        )
+    else:
+        # Only truncate messages if we don't have a context object
+        for message in messages:
+            message['content'] = truncate_text_middle(message['content'])
     
     # Send request to LLM
     response = client.chat.completions.create(
@@ -353,6 +376,8 @@ def explore_and_verify_setup(repo_dir, context: RepositoryContext):
     Returns:
         bool: True if setup is verified
     """
+    MAX_ATTEMPTS = 10  # Maximum number of exploration/verification attempts
+    attempt_count = 0
     exploration_prompt =  """You MUST respond in the following JSON format ONLY. Any non-JSON response will be rejected:
 
         {
@@ -404,19 +429,34 @@ def explore_and_verify_setup(repo_dir, context: RepositoryContext):
     
 
     while True:
+        # Check attempt limit
+        attempt_count += 1
+        if attempt_count > MAX_ATTEMPTS:
+            context.add_chat_message(
+                "system",
+                "Maximum verification attempts reached. Stopping verification process."
+            )
+            return False
+
         # Get agent's next action
         user_prompt = {
             "role": "user",
-            "content": """Analyze the current state and provide your next action in VALID JSON format.
-                    Remember:
-                    1. Your response must be pure JSON
-                    2. Include all required fields:
-                    - exploration_command
-                    - executable_command
-                    - verified_dependency_setup
-                    - analysis
-                    3. Do not include any text outside the JSON structure
-                    4. Do not use markdown or code blocks"""
+            "content": """You are an autonomous agent exploring a repository to verify its setup.
+                    Based on your previous exploration results, determine your next action.
+
+                    Return ONLY a valid JSON object with this structure:
+                    {
+                        "exploration_command": "your next shell command to explore, or null if ready to verify",
+                        "executable_command": "your verification command if ready, or null if still exploring",
+                        "verified_dependency_setup": boolean indicating if setup is verified,
+                        "analysis": "your analysis of findings and next steps"
+                    }
+
+                    CRITICAL:
+                    1. You are an agent, not a human assistant
+                    2. Respond with pure JSON only
+                    3. No explanations or text outside JSON
+                    4. No markdown or formatting"""
         }
         
         try:
@@ -439,7 +479,7 @@ def explore_and_verify_setup(repo_dir, context: RepositoryContext):
                     text=True,
                     cwd=repo_dir
                 )
-                stdout, stderr = process.communicate()
+                stdout, stderr = process.communicate(timeout=60)
                 
                 # Add the result to context
                 context.add_chat_message(
@@ -463,15 +503,74 @@ def explore_and_verify_setup(repo_dir, context: RepositoryContext):
                 # Add the result to context
                 context.add_chat_message(
                     "user",
-                    f"Verification command output:\n{stdout}\n{stderr}"
+                    f"""Verification command output:
+                        Command: {action['executable_command']}
+                        Output:
+                        {stdout}
+                        {stderr}"""
+                )
+                # Execute all executable commands and analyze results
+                all_outputs = []
+                for cmd in action["executable_command"].split(";"):
+                    cmd = cmd.strip()
+                    if not cmd:
+                        continue
+                        
+                    process = subprocess.Popen(
+                        cmd,
+                        shell=True,
+                        stdout=subprocess.PIPE,
+                        stderr=subprocess.PIPE,
+                        text=True,
+                        cwd=repo_dir
+                    )
+                    stdout, stderr = process.communicate(timeout=60)
+                    all_outputs.append({
+                        "command": cmd,
+                        "stdout": stdout,
+                        "stderr": stderr,
+                        "return_code": process.returncode
+                    })
+
+                # Have LLM analyze the results
+                analysis_prompt = {
+                    "role": "user",
+                    "content": f"""Please analyze the outputs from multiple verification commands and determine if dependencies are properly set up.
+                    If there are any issues, explain what went wrong.
+                    
+                    Command outputs:
+                    {json.dumps(all_outputs, indent=2)}
+                    
+                    Please respond with a JSON in this format:
+                    {{
+                        "success": true/false,
+                        "analysis": "detailed explanation of what worked or what went wrong"
+                    }}"""
+                }
+                
+                analysis_response = call_llm(
+                    messages=[analysis_prompt],
+                    system_message="You are a helpful assistant analyzing command outputs to verify dependency setup.",
+                    context=context
                 )
                 
-                # Return the final verification result
-                return action["verified_dependency_setup"]
+                try:
+                    analysis = json.loads(analysis_response)
+                    print("The analysis is: ", analysis)
+                    if not analysis["success"]:
+                        return (False, analysis["analysis"])
+                    else:
+                        return (True, analysis["analysis"])
+                except:
+                    context.add_chat_message(
+                        "assistant",
+                        "Failed to parse analysis response"
+                    )
+                    return (False, analysis_response)
                 
             # If agent couldn't find anything to verify
             if not action["exploration_command"] and not action["executable_command"]:
-                return False
+                return (False, "No exploration or executable command found")
                 
         except ValueError as e:
             # If JSON validation fails, add error to context and retry
@@ -485,7 +584,7 @@ def explore_and_verify_setup(repo_dir, context: RepositoryContext):
                 "user",
                 f"Error during execution: {str(e)}"
             )
-            return False
+            return (False, str(e))
 
 def run_ls(working_dir):
     """
@@ -745,6 +844,18 @@ def run_from_github(github_url, README):
     Clones a GitHub repository, reads the README file, extracts command-line instructions,
     executes them live, and returns the full log.
     """
+    MAX_TOTAL_COMMANDS = 50  # Maximum total commands to execute
+    MAX_RETRIES_PER_COMMAND = 3  # Maximum retries for each command
+    command_count = 0
+    retry_counts = {}  # Track retries for each command
+    last_executable = None  # Track the last executable command
+    
+    # Add command execution history tracking
+    command_history = []
+    
+    # Create command_history directory if it doesn't exist
+    os.makedirs("command_history", exist_ok=True)
+    
     log_history = ""  # Initialize log accumulator
     repo_dir = None 
     verification_done = False
@@ -756,6 +867,13 @@ def run_from_github(github_url, README):
         log_history += f"Cloning repository: {github_url}\n"
         yield log_history  # Update UI
         repo_dir = clone_repo(github_url)
+        
+        # Record clone command
+        command_history.append({
+            "command": f"git clone {github_url} {repo_dir}",
+            "output": f"Repository cloned to {repo_dir}"
+        })
+        
         log_history += f"Repository cloned to {repo_dir}\n"
         yield log_history
    
@@ -782,34 +900,49 @@ def run_from_github(github_url, README):
             if not cmd:
                 current_command += 1
                 continue
+            
+            # Check total command limit
+            command_count += 1
+            if command_count > MAX_TOTAL_COMMANDS:
+                log_history += "\n⚠️ Maximum command execution limit reached. Stopping execution.\n"
+                yield log_history
+                break
                 
-            log_history += f"\n---\nExecuting command: {cmd}\n"
+            # Check retry limit for this specific command
+            retry_counts[cmd] = retry_counts.get(cmd, 0) + 1
+            if retry_counts[cmd] > MAX_RETRIES_PER_COMMAND:
+                log_history += f"\n⚠️ Maximum retries reached for command: {cmd}. Skipping.\n"
+                current_command += 1
+                continue
+                
+            log_history += f"\n---\nExecuting command: {cmd} (Attempt {retry_counts[cmd]})\n"
+            last_executable = cmd  # Update last executable command
             yield log_history
             
             success, output, next_cmd, critical_failure, alternative_cmd, dependency_set_up = execute_and_analyze_command(cmd, repo_dir, context)
             log_history += output
             
-            # Add chat history after each command analysis
-            log_history += "\n=== Command Analysis Chat History ===\n"
-            recent_messages = context.context['chat_history'][-2:]
-            for msg in recent_messages:
-                log_history += f"{msg['role'].upper()}: {msg['content']}\n"
-            log_history += "=== End Analysis History ===\n"
+            # Record command execution
+            command_history.append({
+                "command": cmd,
+                "output": output
+            })
             
             # Check if dependencies are set up
             if dependency_set_up and not verification_done:
                 log_history += "\n🔍 Starting repository exploration and verification...\n"
                 yield log_history
                 
-                verified = explore_and_verify_setup(repo_dir, context)
+                verified, verification_output = explore_and_verify_setup(repo_dir, context)
                 verification_done = True
                 
                 if verified:
-                    log_history += "\n✅ Final Verification: Dependencies are correctly set up and working.\n"
+                    log_history += "\n✅ Final Verification: Dependencies are correctly set up and working.\n"+"$Analysis$: "+verification_output+"$/Analysis$"
                 else:
-                    log_history += "\n⚠️ Final Verification failed: Dependencies might not be fully functional.\n"
+                    log_history += "\n⚠️ Final Verification failed: Dependencies might not be fully functional.\n"+"$Analysis$: "+verification_output+"$/Analysis$"
                 
                 yield log_history
+                break
             
             if not success:
                 if alternative_cmd:
@@ -830,8 +963,13 @@ def run_from_github(github_url, README):
         
         # Store the chat history
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        with open(f"chat_history/chat_history_{timestamp}.txt", "w") as f:
+        with open(f"LLM_repo/chat_history/chat_history_{timestamp}.txt", "w") as f:
             f.write(json.dumps(context.context['chat_history']))
+            
+        # Store command execution history
+        with open(f"LLM_repo/command_history/command_history_{timestamp}.json", "w") as f:
+            json.dump(command_history, f, indent=4, ensure_ascii=False)
+            
         yield log_history
 
     except Exception as e:
@@ -839,6 +977,18 @@ def run_from_github(github_url, README):
         yield log_history
 
     finally:
+        
+        # Add chat history after each command analysis
+        log_history += "\n=== Command Analysis Chat History ===\n"
+        recent_messages = context.context['chat_history'][-2:]
+        for msg in recent_messages:
+            log_history += f"{msg['role'].upper()}: {msg['content']}\n"
+        log_history += "=== End Analysis History ===\n"
+        
+        # Add last executable command to log
+        if last_executable:
+            log_history += f"\n=== Last Executable Command ===\n{last_executable}\n=== End Last Command ===\n"
+            
         if repo_dir:
             shutil.rmtree(repo_dir, ignore_errors=True)
             log_history += f"\n🧹 Cleaned up repository: {repo_dir}\n"
@@ -863,13 +1013,47 @@ def get_final_log(generator):
 
 def process_single_repo(url, readme):
     """
-    Runs run_from_github for a single repository and returns a tuple (url, (final_log, success_bool)).
+    Runs run_from_github for a single repository and returns a tuple (url, result_dict).
     """
     print("Process single repo, url:", url)
     log = run_from_github(url, readme)
     final_log = get_final_log(log)
     success = "\n✅ Final Verification: Dependencies are correctly set up and working.\n" in final_log
-    return url, [final_log, success]
+    
+    # Extract analysis from verification output
+    analysis = ""
+    for line in final_log.split('\n'):
+        if "$Analysis$:" in line:
+            analysis = line.split("$Analysis$:")[1].split("$/Analysis$")[0].strip()
+            break
+    
+    # If no verification analysis found, try to get the last command analysis
+    if not analysis:
+        chat_history_start = final_log.find("=== Command Analysis Chat History ===")
+        if chat_history_start != -1:
+            chat_history = final_log[chat_history_start:]
+            try:
+                # Try to parse the last analysis JSON
+                analysis_start = chat_history.find('{\n')
+                analysis_end = chat_history.find('\n}', analysis_start) + 2
+                if analysis_start != -1 and analysis_end != -1:
+                    analysis_json = json.loads(chat_history[analysis_start:analysis_end])
+                    analysis = analysis_json.get("analysis", "")
+            except json.JSONDecodeError:
+                print(f"Failed to parse analysis JSON for {url}")
+    
+    # Extract the last executable command from the log
+    last_executable = None
+    for line in final_log.split('\n'):
+        if line.startswith("Executing command: "):
+            last_executable = line.replace("Executing command: ", "").split(" (Attempt")[0].strip()
+            
+    return url, {
+        "log": final_log,
+        "success": success,
+        "last_executable": last_executable,
+        "analysis": analysis
+    }
 
 def process_repos(repo_dict, max_workers=4):
     """
@@ -878,9 +1062,10 @@ def process_repos(repo_dict, max_workers=4):
       - {github_url: [readme_string, ...]}
     
     For each GitHub URL, it concurrently runs run_from_github(github_url, readme) and collects the final log.
-    It returns a dictionary where each key is the GitHub URL and each value is a tuple:
-       (final_log, True)  if the success string is found,
-       (final_log, False) otherwise.
+    It returns a dictionary where each key is the GitHub URL and each value is a dictionary containing:
+       - log: The complete execution log
+       - success: Whether the setup was verified successfully
+       - last_executable: The last executable command that was run
     """
     results = {}
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
@@ -899,8 +1084,12 @@ def process_repos(repo_dict, max_workers=4):
             except Exception as e:
                 # In case of error, store the error message in the results.
                 url = future_to_url[future]
-                results[url] = (f"Error processing repo: {str(e)}", False)
-                
+                results[url] = {
+                    "log": f"Error processing repo: {str(e)}",
+                    "success": False,
+                    "last_executable": None,
+                    "analysis": str(e)
+                }
                 
     return results
 
@@ -917,9 +1106,9 @@ def save_results_to_file(results, filename):
         json.dump(results, f, indent=4, ensure_ascii=False)
 
 
-with open('repo_set/simple_repos.json', 'r', encoding='utf-8') as f:
+with open('LLM_repo/repo_set/repos_data.json', 'r', encoding='utf-8') as f:
     repo_dict = json.load(f)
 print("Repo set loaded:", repo_dict)
-repo_dict = dict(list(repo_dict.items())[:10])
+repo_dict = dict(list(repo_dict.items())[:40])
 results = process_repos(repo_dict)
-save_results_to_file(results, "results.json")
+save_results_to_file(results, "LLM_repo/results_larger_set.json")

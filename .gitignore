@@ -173,3 +173,4 @@ LLM_repo/venv/
 LLM_repo/.envrepo_set/
 chat_history/
 LLM_repo/.env
+command_history/
