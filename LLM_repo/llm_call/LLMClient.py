@@ -213,7 +213,7 @@ class BedrockClient(LLMClient):
             
             # Get the region from environment or use default
             aws_region = os.getenv("AWS_REGION", "us-east-1")
-            
+
             # Create the Bedrock client using default credential provider chain
             self.client = boto3.client('bedrock-runtime', region_name=aws_region)
             

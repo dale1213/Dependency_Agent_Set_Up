@@ -24,15 +24,15 @@
         null
       ],
       [
-        "transformers",
+        "torch",
         null
       ],
       [
-        "torch",
+        "transformers",
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:09.948770",
+    "analysis_date": "2025-03-26T00:49:27.194720",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -84,7 +84,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:11.590856",
+    "analysis_date": "2025-03-26T00:49:29.083055",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -322,7 +322,7 @@
         "0.10.3"
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:13.179967",
+    "analysis_date": "2025-03-26T00:49:30.679577",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -401,7 +401,7 @@
     ],
     "card_url": "https://huggingface.co/MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
     "dependencies": null,
-    "analysis_date": "2025-03-26T00:47:16.558188",
+    "analysis_date": "2025-03-26T00:49:32.984156",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -833,7 +833,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:17.893293",
+    "analysis_date": "2025-03-26T00:49:34.296864",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -885,7 +885,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:18.919330",
+    "analysis_date": "2025-03-26T00:49:35.286931",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -937,7 +937,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:20.264705",
+    "analysis_date": "2025-03-26T00:49:36.614268",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -999,15 +999,15 @@
         null
       ],
       [
-        "urllib",
+        "csv",
         null
       ],
       [
-        "csv",
+        "urllib",
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:21.841840",
+    "analysis_date": "2025-03-26T00:49:39.814600",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -1061,7 +1061,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:23.284890",
+    "analysis_date": "2025-03-26T00:49:41.138796",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -1117,7 +1117,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:24.745135",
+    "analysis_date": "2025-03-26T00:49:42.406708",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -1165,7 +1165,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:25.877559",
+    "analysis_date": "2025-03-26T00:49:44.435945",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -1226,7 +1226,7 @@
     ],
     "card_url": "https://huggingface.co/facebook/roberta-hate-speech-dynabench-r4-target",
     "dependencies": null,
-    "analysis_date": "2025-03-26T00:47:26.601514",
+    "analysis_date": "2025-03-26T00:49:45.113669",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -1267,7 +1267,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:27.577597",
+    "analysis_date": "2025-03-26T00:49:46.055166",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -1313,7 +1313,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:28.510294",
+    "analysis_date": "2025-03-26T00:49:47.424865",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -1360,9 +1360,17 @@
       [
         "FlagEmbedding",
         null
+      ],
+      [
+        "torch",
+        null
+      ],
+      [
+        "transformers",
+        null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:30.319972",
+    "analysis_date": "2025-03-26T00:49:49.196281",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -1427,7 +1435,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:32.175783",
+    "analysis_date": "2025-03-26T00:49:51.599035",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -1468,7 +1476,7 @@
     ],
     "card_url": "https://huggingface.co/BAAI/bge-reranker-base",
     "dependencies": null,
-    "analysis_date": "2025-03-26T00:47:35.353716",
+    "analysis_date": "2025-03-26T00:49:54.131069",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -1613,7 +1621,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:36.316228",
+    "analysis_date": "2025-03-26T00:49:55.076713",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -1662,7 +1670,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:37.335268",
+    "analysis_date": "2025-03-26T00:49:56.085706",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -1707,7 +1715,7 @@
     ],
     "card_url": "https://huggingface.co/mixedbread-ai/mxbai-rerank-base-v1",
     "dependencies": null,
-    "analysis_date": "2025-03-26T00:47:41.964876",
+    "analysis_date": "2025-03-26T00:49:58.664226",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -1758,7 +1766,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:43.227191",
+    "analysis_date": "2025-03-26T00:49:59.510259",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -1796,7 +1804,7 @@
     "model_name": "BAAI/bge-reranker-large",
     "author": "BAAI",
     "downloads": 843418,
-    "likes": 385,
+    "likes": 386,
     "tags": [
       "transformers",
       "pytorch",
@@ -1822,7 +1830,7 @@
     ],
     "card_url": "https://huggingface.co/BAAI/bge-reranker-large",
     "dependencies": null,
-    "analysis_date": "2025-03-26T00:47:46.496373",
+    "analysis_date": "2025-03-26T00:50:01.621696",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -1970,7 +1978,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:49.145213",
+    "analysis_date": "2025-03-26T00:50:02.603378",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -2044,7 +2052,7 @@
         "0.14.1"
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:50.448123",
+    "analysis_date": "2025-03-26T00:50:03.964955",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -2156,7 +2164,7 @@
         "0.13.3"
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:52.248545",
+    "analysis_date": "2025-03-26T00:50:05.888385",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -2229,7 +2237,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:53.722871",
+    "analysis_date": "2025-03-26T00:50:07.121648",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -2279,10 +2287,6 @@
     "card_url": "https://huggingface.co/unitary/toxic-bert",
     "dependencies": [
       [
-        "detoxify",
-        null
-      ],
-      [
         "transformers",
         null
       ],
@@ -2291,7 +2295,7 @@
         null
       ],
       [
-        "kaggle",
+        "detoxify",
         null
       ],
       [
@@ -2303,7 +2307,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:55.444439",
+    "analysis_date": "2025-03-26T00:50:08.681373",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -2350,7 +2354,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:57.150590",
+    "analysis_date": "2025-03-26T00:50:10.183528",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -2397,7 +2401,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:58.191480",
+    "analysis_date": "2025-03-26T00:50:11.228716",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -2440,15 +2444,15 @@
         null
       ],
       [
-        "transformers",
+        "torch",
         null
       ],
       [
-        "torch",
+        "transformers",
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:47:59.410108",
+    "analysis_date": "2025-03-26T00:50:12.511684",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -2489,7 +2493,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:48:00.719009",
+    "analysis_date": "2025-03-26T00:50:13.690024",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -2532,7 +2536,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:48:01.919488",
+    "analysis_date": "2025-03-26T00:50:14.979578",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -2584,7 +2588,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:48:03.790293",
+    "analysis_date": "2025-03-26T00:50:19.371747",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -2641,7 +2645,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:48:05.566837",
+    "analysis_date": "2025-03-26T00:50:21.046978",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -2700,7 +2704,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:48:06.659893",
+    "analysis_date": "2025-03-26T00:50:21.959226",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -2762,7 +2766,7 @@
         "0.10.3"
       ]
     ],
-    "analysis_date": "2025-03-26T00:48:09.126206",
+    "analysis_date": "2025-03-26T00:50:23.387876",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -2844,15 +2848,15 @@
         null
       ],
       [
-        "transformers",
+        "torch",
         null
       ],
       [
-        "torch",
+        "transformers",
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:48:11.255143",
+    "analysis_date": "2025-03-26T00:50:24.801402",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -2903,7 +2907,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:48:13.108257",
+    "analysis_date": "2025-03-26T00:50:26.435983",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -2982,7 +2986,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:48:14.248483",
+    "analysis_date": "2025-03-26T00:50:27.426941",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -3064,7 +3068,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:48:15.382353",
+    "analysis_date": "2025-03-26T00:50:28.540665",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -3116,7 +3120,7 @@
     ],
     "card_url": "https://huggingface.co/mixedbread-ai/mxbai-rerank-xsmall-v1",
     "dependencies": null,
-    "analysis_date": "2025-03-26T00:48:20.059251",
+    "analysis_date": "2025-03-26T00:50:33.887199",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -3173,7 +3177,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:48:21.432934",
+    "analysis_date": "2025-03-26T00:50:35.978791",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -3232,7 +3236,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:48:22.866511",
+    "analysis_date": "2025-03-26T00:50:37.715968",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -3287,7 +3291,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:48:24.160507",
+    "analysis_date": "2025-03-26T00:50:39.058594",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -3326,7 +3330,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:48:26.369747",
+    "analysis_date": "2025-03-26T00:50:40.334819",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -3382,7 +3386,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:48:27.218160",
+    "analysis_date": "2025-03-26T00:50:41.424743",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -3510,7 +3514,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:48:28.464256",
+    "analysis_date": "2025-03-26T00:50:42.771091",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -3656,7 +3660,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:48:29.626058",
+    "analysis_date": "2025-03-26T00:50:43.895494",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -3751,7 +3755,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:48:30.949029",
+    "analysis_date": "2025-03-26T00:50:45.242141",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,
@@ -3834,7 +3838,7 @@
         null
       ]
     ],
-    "analysis_date": "2025-03-26T00:48:32.542910",
+    "analysis_date": "2025-03-26T00:50:46.235031",
     "repo_size": null,
     "repo_stars": null,
     "repo_visibility": false,

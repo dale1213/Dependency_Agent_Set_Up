@@ -3,10 +3,10 @@ import json
 import logging
 from typing import Dict, List, Optional, Tuple
 from datetime import datetime
-from huggingface_hub import HfApi, ModelCard, ModelInfo
+from huggingface_hub import HfApi, ModelCard
 import boto3
 from botocore.exceptions import ClientError
-from LLM_repo.llm_call.LLMClient import LLMClient
+from llm_call.LLMClient import LLMClient
 
 # Configure logging
 logging.basicConfig(
@@ -61,6 +61,7 @@ class HuggingFaceModelAnalyzer:
         """
         prompt = f"""Please analyze the following model card and extract the Python package dependencies.
         Return ONLY a list of tuples in the format [(package_name, version), ...] where version should be None if not explicitly specified in the model card.
+        The package_name shall be something we can download via pip install package_name==version.
         Do not include any other text or explanation.
         
         For example:
@@ -146,13 +147,10 @@ class HuggingFaceModelAnalyzer:
                 "model_name": model_info.id,
                 "author": model_info.author,
                 "downloads": model_info.downloads,
-                "downloads_all_time": model_info.downloads_all_time,
                 "likes": model_info.likes,
                 "tags": model_info.tags,
                 "card_url": f"https://huggingface.co/{model_id}",
                 "dependencies": dependencies,
-                "last_modified": model_info.last_modified.isoformat() if model_info.last_modified else None,
-                "created_at": model_info.created_at.isoformat() if model_info.created_at else None,
                 "analysis_date": datetime.now().isoformat(),
                 "repo_size": repo_info.size if hasattr(repo_info, 'size') else None,
                 "repo_stars": repo_info.stars if hasattr(repo_info, 'stars') else None,
@@ -165,10 +163,6 @@ class HuggingFaceModelAnalyzer:
                 "card_text": card.text,
                 "card_content": card.content,
                 "library_name": model_info.library_name,
-                "transformers_info": model_info.transformers_info.__dict__ if model_info.transformers_info else None,
-                "safetensors": model_info.safetensors.__dict__ if model_info.safetensors else None,
-                "model_index": model_info.model_index,
-                "trending_score": model_info.trending_score
             }
             
             return result
@@ -302,9 +296,8 @@ class ModelFetcher:
             
             # Get models from Hugging Face
             models = self.hf_api.list_models(
-                filter=filters if filters else None,
+                filter=model_type if filters else None,  # Use model_type as filter instead of pipeline_tag
                 author=author,
-                pipeline_tag=model_type,  # Use pipeline_tag for model type
                 sort=sort_by,
                 direction=-1,  # Descending order
                 limit=max_models,
