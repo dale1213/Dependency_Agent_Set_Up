@@ -1,10 +1,16 @@
 import os
 import json
+import logging
 from llm_call.LLMClient import LLMClient
 
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+logger = logging.getLogger(__name__)
 
 def get_model_test_script(model, dir):
-    model_name = model['model_id']
     model_url = model.get('card_url', 'Not specified')
     model_type = model.get('model_type', 'Not specified')
     pipeline_tag = model.get('pipeline_tag', 'Not specified')
@@ -31,19 +37,33 @@ If the information is not enough, return EXACTLY "Not enough information".
         print("Error calling LLMClient API:", e)
         raise SystemExit(1)
     if generated_code == 'Not enough information':
-        return
+        return None
     else:
         filename = "tester.py"
         os.makedirs(dir, exist_ok=True)
         with open(f'{dir}/{filename}', "w") as f:
             f.write(generated_code)
+        return f'{dir}/{filename}'
 
-def generate_bash_script(model_dict, dir):
-    model_name, dependencies = next(iter(model_dict.items()))
+
+def get_model_info(model_data):
+    model_id = model_data['model_id']
+    deps = model_data.get('dependencies', [])
+    model_deps = []
+    for dep in deps:
+        if len(dep) == 2:
+            library, version = dep
+            model_deps.append((library, version))
+    
+    return model_id, model_deps
+
+
+def generate_bash_script(model, dir):
+    model_id, model_deps = get_model_info(model)
     
     python_version = None
     filtered_deps = []
-    for dep_name, dep_version in dependencies:
+    for dep_name, dep_version in model_deps:
         if dep_name == 'python':
             python_version = dep_version
         else:
@@ -69,7 +89,11 @@ def generate_bash_script(model_dict, dir):
     
     # Add dependencies
     for dep_name, dep_version in filtered_deps:
-        script_content.append(f"pip install {dep_name}=={dep_version}")
+        if dep_version is not None:
+            script_content.append(f"pip install {dep_name}=={dep_version}")
+        else:
+            script_content.append(f"pip install {dep_name}")
+    script_content.append(f"python tester.py")
     bash_script = "\n".join(script_content)
     
     filename = "setup.sh"
@@ -80,35 +104,17 @@ def generate_bash_script(model_dict, dir):
     
     # Make the script executable
     os.chmod(f'{dir}/{filename}', 0o755)
-    return filename
+    return f'{dir}/{filename}'
 
+if __name__ == '__main__':
+    json_file = "./model_analysis_type_question-answering_min_dl_1000_lib_transformers.json"
+    with open(json_file, 'r') as f:
+        data = json.load(f)
 
-json_file = "./model_analysis_type_question-answering_min_dl_1000_lib_transformers.json"
-with open(json_file, 'r') as f:
-    data = json.load(f)
-# Process models in current file
-models_with_version_info = {}
-all_model_dependencies = {}
-
-for model in data:
-    model_id = model['model_id']
-    deps = model.get('dependencies', [])
-    
-    if deps:
-        all_model_dependencies[model_id] = []
-        has_non_null_version = False
-        
-        for dep in deps:
-            if len(dep) == 2:
-                library, version = dep
-                all_model_dependencies[model_id].append((library, version))
-                if version is not None:
-                    has_non_null_version = True
-        
-        if has_non_null_version:
-            models_with_version_info[model_id] = all_model_dependencies[model_id]
-            model_dir = model_id.replace('/', '_')
-            print(model_id)
-            get_model_test_script(model, model_dir)
-            generate_bash_script(models_with_version_info, model_dir)
-            break
+    for model in data:
+        model_id = model['model_id']
+        model_dir = model_id.replace('/', '_')
+        get_model_test_script(model, model_dir)
+        bash_name = generate_bash_script(model, model_dir)
+        logger.info(f'Bash Script: {bash_name}')
+        break
