@@ -1,0 +1,317 @@
+{
+  "cross-encoder/ms-marco-MiniLM-L6-v2": {
+    "errors": [
+      {
+        "timestamp": "2025-04-02T00:25:06.646412",
+        "category": "version_conflict",
+        "description": "Invalid version specifier for sentence_transformers package",
+        "missing_dependencies": [
+          "sentence_transformers"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 1,
+      "categories": {
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "sentence_transformers": 1
+      }
+    }
+  },
+  "distilbert/distilbert-base-uncased-finetuned-sst-2-english": {
+    "errors": [
+      {
+        "timestamp": "2025-04-02T00:25:16.470421",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch package",
+        "missing_dependencies": [
+          "torch==2.0.1"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 1,
+      "categories": {
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "torch==2.0.1": 1
+      }
+    }
+  },
+  "cross-encoder/ms-marco-MiniLM-L4-v2": {
+    "errors": [
+      {
+        "timestamp": "2025-04-02T00:42:38.260180",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for sentence_transformers package",
+        "missing_dependencies": [
+          "sentence_transformers"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 1,
+      "categories": {
+        "installation_failure": 1
+      },
+      "missing_dependencies": {
+        "sentence_transformers": 1
+      }
+    }
+  },
+  "lucadiliello/BLEURT-20-D12": {
+    "errors": [
+      {
+        "timestamp": "2025-04-02T00:50:31.538178",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch package",
+        "missing_dependencies": [
+          "torch==2.0.1"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 1,
+      "categories": {
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "torch==2.0.1": 1
+      }
+    }
+  },
+  "BAAI/bge-reranker-v2-m3": {
+    "errors": [
+      {
+        "timestamp": "2025-04-02T01:01:14.368000",
+        "category": "dependency_error",
+        "description": "Failed to install build dependencies for pyarrow due to missing 'distutils' module",
+        "missing_dependencies": [
+          "distutils"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 1,
+      "categories": {
+        "dependency_error": 1
+      },
+      "missing_dependencies": {
+        "distutils": 1
+      }
+    }
+  },
+  "TieIncred/distilbert-base-uncased-finetuned-emotional": {
+    "errors": [
+      {
+        "timestamp": "2025-04-02T01:18:46.848102",
+        "category": "version_conflict",
+        "description": "Unable to find a compatible version of pytorch with the specified CUDA version",
+        "missing_dependencies": [
+          "pytorch==2.1.0+cu118"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 1,
+      "categories": {
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "pytorch==2.1.0+cu118": 1
+      }
+    }
+  },
+  "facebook/fasttext-language-identification": {
+    "errors": [
+      {
+        "timestamp": "2025-04-02T01:39:40.845482",
+        "category": "dependency_error",
+        "description": "Failed to build wheel due to missing pybind11 module",
+        "missing_dependencies": [
+          "pybind11"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 1,
+      "categories": {
+        "dependency_error": 1
+      },
+      "missing_dependencies": {
+        "pybind11": 1
+      }
+    }
+  },
+  "cross-encoder/ms-marco-MiniLM-L12-v2": {
+    "errors": [
+      {
+        "timestamp": "2025-04-02T01:51:57.690717",
+        "category": "version_conflict",
+        "description": "Invalid version specifier for sentence_transformers package",
+        "missing_dependencies": [
+          "sentence_transformers"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 1,
+      "categories": {
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "sentence_transformers": 1
+      }
+    }
+  },
+  "nbroad/ESG-BERT": {
+    "errors": [
+      {
+        "timestamp": "2025-04-02T02:03:48.465737",
+        "category": "version_conflict",
+        "description": "Unable to find a compatible version of torchvision",
+        "missing_dependencies": [
+          "torchvision==0.15.2"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 1,
+      "categories": {
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "torchvision==0.15.2": 1
+      }
+    }
+  },
+  "tals/albert-xlarge-vitaminc-mnli": {
+    "errors": [
+      {
+        "timestamp": "2025-04-02T02:05:41.287033",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch package",
+        "missing_dependencies": [
+          "torch==2.0.1"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 1,
+      "categories": {
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "torch==2.0.1": 1
+      }
+    }
+  },
+  "cross-encoder/ms-marco-electra-base": {
+    "errors": [
+      {
+        "timestamp": "2025-04-02T02:07:27.689930",
+        "category": "version_conflict",
+        "description": "Invalid version specifier for sentence_transformers package",
+        "missing_dependencies": [
+          "sentence_transformers"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 1,
+      "categories": {
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "sentence_transformers": 1
+      }
+    }
+  },
+  "madhurjindal/autonlp-Gibberish-Detector-492513457": {
+    "errors": [
+      {
+        "timestamp": "2025-04-02T02:20:58.921998",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch package",
+        "missing_dependencies": [
+          "torch==2.0.1"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 1,
+      "categories": {
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "torch==2.0.1": 1
+      }
+    }
+  },
+  "cross-encoder/ms-marco-MiniLM-L2-v2": {
+    "errors": [
+      {
+        "timestamp": "2025-04-02T02:26:01.170015",
+        "category": "version_conflict",
+        "description": "Invalid version specifier for sentence_transformers package",
+        "missing_dependencies": [
+          "sentence_transformers"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 1,
+      "categories": {
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "sentence_transformers": 1
+      }
+    }
+  },
+  "Alibaba-NLP/gte-multilingual-reranker-base": {
+    "errors": [
+      {
+        "timestamp": "2025-04-02T02:30:04.733917",
+        "category": "version_conflict",
+        "description": "Unable to find a compatible version of torch",
+        "missing_dependencies": [
+          "torch==2.0.1"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 1,
+      "categories": {
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "torch==2.0.1": 1
+      }
+    }
+  },
+  "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1": {
+    "errors": [
+      {
+        "timestamp": "2025-04-02T02:38:02.805815",
+        "category": "version_conflict",
+        "description": "Invalid version specifier for sentence_transformers package",
+        "missing_dependencies": [
+          "sentence_transformers"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 1,
+      "categories": {
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "sentence_transformers": 1
+      }
+    }
+  }
+}

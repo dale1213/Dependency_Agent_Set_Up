@@ -1,0 +1,905 @@
+{
+  "elements": [
+    {
+      "id": "model_bigwiz83_sapbert-from-pubmedbert-squad2",
+      "label": "bigwiz83/sapbert-from-pubmedbert-squad2",
+      "type": "model"
+    },
+    {
+      "id": "model_deepset_roberta-base-squad2",
+      "label": "deepset/roberta-base-squad2",
+      "type": "model"
+    },
+    {
+      "id": "model_distilbert_distilbert-base-cased-distilled-squad",
+      "label": "distilbert/distilbert-base-cased-distilled-squad",
+      "type": "model"
+    },
+    {
+      "id": "model_deepset_bert-large-uncased-whole-word-masking-squad2",
+      "label": "deepset/bert-large-uncased-whole-word-masking-squad2",
+      "type": "model"
+    },
+    {
+      "id": "model_google-bert_bert-large-uncased-whole-word-masking-finetuned-squad",
+      "label": "google-bert/bert-large-uncased-whole-word-masking-finetuned-squad",
+      "type": "model"
+    },
+    {
+      "id": "model_deepset_minilm-uncased-squad2",
+      "label": "deepset/minilm-uncased-squad2",
+      "type": "model"
+    },
+    {
+      "id": "model_sjrhuschlee_flan-t5-large-squad2",
+      "label": "sjrhuschlee/flan-t5-large-squad2",
+      "type": "model"
+    },
+    {
+      "id": "model_cross-encoder_ms-marco-MiniLM-L6-v2",
+      "label": "cross-encoder/ms-marco-MiniLM-L6-v2",
+      "type": "model"
+    },
+    {
+      "id": "model_distilbert_distilbert-base-uncased-finetuned-sst-2-english",
+      "label": "distilbert/distilbert-base-uncased-finetuned-sst-2-english",
+      "type": "model"
+    },
+    {
+      "id": "model_papluca_xlm-roberta-base-language-detection",
+      "label": "papluca/xlm-roberta-base-language-detection",
+      "type": "model"
+    },
+    {
+      "id": "model_facebook_bart-large-mnli",
+      "label": "facebook/bart-large-mnli",
+      "type": "model"
+    },
+    {
+      "id": "model_ProsusAI_finbert",
+      "label": "ProsusAI/finbert",
+      "type": "model"
+    },
+    {
+      "id": "model_microsoft_deberta-xlarge-mnli",
+      "label": "microsoft/deberta-xlarge-mnli",
+      "type": "model"
+    },
+    {
+      "id": "model_cardiffnlp_twitter-roberta-base-sentiment",
+      "label": "cardiffnlp/twitter-roberta-base-sentiment",
+      "type": "model"
+    },
+    {
+      "id": "model_cardiffnlp_twitter-roberta-base-sentiment-latest",
+      "label": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+      "type": "model"
+    },
+    {
+      "id": "model_cross-encoder_ms-marco-MiniLM-L4-v2",
+      "label": "cross-encoder/ms-marco-MiniLM-L4-v2",
+      "type": "model"
+    },
+    {
+      "id": "model_cardiffnlp_twitter-xlm-roberta-base-sentiment",
+      "label": "cardiffnlp/twitter-xlm-roberta-base-sentiment",
+      "type": "model"
+    },
+    {
+      "id": "model_lucadiliello_BLEURT-20-D12",
+      "label": "lucadiliello/BLEURT-20-D12",
+      "type": "model"
+    },
+    {
+      "id": "model_nlptown_bert-base-multilingual-uncased-sentiment",
+      "label": "nlptown/bert-base-multilingual-uncased-sentiment",
+      "type": "model"
+    },
+    {
+      "id": "model_BAAI_bge-reranker-v2-m3",
+      "label": "BAAI/bge-reranker-v2-m3",
+      "type": "model"
+    },
+    {
+      "id": "model_cardiffnlp_twitter-roberta-base-emotion",
+      "label": "cardiffnlp/twitter-roberta-base-emotion",
+      "type": "model"
+    },
+    {
+      "id": "model_yiyanghkust_finbert-tone",
+      "label": "yiyanghkust/finbert-tone",
+      "type": "model"
+    },
+    {
+      "id": "model_pysentimiento_robertuito-sentiment-analysis",
+      "label": "pysentimiento/robertuito-sentiment-analysis",
+      "type": "model"
+    },
+    {
+      "id": "model_michellejieli_emotion_text_classifier",
+      "label": "michellejieli/emotion_text_classifier",
+      "type": "model"
+    },
+    {
+      "id": "model_j-hartmann_emotion-english-distilroberta-base",
+      "label": "j-hartmann/emotion-english-distilroberta-base",
+      "type": "model"
+    },
+    {
+      "id": "model_TieIncred_distilbert-base-uncased-finetuned-emotional",
+      "label": "TieIncred/distilbert-base-uncased-finetuned-emotional",
+      "type": "model"
+    },
+    {
+      "id": "model_lxyuan_distilbert-base-multilingual-cased-sentiments-student",
+      "label": "lxyuan/distilbert-base-multilingual-cased-sentiments-student",
+      "type": "model"
+    },
+    {
+      "id": "model_microsoft_deberta-large-mnli",
+      "label": "microsoft/deberta-large-mnli",
+      "type": "model"
+    },
+    {
+      "id": "model_unitary_toxic-bert",
+      "label": "unitary/toxic-bert",
+      "type": "model"
+    },
+    {
+      "id": "model_facebook_fasttext-language-identification",
+      "label": "facebook/fasttext-language-identification",
+      "type": "model"
+    },
+    {
+      "id": "model_Elron_bleurt-tiny-512",
+      "label": "Elron/bleurt-tiny-512",
+      "type": "model"
+    },
+    {
+      "id": "model_cross-encoder_ms-marco-MiniLM-L12-v2",
+      "label": "cross-encoder/ms-marco-MiniLM-L12-v2",
+      "type": "model"
+    },
+    {
+      "id": "model_finiteautomata_beto-sentiment-analysis",
+      "label": "finiteautomata/beto-sentiment-analysis",
+      "type": "model"
+    },
+    {
+      "id": "model_martin-ha_toxic-comment-model",
+      "label": "martin-ha/toxic-comment-model",
+      "type": "model"
+    },
+    {
+      "id": "model_nbroad_ESG-BERT",
+      "label": "nbroad/ESG-BERT",
+      "type": "model"
+    },
+    {
+      "id": "model_SamLowe_roberta-base-go_emotions",
+      "label": "SamLowe/roberta-base-go_emotions",
+      "type": "model"
+    },
+    {
+      "id": "model_tals_albert-xlarge-vitaminc-mnli",
+      "label": "tals/albert-xlarge-vitaminc-mnli",
+      "type": "model"
+    },
+    {
+      "id": "model_mrm8488_distilroberta-finetuned-financial-news-sentiment-analysis",
+      "label": "mrm8488/distilroberta-finetuned-financial-news-sentiment-analysis",
+      "type": "model"
+    },
+    {
+      "id": "model_cross-encoder_ms-marco-electra-base",
+      "label": "cross-encoder/ms-marco-electra-base",
+      "type": "model"
+    },
+    {
+      "id": "model_jinaai_jina-reranker-v2-base-multilingual",
+      "label": "jinaai/jina-reranker-v2-base-multilingual",
+      "type": "model"
+    },
+    {
+      "id": "model_MoritzLaurer_mDeBERTa-v3-base-mnli-xnli",
+      "label": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+      "type": "model"
+    },
+    {
+      "id": "model_oliverguhr_german-sentiment-bert",
+      "label": "oliverguhr/german-sentiment-bert",
+      "type": "model"
+    },
+    {
+      "id": "model_madhurjindal_autonlp-Gibberish-Detector-492513457",
+      "label": "madhurjindal/autonlp-Gibberish-Detector-492513457",
+      "type": "model"
+    },
+    {
+      "id": "model_WebOrganizer_TopicClassifier-NoURL",
+      "label": "WebOrganizer/TopicClassifier-NoURL",
+      "type": "model"
+    },
+    {
+      "id": "model_cross-encoder_ms-marco-MiniLM-L2-v2",
+      "label": "cross-encoder/ms-marco-MiniLM-L2-v2",
+      "type": "model"
+    },
+    {
+      "id": "model_sadickam_sdgBERT",
+      "label": "sadickam/sdgBERT",
+      "type": "model"
+    },
+    {
+      "id": "model_finiteautomata_bertweet-base-sentiment-analysis",
+      "label": "finiteautomata/bertweet-base-sentiment-analysis",
+      "type": "model"
+    },
+    {
+      "id": "model_Alibaba-NLP_gte-multilingual-reranker-base",
+      "label": "Alibaba-NLP/gte-multilingual-reranker-base",
+      "type": "model"
+    },
+    {
+      "id": "model_cross-encoder_mmarco-mMiniLMv2-L12-H384-v1",
+      "label": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+      "type": "model"
+    },
+    {
+      "id": "model_tabularisai_multilingual-sentiment-analysis",
+      "label": "tabularisai/multilingual-sentiment-analysis",
+      "type": "model"
+    },
+    {
+      "id": "model_jpwahle_longformer-base-plagiarism-detection",
+      "label": "jpwahle/longformer-base-plagiarism-detection",
+      "type": "model"
+    },
+    {
+      "id": "package_transformers==4.7.0",
+      "label": "transformers==4.7.0",
+      "type": "package"
+    },
+    {
+      "id": "package_torch==1.8.0",
+      "label": "torch==1.8.0",
+      "type": "package"
+    },
+    {
+      "id": "package_datasets==1.4.1",
+      "label": "datasets==1.4.1",
+      "type": "package"
+    },
+    {
+      "id": "package_tokenizers==0.10.2",
+      "label": "tokenizers==0.10.2",
+      "type": "package"
+    },
+    {
+      "id": "package_huggingface-hub==0.0.8",
+      "label": "huggingface-hub==0.0.8",
+      "type": "package"
+    },
+    {
+      "id": "package_numpy==1.26.1",
+      "label": "numpy==1.26.1",
+      "type": "package"
+    },
+    {
+      "id": "package_haystack-ai==2.11.1",
+      "label": "haystack-ai==2.11.1",
+      "type": "package"
+    },
+    {
+      "id": "package_transformers==4.30.2",
+      "label": "transformers==4.30.2",
+      "type": "package"
+    },
+    {
+      "id": "package_torch==2.0.1",
+      "label": "torch==2.0.1",
+      "type": "package"
+    },
+    {
+      "id": "package_numpy==1.24.3",
+      "label": "numpy==1.24.3",
+      "type": "package"
+    },
+    {
+      "id": "package_hf_xet==0.1.0",
+      "label": "hf_xet==0.1.0",
+      "type": "package"
+    },
+    {
+      "id": "package_xformers==0.0.22",
+      "label": "xformers==0.0.22",
+      "type": "package"
+    },
+    {
+      "id": "package_transformers==4.12.5",
+      "label": "transformers==4.12.5",
+      "type": "package"
+    },
+    {
+      "id": "package_torch==1.10.0",
+      "label": "torch==1.10.0",
+      "type": "package"
+    },
+    {
+      "id": "package_datasets==1.15.1",
+      "label": "datasets==1.15.1",
+      "type": "package"
+    },
+    {
+      "id": "package_tokenizers==0.10.3",
+      "label": "tokenizers==0.10.3",
+      "type": "package"
+    },
+    {
+      "id": "package_xformers==0.0.20",
+      "label": "xformers==0.0.20",
+      "type": "package"
+    },
+    {
+      "id": "package_scipy==1.10.1",
+      "label": "scipy==1.10.1",
+      "type": "package"
+    },
+    {
+      "id": "package_pysentimiento==0.7.2",
+      "label": "pysentimiento==0.7.2",
+      "type": "package"
+    },
+    {
+      "id": "package_transformers==4.28.1",
+      "label": "transformers==4.28.1",
+      "type": "package"
+    },
+    {
+      "id": "package_torch==2.0.0",
+      "label": "torch==2.0.0",
+      "type": "package"
+    },
+    {
+      "id": "package_datasets==2.11.0",
+      "label": "datasets==2.11.0",
+      "type": "package"
+    },
+    {
+      "id": "package_tokenizers==0.13.3",
+      "label": "tokenizers==0.13.3",
+      "type": "package"
+    },
+    {
+      "id": "package_torchserve==0.8.2",
+      "label": "torchserve==0.8.2",
+      "type": "package"
+    },
+    {
+      "id": "package_torch-model-archiver==0.8.1",
+      "label": "torch-model-archiver==0.8.1",
+      "type": "package"
+    },
+    {
+      "id": "package_torchvision==0.15.2",
+      "label": "torchvision==0.15.2",
+      "type": "package"
+    },
+    {
+      "id": "package_datasets==2.14.5",
+      "label": "datasets==2.14.5",
+      "type": "package"
+    },
+    {
+      "id": "package_sentencepiece==0.1.99",
+      "label": "sentencepiece==0.1.99",
+      "type": "package"
+    },
+    {
+      "id": "package_transformers==4.10.2",
+      "label": "transformers==4.10.2",
+      "type": "package"
+    },
+    {
+      "id": "package_torch==1.9.0",
+      "label": "torch==1.9.0",
+      "type": "package"
+    },
+    {
+      "id": "package_datasets==1.12.1",
+      "label": "datasets==1.12.1",
+      "type": "package"
+    },
+    {
+      "id": "package_germansentiment==1.0.6",
+      "label": "germansentiment==1.0.6",
+      "type": "package"
+    }
+  ],
+  "connections": [
+    {
+      "from": "model_bigwiz83_sapbert-from-pubmedbert-squad2",
+      "to": "package_transformers==4.7.0"
+    },
+    {
+      "from": "model_bigwiz83_sapbert-from-pubmedbert-squad2",
+      "to": "package_torch==1.8.0"
+    },
+    {
+      "from": "model_bigwiz83_sapbert-from-pubmedbert-squad2",
+      "to": "package_datasets==1.4.1"
+    },
+    {
+      "from": "model_bigwiz83_sapbert-from-pubmedbert-squad2",
+      "to": "package_tokenizers==0.10.2"
+    },
+    {
+      "from": "model_bigwiz83_sapbert-from-pubmedbert-squad2",
+      "to": "package_huggingface-hub==0.0.8"
+    },
+    {
+      "from": "model_bigwiz83_sapbert-from-pubmedbert-squad2",
+      "to": "package_numpy==1.26.1"
+    },
+    {
+      "from": "model_deepset_roberta-base-squad2",
+      "to": "package_haystack-ai==2.11.1"
+    },
+    {
+      "from": "model_deepset_roberta-base-squad2",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_deepset_roberta-base-squad2",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_deepset_roberta-base-squad2",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_distilbert_distilbert-base-cased-distilled-squad",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_distilbert_distilbert-base-cased-distilled-squad",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_distilbert_distilbert-base-cased-distilled-squad",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_distilbert_distilbert-base-cased-distilled-squad",
+      "to": "package_hf_xet==0.1.0"
+    },
+    {
+      "from": "model_google-bert_bert-large-uncased-whole-word-masking-finetuned-squad",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_google-bert_bert-large-uncased-whole-word-masking-finetuned-squad",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_google-bert_bert-large-uncased-whole-word-masking-finetuned-squad",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_google-bert_bert-large-uncased-whole-word-masking-finetuned-squad",
+      "to": "package_hf_xet==0.1.0"
+    },
+    {
+      "from": "model_distilbert_distilbert-base-uncased-finetuned-sst-2-english",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_distilbert_distilbert-base-uncased-finetuned-sst-2-english",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_distilbert_distilbert-base-uncased-finetuned-sst-2-english",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_distilbert_distilbert-base-uncased-finetuned-sst-2-english",
+      "to": "package_xformers==0.0.22"
+    },
+    {
+      "from": "model_distilbert_distilbert-base-uncased-finetuned-sst-2-english",
+      "to": "package_hf_xet==0.1.0"
+    },
+    {
+      "from": "model_papluca_xlm-roberta-base-language-detection",
+      "to": "package_transformers==4.12.5"
+    },
+    {
+      "from": "model_papluca_xlm-roberta-base-language-detection",
+      "to": "package_torch==1.10.0"
+    },
+    {
+      "from": "model_papluca_xlm-roberta-base-language-detection",
+      "to": "package_datasets==1.15.1"
+    },
+    {
+      "from": "model_papluca_xlm-roberta-base-language-detection",
+      "to": "package_tokenizers==0.10.3"
+    },
+    {
+      "from": "model_papluca_xlm-roberta-base-language-detection",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_facebook_bart-large-mnli",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_facebook_bart-large-mnli",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_facebook_bart-large-mnli",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_facebook_bart-large-mnli",
+      "to": "package_hf_xet==0.1.0"
+    },
+    {
+      "from": "model_ProsusAI_finbert",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_ProsusAI_finbert",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_ProsusAI_finbert",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_ProsusAI_finbert",
+      "to": "package_xformers==0.0.20"
+    },
+    {
+      "from": "model_ProsusAI_finbert",
+      "to": "package_hf_xet==0.1.0"
+    },
+    {
+      "from": "model_microsoft_deberta-xlarge-mnli",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_microsoft_deberta-xlarge-mnli",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_microsoft_deberta-xlarge-mnli",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_cardiffnlp_twitter-roberta-base-sentiment-latest",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_cardiffnlp_twitter-roberta-base-sentiment-latest",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_cardiffnlp_twitter-roberta-base-sentiment-latest",
+      "to": "package_scipy==1.10.1"
+    },
+    {
+      "from": "model_cardiffnlp_twitter-roberta-base-sentiment-latest",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_nlptown_bert-base-multilingual-uncased-sentiment",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_nlptown_bert-base-multilingual-uncased-sentiment",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_nlptown_bert-base-multilingual-uncased-sentiment",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_nlptown_bert-base-multilingual-uncased-sentiment",
+      "to": "package_xformers==0.0.20"
+    },
+    {
+      "from": "model_yiyanghkust_finbert-tone",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_yiyanghkust_finbert-tone",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_yiyanghkust_finbert-tone",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_yiyanghkust_finbert-tone",
+      "to": "package_xformers==0.0.22"
+    },
+    {
+      "from": "model_pysentimiento_robertuito-sentiment-analysis",
+      "to": "package_pysentimiento==0.7.2"
+    },
+    {
+      "from": "model_michellejieli_emotion_text_classifier",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_michellejieli_emotion_text_classifier",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_michellejieli_emotion_text_classifier",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_michellejieli_emotion_text_classifier",
+      "to": "package_hf_xet==0.1.0"
+    },
+    {
+      "from": "model_michellejieli_emotion_text_classifier",
+      "to": "package_xformers==0.0.20"
+    },
+    {
+      "from": "model_j-hartmann_emotion-english-distilroberta-base",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_j-hartmann_emotion-english-distilroberta-base",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_j-hartmann_emotion-english-distilroberta-base",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_j-hartmann_emotion-english-distilroberta-base",
+      "to": "package_xformers==0.0.20"
+    },
+    {
+      "from": "model_j-hartmann_emotion-english-distilroberta-base",
+      "to": "package_hf_xet==0.1.0"
+    },
+    {
+      "from": "model_lxyuan_distilbert-base-multilingual-cased-sentiments-student",
+      "to": "package_transformers==4.28.1"
+    },
+    {
+      "from": "model_lxyuan_distilbert-base-multilingual-cased-sentiments-student",
+      "to": "package_torch==2.0.0"
+    },
+    {
+      "from": "model_lxyuan_distilbert-base-multilingual-cased-sentiments-student",
+      "to": "package_datasets==2.11.0"
+    },
+    {
+      "from": "model_lxyuan_distilbert-base-multilingual-cased-sentiments-student",
+      "to": "package_tokenizers==0.13.3"
+    },
+    {
+      "from": "model_lxyuan_distilbert-base-multilingual-cased-sentiments-student",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_microsoft_deberta-large-mnli",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_microsoft_deberta-large-mnli",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_microsoft_deberta-large-mnli",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_Elron_bleurt-tiny-512",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_Elron_bleurt-tiny-512",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_Elron_bleurt-tiny-512",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_finiteautomata_beto-sentiment-analysis",
+      "to": "package_pysentimiento==0.7.2"
+    },
+    {
+      "from": "model_martin-ha_toxic-comment-model",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_martin-ha_toxic-comment-model",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_martin-ha_toxic-comment-model",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_martin-ha_toxic-comment-model",
+      "to": "package_xformers==0.0.20"
+    },
+    {
+      "from": "model_nbroad_ESG-BERT",
+      "to": "package_torchserve==0.8.2"
+    },
+    {
+      "from": "model_nbroad_ESG-BERT",
+      "to": "package_torch-model-archiver==0.8.1"
+    },
+    {
+      "from": "model_nbroad_ESG-BERT",
+      "to": "package_torchvision==0.15.2"
+    },
+    {
+      "from": "model_nbroad_ESG-BERT",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_nbroad_ESG-BERT",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_nbroad_ESG-BERT",
+      "to": "package_xformers==0.0.20"
+    },
+    {
+      "from": "model_SamLowe_roberta-base-go_emotions",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_SamLowe_roberta-base-go_emotions",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_SamLowe_roberta-base-go_emotions",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_SamLowe_roberta-base-go_emotions",
+      "to": "package_hf_xet==0.1.0"
+    },
+    {
+      "from": "model_SamLowe_roberta-base-go_emotions",
+      "to": "package_xformers==0.0.22"
+    },
+    {
+      "from": "model_tals_albert-xlarge-vitaminc-mnli",
+      "to": "package_datasets==2.14.5"
+    },
+    {
+      "from": "model_tals_albert-xlarge-vitaminc-mnli",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_tals_albert-xlarge-vitaminc-mnli",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_tals_albert-xlarge-vitaminc-mnli",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_tals_albert-xlarge-vitaminc-mnli",
+      "to": "package_sentencepiece==0.1.99"
+    },
+    {
+      "from": "model_mrm8488_distilroberta-finetuned-financial-news-sentiment-analysis",
+      "to": "package_transformers==4.10.2"
+    },
+    {
+      "from": "model_mrm8488_distilroberta-finetuned-financial-news-sentiment-analysis",
+      "to": "package_torch==1.9.0"
+    },
+    {
+      "from": "model_mrm8488_distilroberta-finetuned-financial-news-sentiment-analysis",
+      "to": "package_datasets==1.12.1"
+    },
+    {
+      "from": "model_mrm8488_distilroberta-finetuned-financial-news-sentiment-analysis",
+      "to": "package_tokenizers==0.10.3"
+    },
+    {
+      "from": "model_mrm8488_distilroberta-finetuned-financial-news-sentiment-analysis",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_MoritzLaurer_mDeBERTa-v3-base-mnli-xnli",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_MoritzLaurer_mDeBERTa-v3-base-mnli-xnli",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_MoritzLaurer_mDeBERTa-v3-base-mnli-xnli",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_oliverguhr_german-sentiment-bert",
+      "to": "package_germansentiment==1.0.6"
+    },
+    {
+      "from": "model_madhurjindal_autonlp-Gibberish-Detector-492513457",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_madhurjindal_autonlp-Gibberish-Detector-492513457",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_madhurjindal_autonlp-Gibberish-Detector-492513457",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_madhurjindal_autonlp-Gibberish-Detector-492513457",
+      "to": "package_xformers==0.0.22"
+    },
+    {
+      "from": "model_sadickam_sdgBERT",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_sadickam_sdgBERT",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_sadickam_sdgBERT",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_sadickam_sdgBERT",
+      "to": "package_xformers==0.0.20"
+    },
+    {
+      "from": "model_finiteautomata_bertweet-base-sentiment-analysis",
+      "to": "package_pysentimiento==0.7.2"
+    },
+    {
+      "from": "model_tabularisai_multilingual-sentiment-analysis",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_tabularisai_multilingual-sentiment-analysis",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_tabularisai_multilingual-sentiment-analysis",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_tabularisai_multilingual-sentiment-analysis",
+      "to": "package_xformers==0.0.20"
+    },
+    {
+      "from": "model_jpwahle_longformer-base-plagiarism-detection",
+      "to": "package_transformers==4.30.2"
+    },
+    {
+      "from": "model_jpwahle_longformer-base-plagiarism-detection",
+      "to": "package_torch==2.0.1"
+    },
+    {
+      "from": "model_jpwahle_longformer-base-plagiarism-detection",
+      "to": "package_numpy==1.24.3"
+    },
+    {
+      "from": "model_jpwahle_longformer-base-plagiarism-detection",
+      "to": "package_xformers==0.0.22"
+    }
+  ]
+}

@@ -1,0 +1,1055 @@
+[
+  {
+    "model_id": "deepset/roberta-base-squad2",
+    "model_name": "deepset/roberta-base-squad2",
+    "author": "deepset",
+    "downloads": 1698760,
+    "likes": 864,
+    "tags": [
+      "transformers",
+      "pytorch",
+      "tf",
+      "jax",
+      "rust",
+      "safetensors",
+      "roberta",
+      "question-answering",
+      "en",
+      "dataset:squad_v2",
+      "base_model:FacebookAI/roberta-base",
+      "base_model:finetune:FacebookAI/roberta-base",
+      "license:cc-by-4.0",
+      "model-index",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "card_url": "https://huggingface.co/deepset/roberta-base-squad2",
+    "dependencies": [
+      [
+        "haystack-ai",
+        "2.11.1"
+      ],
+      [
+        "transformers",
+        "4.30.2"
+      ],
+      [
+        "torch",
+        "2.0.1"
+      ],
+      [
+        "numpy",
+        "1.24.3"
+      ]
+    ],
+    "analysis_date": "2025-03-26T00:49:35.595099",
+    "repo_size": null,
+    "repo_stars": null,
+    "repo_visibility": false,
+    "model_type": "roberta",
+    "pipeline_tag": "question-answering",
+    "task_categories": null,
+    "license": null,
+    "card_metadata": {
+      "language": "en",
+      "license": "cc-by-4.0",
+      "datasets": [
+        "squad_v2"
+      ],
+      "base_model": [
+        "FacebookAI/roberta-base"
+      ],
+      "model-index": [
+        {
+          "name": "deepset/roberta-base-squad2",
+          "results": [
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squad_v2",
+                "type": "squad_v2",
+                "config": "squad_v2",
+                "split": "validation"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 79.9309,
+                  "name": "Exact Match",
+                  "verified": true,
+                  "verifyToken": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiMDhhNjg5YzNiZGQ1YTIyYTAwZGUwOWEzZTRiYzdjM2QzYjA3ZTUxNDM1NjE1MTUyMjE1MGY1YzEzMjRjYzVjYiIsInZlcnNpb24iOjF9.EH5JJo8EEFwU7osPz3s7qanw_tigeCFhCXjSfyN0Y1nWVnSfulSxIk_DbAEI5iE80V4EKLyp5-mYFodWvL2KDA"
+                },
+                {
+                  "type": "f1",
+                  "value": 82.9501,
+                  "name": "F1",
+                  "verified": true,
+                  "verifyToken": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiMjk5ZDYwOGQyNjNkMWI0OTE4YzRmOTlkY2JjNjQ0YTZkNTMzMzNkYTA0MDFmNmI3NjA3NjNlMjhiMDQ2ZjJjNSIsInZlcnNpb24iOjF9.DDm0LNTkdLbGsue58bg1aH_s67KfbcmkvL-6ZiI2s8IoxhHJMSf29H_uV2YLyevwx900t-MwTVOW3qfFnMMEAQ"
+                },
+                {
+                  "type": "total",
+                  "value": 11869,
+                  "name": "total",
+                  "verified": true,
+                  "verifyToken": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiMGFkMmI2ODM0NmY5NGNkNmUxYWViOWYxZDNkY2EzYWFmOWI4N2VhYzY5MGEzMTVhOTU4Zjc4YWViOGNjOWJjMCIsInZlcnNpb24iOjF9.fexrU1icJK5_MiifBtZWkeUvpmFISqBLDXSQJ8E6UnrRof-7cU0s4tX_dIsauHWtUpIHMPZCf5dlMWQKXZuAAA"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squad",
+                "type": "squad",
+                "config": "plain_text",
+                "split": "validation"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 85.289,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 91.841,
+                  "name": "F1"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "adversarial_qa",
+                "type": "adversarial_qa",
+                "config": "adversarialQA",
+                "split": "validation"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 29.5,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 40.367,
+                  "name": "F1"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squad_adversarial",
+                "type": "squad_adversarial",
+                "config": "AddOneSent",
+                "split": "validation"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 78.567,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 84.469,
+                  "name": "F1"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squadshifts amazon",
+                "type": "squadshifts",
+                "config": "amazon",
+                "split": "test"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 69.924,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 83.284,
+                  "name": "F1"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squadshifts new_wiki",
+                "type": "squadshifts",
+                "config": "new_wiki",
+                "split": "test"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 81.204,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 90.595,
+                  "name": "F1"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squadshifts nyt",
+                "type": "squadshifts",
+                "config": "nyt",
+                "split": "test"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 82.931,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 90.756,
+                  "name": "F1"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squadshifts reddit",
+                "type": "squadshifts",
+                "config": "reddit",
+                "split": "test"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 71.55,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 82.939,
+                  "name": "F1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "card_text": "\n# roberta-base for Extractive QA \n\nThis is the [roberta-base](https://huggingface.co/roberta-base) model, fine-tuned using the [SQuAD2.0](https://huggingface.co/datasets/squad_v2) dataset. It's been trained on question-answer pairs, including unanswerable questions, for the task of Extractive Question Answering. \nWe have also released a distilled version of this model called [deepset/tinyroberta-squad2](https://huggingface.co/deepset/tinyroberta-squad2). It has a comparable prediction quality and runs at twice the speed of [deepset/roberta-base-squad2](https://huggingface.co/deepset/roberta-base-squad2).\n\n\n## Overview\n**Language model:** roberta-base  \n**Language:** English  \n**Downstream-task:** Extractive QA  \n**Training data:** SQuAD 2.0  \n**Eval data:** SQuAD 2.0  \n**Code:**  See [an example extractive QA pipeline built with Haystack](https://haystack.deepset.ai/tutorials/34_extractive_qa_pipeline)  \n**Infrastructure**: 4x Tesla v100\n\n## Hyperparameters\n\n```\nbatch_size = 96\nn_epochs = 2\nbase_LM_model = \"roberta-base\"\nmax_seq_len = 386\nlearning_rate = 3e-5\nlr_schedule = LinearWarmup\nwarmup_proportion = 0.2\ndoc_stride=128\nmax_query_length=64\n``` \n\n## Usage\n\n### In Haystack\nHaystack is an AI orchestration framework to build customizable, production-ready LLM applications. You can use this model in Haystack to do extractive question answering on documents. \nTo load and run the model with [Haystack](https://github.com/deepset-ai/haystack/):\n```python\n# After running pip install haystack-ai \"transformers[torch,sentencepiece]\"\n\nfrom haystack import Document\nfrom haystack.components.readers import ExtractiveReader\n\ndocs = [\n    Document(content=\"Python is a popular programming language\"),\n    Document(content=\"python ist eine beliebte Programmiersprache\"),\n]\n\nreader = ExtractiveReader(model=\"deepset/roberta-base-squad2\")\nreader.warm_up()\n\nquestion = \"What is a popular programming language?\"\nresult = reader.run(query=question, documents=docs)\n# {'answers': [ExtractedAnswer(query='What is a popular programming language?', score=0.5740374326705933, data='python', document=Document(id=..., content: '...'), context=None, document_offset=ExtractedAnswer.Span(start=0, end=6),...)]}\n```\nFor a complete example with an extractive question answering pipeline that scales over many documents, check out the [corresponding Haystack tutorial](https://haystack.deepset.ai/tutorials/34_extractive_qa_pipeline).\n\n### In Transformers\n```python\nfrom transformers import AutoModelForQuestionAnswering, AutoTokenizer, pipeline\n\nmodel_name = \"deepset/roberta-base-squad2\"\n\n# a) Get predictions\nnlp = pipeline('question-answering', model=model_name, tokenizer=model_name)\nQA_input = {\n    'question': 'Why is model conversion important?',\n    'context': 'The option to convert models between FARM and transformers gives freedom to the user and let people easily switch between frameworks.'\n}\nres = nlp(QA_input)\n\n# b) Load model & tokenizer\nmodel = AutoModelForQuestionAnswering.from_pretrained(model_name)\ntokenizer = AutoTokenizer.from_pretrained(model_name)\n```\n\n## Performance\nEvaluated on the SQuAD 2.0 dev set with the [official eval script](https://worksheets.codalab.org/rest/bundles/0x6b567e1cf2e041ec80d7098f031c5c9e/contents/blob/).\n\n```\n\"exact\": 79.87029394424324,\n\"f1\": 82.91251169582613,\n\n\"total\": 11873,\n\"HasAns_exact\": 77.93522267206478,\n\"HasAns_f1\": 84.02838248389763,\n\"HasAns_total\": 5928,\n\"NoAns_exact\": 81.79983179142137,\n\"NoAns_f1\": 81.79983179142137,\n\"NoAns_total\": 5945\n```\n\n## Authors\n**Branden Chan:** branden.chan@deepset.ai  \n**Timo M\u00f6ller:** timo.moeller@deepset.ai  \n**Malte Pietsch:** malte.pietsch@deepset.ai  \n**Tanay Soni:**  tanay.soni@deepset.ai \n\n## About us\n\n<div class=\"grid lg:grid-cols-2 gap-x-4 gap-y-3\">\n    <div class=\"w-full h-40 object-cover mb-2 rounded-lg flex items-center justify-center\">\n         <img alt=\"\" src=\"https://raw.githubusercontent.com/deepset-ai/.github/main/deepset-logo-colored.png\" class=\"w-40\"/>\n     </div>\n     <div class=\"w-full h-40 object-cover mb-2 rounded-lg flex items-center justify-center\">\n         <img alt=\"\" src=\"https://raw.githubusercontent.com/deepset-ai/.github/main/haystack-logo-colored.png\" class=\"w-40\"/>\n     </div>\n</div>\n\n[deepset](http://deepset.ai/) is the company behind the production-ready open-source AI framework [Haystack](https://haystack.deepset.ai/).\n\nSome of our other work: \n- [Distilled roberta-base-squad2 (aka \"tinyroberta-squad2\")](https://huggingface.co/deepset/tinyroberta-squad2)\n- [German BERT](https://deepset.ai/german-bert), [GermanQuAD and GermanDPR](https://deepset.ai/germanquad), [German embedding model](https://huggingface.co/mixedbread-ai/deepset-mxbai-embed-de-large-v1)\n- [deepset Cloud](https://www.deepset.ai/deepset-cloud-product)\n- [deepset Studio](https://www.deepset.ai/deepset-studio)\n\n## Get in touch and join the Haystack community\n\n<p>For more info on Haystack, visit our <strong><a href=\"https://github.com/deepset-ai/haystack\">GitHub</a></strong> repo and <strong><a href=\"https://docs.haystack.deepset.ai\">Documentation</a></strong>. \n\nWe also have a <strong><a class=\"h-7\" href=\"https://haystack.deepset.ai/community\">Discord community open to everyone!</a></strong></p>\n\n[Twitter](https://twitter.com/Haystack_AI) | [LinkedIn](https://www.linkedin.com/company/deepset-ai/) | [Discord](https://haystack.deepset.ai/community) | [GitHub Discussions](https://github.com/deepset-ai/haystack/discussions) | [Website](https://haystack.deepset.ai/) | [YouTube](https://www.youtube.com/@deepset_ai)\n\nBy the way: [we're hiring!](http://www.deepset.ai/jobs)",
+    "card_content": "---\nlanguage: en\nlicense: cc-by-4.0\ndatasets:\n- squad_v2\nbase_model:\n- FacebookAI/roberta-base\nmodel-index:\n- name: deepset/roberta-base-squad2\n  results:\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squad_v2\n      type: squad_v2\n      config: squad_v2\n      split: validation\n    metrics:\n    - type: exact_match\n      value: 79.9309\n      name: Exact Match\n      verified: true\n      verifyToken: eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiMDhhNjg5YzNiZGQ1YTIyYTAwZGUwOWEzZTRiYzdjM2QzYjA3ZTUxNDM1NjE1MTUyMjE1MGY1YzEzMjRjYzVjYiIsInZlcnNpb24iOjF9.EH5JJo8EEFwU7osPz3s7qanw_tigeCFhCXjSfyN0Y1nWVnSfulSxIk_DbAEI5iE80V4EKLyp5-mYFodWvL2KDA\n    - type: f1\n      value: 82.9501\n      name: F1\n      verified: true\n      verifyToken: eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiMjk5ZDYwOGQyNjNkMWI0OTE4YzRmOTlkY2JjNjQ0YTZkNTMzMzNkYTA0MDFmNmI3NjA3NjNlMjhiMDQ2ZjJjNSIsInZlcnNpb24iOjF9.DDm0LNTkdLbGsue58bg1aH_s67KfbcmkvL-6ZiI2s8IoxhHJMSf29H_uV2YLyevwx900t-MwTVOW3qfFnMMEAQ\n    - type: total\n      value: 11869\n      name: total\n      verified: true\n      verifyToken: eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiMGFkMmI2ODM0NmY5NGNkNmUxYWViOWYxZDNkY2EzYWFmOWI4N2VhYzY5MGEzMTVhOTU4Zjc4YWViOGNjOWJjMCIsInZlcnNpb24iOjF9.fexrU1icJK5_MiifBtZWkeUvpmFISqBLDXSQJ8E6UnrRof-7cU0s4tX_dIsauHWtUpIHMPZCf5dlMWQKXZuAAA\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squad\n      type: squad\n      config: plain_text\n      split: validation\n    metrics:\n    - type: exact_match\n      value: 85.289\n      name: Exact Match\n    - type: f1\n      value: 91.841\n      name: F1\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: adversarial_qa\n      type: adversarial_qa\n      config: adversarialQA\n      split: validation\n    metrics:\n    - type: exact_match\n      value: 29.5\n      name: Exact Match\n    - type: f1\n      value: 40.367\n      name: F1\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squad_adversarial\n      type: squad_adversarial\n      config: AddOneSent\n      split: validation\n    metrics:\n    - type: exact_match\n      value: 78.567\n      name: Exact Match\n    - type: f1\n      value: 84.469\n      name: F1\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squadshifts amazon\n      type: squadshifts\n      config: amazon\n      split: test\n    metrics:\n    - type: exact_match\n      value: 69.924\n      name: Exact Match\n    - type: f1\n      value: 83.284\n      name: F1\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squadshifts new_wiki\n      type: squadshifts\n      config: new_wiki\n      split: test\n    metrics:\n    - type: exact_match\n      value: 81.204\n      name: Exact Match\n    - type: f1\n      value: 90.595\n      name: F1\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squadshifts nyt\n      type: squadshifts\n      config: nyt\n      split: test\n    metrics:\n    - type: exact_match\n      value: 82.931\n      name: Exact Match\n    - type: f1\n      value: 90.756\n      name: F1\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squadshifts reddit\n      type: squadshifts\n      config: reddit\n      split: test\n    metrics:\n    - type: exact_match\n      value: 71.55\n      name: Exact Match\n    - type: f1\n      value: 82.939\n      name: F1\n---\n\n# roberta-base for Extractive QA \n\nThis is the [roberta-base](https://huggingface.co/roberta-base) model, fine-tuned using the [SQuAD2.0](https://huggingface.co/datasets/squad_v2) dataset. It's been trained on question-answer pairs, including unanswerable questions, for the task of Extractive Question Answering. \nWe have also released a distilled version of this model called [deepset/tinyroberta-squad2](https://huggingface.co/deepset/tinyroberta-squad2). It has a comparable prediction quality and runs at twice the speed of [deepset/roberta-base-squad2](https://huggingface.co/deepset/roberta-base-squad2).\n\n\n## Overview\n**Language model:** roberta-base  \n**Language:** English  \n**Downstream-task:** Extractive QA  \n**Training data:** SQuAD 2.0  \n**Eval data:** SQuAD 2.0  \n**Code:**  See [an example extractive QA pipeline built with Haystack](https://haystack.deepset.ai/tutorials/34_extractive_qa_pipeline)  \n**Infrastructure**: 4x Tesla v100\n\n## Hyperparameters\n\n```\nbatch_size = 96\nn_epochs = 2\nbase_LM_model = \"roberta-base\"\nmax_seq_len = 386\nlearning_rate = 3e-5\nlr_schedule = LinearWarmup\nwarmup_proportion = 0.2\ndoc_stride=128\nmax_query_length=64\n``` \n\n## Usage\n\n### In Haystack\nHaystack is an AI orchestration framework to build customizable, production-ready LLM applications. You can use this model in Haystack to do extractive question answering on documents. \nTo load and run the model with [Haystack](https://github.com/deepset-ai/haystack/):\n```python\n# After running pip install haystack-ai \"transformers[torch,sentencepiece]\"\n\nfrom haystack import Document\nfrom haystack.components.readers import ExtractiveReader\n\ndocs = [\n    Document(content=\"Python is a popular programming language\"),\n    Document(content=\"python ist eine beliebte Programmiersprache\"),\n]\n\nreader = ExtractiveReader(model=\"deepset/roberta-base-squad2\")\nreader.warm_up()\n\nquestion = \"What is a popular programming language?\"\nresult = reader.run(query=question, documents=docs)\n# {'answers': [ExtractedAnswer(query='What is a popular programming language?', score=0.5740374326705933, data='python', document=Document(id=..., content: '...'), context=None, document_offset=ExtractedAnswer.Span(start=0, end=6),...)]}\n```\nFor a complete example with an extractive question answering pipeline that scales over many documents, check out the [corresponding Haystack tutorial](https://haystack.deepset.ai/tutorials/34_extractive_qa_pipeline).\n\n### In Transformers\n```python\nfrom transformers import AutoModelForQuestionAnswering, AutoTokenizer, pipeline\n\nmodel_name = \"deepset/roberta-base-squad2\"\n\n# a) Get predictions\nnlp = pipeline('question-answering', model=model_name, tokenizer=model_name)\nQA_input = {\n    'question': 'Why is model conversion important?',\n    'context': 'The option to convert models between FARM and transformers gives freedom to the user and let people easily switch between frameworks.'\n}\nres = nlp(QA_input)\n\n# b) Load model & tokenizer\nmodel = AutoModelForQuestionAnswering.from_pretrained(model_name)\ntokenizer = AutoTokenizer.from_pretrained(model_name)\n```\n\n## Performance\nEvaluated on the SQuAD 2.0 dev set with the [official eval script](https://worksheets.codalab.org/rest/bundles/0x6b567e1cf2e041ec80d7098f031c5c9e/contents/blob/).\n\n```\n\"exact\": 79.87029394424324,\n\"f1\": 82.91251169582613,\n\n\"total\": 11873,\n\"HasAns_exact\": 77.93522267206478,\n\"HasAns_f1\": 84.02838248389763,\n\"HasAns_total\": 5928,\n\"NoAns_exact\": 81.79983179142137,\n\"NoAns_f1\": 81.79983179142137,\n\"NoAns_total\": 5945\n```\n\n## Authors\n**Branden Chan:** branden.chan@deepset.ai  \n**Timo M\u00f6ller:** timo.moeller@deepset.ai  \n**Malte Pietsch:** malte.pietsch@deepset.ai  \n**Tanay Soni:**  tanay.soni@deepset.ai \n\n## About us\n\n<div class=\"grid lg:grid-cols-2 gap-x-4 gap-y-3\">\n    <div class=\"w-full h-40 object-cover mb-2 rounded-lg flex items-center justify-center\">\n         <img alt=\"\" src=\"https://raw.githubusercontent.com/deepset-ai/.github/main/deepset-logo-colored.png\" class=\"w-40\"/>\n     </div>\n     <div class=\"w-full h-40 object-cover mb-2 rounded-lg flex items-center justify-center\">\n         <img alt=\"\" src=\"https://raw.githubusercontent.com/deepset-ai/.github/main/haystack-logo-colored.png\" class=\"w-40\"/>\n     </div>\n</div>\n\n[deepset](http://deepset.ai/) is the company behind the production-ready open-source AI framework [Haystack](https://haystack.deepset.ai/).\n\nSome of our other work: \n- [Distilled roberta-base-squad2 (aka \"tinyroberta-squad2\")](https://huggingface.co/deepset/tinyroberta-squad2)\n- [German BERT](https://deepset.ai/german-bert), [GermanQuAD and GermanDPR](https://deepset.ai/germanquad), [German embedding model](https://huggingface.co/mixedbread-ai/deepset-mxbai-embed-de-large-v1)\n- [deepset Cloud](https://www.deepset.ai/deepset-cloud-product)\n- [deepset Studio](https://www.deepset.ai/deepset-studio)\n\n## Get in touch and join the Haystack community\n\n<p>For more info on Haystack, visit our <strong><a href=\"https://github.com/deepset-ai/haystack\">GitHub</a></strong> repo and <strong><a href=\"https://docs.haystack.deepset.ai\">Documentation</a></strong>. \n\nWe also have a <strong><a class=\"h-7\" href=\"https://haystack.deepset.ai/community\">Discord community open to everyone!</a></strong></p>\n\n[Twitter](https://twitter.com/Haystack_AI) | [LinkedIn](https://www.linkedin.com/company/deepset-ai/) | [Discord](https://haystack.deepset.ai/community) | [GitHub Discussions](https://github.com/deepset-ai/haystack/discussions) | [Website](https://haystack.deepset.ai/) | [YouTube](https://www.youtube.com/@deepset_ai)\n\nBy the way: [we're hiring!](http://www.deepset.ai/jobs)",
+    "library_name": "transformers"
+  },
+  {
+    "model_id": "distilbert/distilbert-base-cased-distilled-squad",
+    "model_name": "distilbert/distilbert-base-cased-distilled-squad",
+    "author": "distilbert",
+    "downloads": 543132,
+    "likes": 239,
+    "tags": [
+      "transformers",
+      "pytorch",
+      "tf",
+      "rust",
+      "safetensors",
+      "openvino",
+      "distilbert",
+      "question-answering",
+      "en",
+      "dataset:squad",
+      "arxiv:1910.01108",
+      "arxiv:1910.09700",
+      "license:apache-2.0",
+      "model-index",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "card_url": "https://huggingface.co/distilbert/distilbert-base-cased-distilled-squad",
+    "dependencies": [
+      [
+        "transformers",
+        "4.30.2"
+      ],
+      [
+        "torch",
+        "2.0.1"
+      ],
+      [
+        "numpy",
+        "1.24.3"
+      ],
+      [
+        "hf_xet",
+        "0.1.0"
+      ]
+    ],
+    "analysis_date": "2025-03-26T00:49:37.207592",
+    "repo_size": null,
+    "repo_stars": null,
+    "repo_visibility": false,
+    "model_type": "distilbert",
+    "pipeline_tag": "question-answering",
+    "task_categories": null,
+    "license": null,
+    "card_metadata": {
+      "language": "en",
+      "license": "apache-2.0",
+      "datasets": [
+        "squad"
+      ],
+      "metrics": [
+        "squad"
+      ],
+      "model-index": [
+        {
+          "name": "distilbert-base-cased-distilled-squad",
+          "results": [
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squad",
+                "type": "squad",
+                "config": "plain_text",
+                "split": "validation"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 79.5998,
+                  "name": "Exact Match",
+                  "verified": true,
+                  "verifyToken": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiZTViZDA2Y2E2NjUyMjNjYjkzNTUzODc5OTk2OTNkYjQxMDRmMDhlYjdmYWJjYWQ2N2RlNzY1YmI3OWY1NmRhOSIsInZlcnNpb24iOjF9.ZJHhboAMwsi3pqU-B-XKRCYP_tzpCRb8pEjGr2Oc-TteZeoWHI8CXcpDxugfC3f7d_oBcKWLzh3CClQxBW1iAQ"
+                },
+                {
+                  "type": "f1",
+                  "value": 86.9965,
+                  "name": "F1",
+                  "verified": true,
+                  "verifyToken": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiZWZlMzY2MmE1NDNhOGNjNWRmODg0YjQ2Zjk5MjUzZDQ2MDYxOTBlMTNhNzQ4NTA2NjRmNDU3MGIzMTYwMmUyOSIsInZlcnNpb24iOjF9.z0ZDir87aT7UEmUeDm8Uw0oUdAqzlBz343gwnsQP3YLfGsaHe-jGlhco0Z7ISUd9NokyCiJCRc4NNxJQ83IuCw"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "card_text": "\n# DistilBERT base cased distilled SQuAD\n\n## Table of Contents\n- [Model Details](#model-details)\n- [How To Get Started With the Model](#how-to-get-started-with-the-model)\n- [Uses](#uses)\n- [Risks, Limitations and Biases](#risks-limitations-and-biases)\n- [Training](#training)\n- [Evaluation](#evaluation)\n- [Environmental Impact](#environmental-impact)\n- [Technical Specifications](#technical-specifications)\n- [Citation Information](#citation-information)\n- [Model Card Authors](#model-card-authors)\n\n## Model Details\n\n**Model Description:** The DistilBERT model was proposed in the blog post [Smaller, faster, cheaper, lighter: Introducing DistilBERT, adistilled version of BERT](https://medium.com/huggingface/distilbert-8cf3380435b5), and the paper [DistilBERT, adistilled version of BERT: smaller, faster, cheaper and lighter](https://arxiv.org/abs/1910.01108). DistilBERT is a small, fast, cheap and light Transformer model trained by distilling BERT base. It has 40% less parameters than *bert-base-uncased*, runs 60% faster while preserving over 95% of BERT's performances as measured on the GLUE language understanding benchmark.\n\nThis model is a fine-tune checkpoint of [DistilBERT-base-cased](https://huggingface.co/distilbert-base-cased), fine-tuned using (a second step of) knowledge distillation on [SQuAD v1.1](https://huggingface.co/datasets/squad). \n\n- **Developed by:** Hugging Face\n- **Model Type:** Transformer-based language model\n- **Language(s):** English \n- **License:** Apache 2.0\n- **Related Models:** [DistilBERT-base-cased](https://huggingface.co/distilbert-base-cased)\n- **Resources for more information:**\n  - See [this repository](https://github.com/huggingface/transformers/tree/main/examples/research_projects/distillation) for more about Distil\\* (a class of compressed models including this model)\n  - See [Sanh et al. (2019)](https://arxiv.org/abs/1910.01108) for more information about knowledge distillation and the training procedure\n\n## How to Get Started with the Model \n\nUse the code below to get started with the model. \n\n```python\n>>> from transformers import pipeline\n>>> question_answerer = pipeline(\"question-answering\", model='distilbert-base-cased-distilled-squad')\n\n>>> context = r\"\"\"\n... Extractive Question Answering is the task of extracting an answer from a text given a question. An example     of a\n... question answering dataset is the SQuAD dataset, which is entirely based on that task. If you would like to fine-tune\n... a model on a SQuAD task, you may leverage the examples/pytorch/question-answering/run_squad.py script.\n... \"\"\"\n\n>>> result = question_answerer(question=\"What is a good example of a question answering dataset?\",     context=context)\n>>> print(\n... f\"Answer: '{result['answer']}', score: {round(result['score'], 4)}, start: {result['start']}, end: {result['end']}\"\n...)\n\nAnswer: 'SQuAD dataset', score: 0.5152, start: 147, end: 160\n```\n\nHere is how to use this model in PyTorch:\n\n```python\nfrom transformers import DistilBertTokenizer, DistilBertModel\nimport torch\ntokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-cased-distilled-squad')\nmodel = DistilBertModel.from_pretrained('distilbert-base-cased-distilled-squad')\n\nquestion, text = \"Who was Jim Henson?\", \"Jim Henson was a nice puppet\"\n\ninputs = tokenizer(question, text, return_tensors=\"pt\")\nwith torch.no_grad():\n    outputs = model(**inputs)\n\nprint(outputs)\n```\n\nAnd in TensorFlow: \n\n```python\nfrom transformers import DistilBertTokenizer, TFDistilBertForQuestionAnswering\nimport tensorflow as tf\n\ntokenizer = DistilBertTokenizer.from_pretrained(\"distilbert-base-cased-distilled-squad\")\nmodel = TFDistilBertForQuestionAnswering.from_pretrained(\"distilbert-base-cased-distilled-squad\")\n\nquestion, text = \"Who was Jim Henson?\", \"Jim Henson was a nice puppet\"\n\ninputs = tokenizer(question, text, return_tensors=\"tf\")\noutputs = model(**inputs)\n\nanswer_start_index = int(tf.math.argmax(outputs.start_logits, axis=-1)[0])\nanswer_end_index = int(tf.math.argmax(outputs.end_logits, axis=-1)[0])\n\npredict_answer_tokens = inputs.input_ids[0, answer_start_index : answer_end_index + 1]\ntokenizer.decode(predict_answer_tokens)\n```\n\n## Uses\n\nThis model can be used for question answering.\n\n#### Misuse and Out-of-scope Use\n\nThe model should not be used to intentionally create hostile or alienating environments for people. In addition, the model was not trained to be factual or true representations of people or events, and therefore using the model to generate such content is out-of-scope for the abilities of this model.\n\n## Risks, Limitations and Biases\n\n**CONTENT WARNING: Readers should be aware that language generated by this model can be disturbing or offensive to some and can propagate historical and current stereotypes.**\n\nSignificant research has explored bias and fairness issues with language models (see, e.g., [Sheng et al. (2021)](https://aclanthology.org/2021.acl-long.330.pdf) and [Bender et al. (2021)](https://dl.acm.org/doi/pdf/10.1145/3442188.3445922)). Predictions generated by the model can include disturbing and harmful stereotypes across protected classes; identity characteristics; and sensitive, social, and occupational groups. For example:\n\n\n```python\n>>> from transformers import pipeline\n>>> question_answerer = pipeline(\"question-answering\", model='distilbert-base-cased-distilled-squad')\n\n>>> context = r\"\"\"\n... Alice is sitting on the bench. Bob is sitting next to her.\n... \"\"\"\n\n>>> result = question_answerer(question=\"Who is the CEO?\", context=context)\n>>> print(\n... f\"Answer: '{result['answer']}', score: {round(result['score'], 4)}, start: {result['start']}, end: {result['end']}\"\n...)\n\nAnswer: 'Bob', score: 0.7527, start: 32, end: 35\n```\n\nUsers (both direct and downstream) should be made aware of the risks, biases and limitations of the model.\n\n## Training\n\n#### Training Data\n\nThe [distilbert-base-cased model](https://huggingface.co/distilbert-base-cased) was trained using the same data as the [distilbert-base-uncased model](https://huggingface.co/distilbert-base-uncased). The [distilbert-base-uncased model](https://huggingface.co/distilbert-base-uncased) model describes it's training data as: \n\n> DistilBERT pretrained on the same data as BERT, which is [BookCorpus](https://yknzhu.wixsite.com/mbweb), a dataset consisting of 11,038 unpublished books and [English Wikipedia](https://en.wikipedia.org/wiki/English_Wikipedia) (excluding lists, tables and headers).\n\nTo learn more about the SQuAD v1.1 dataset, see the [SQuAD v1.1 data card](https://huggingface.co/datasets/squad).\n\n#### Training Procedure\n\n##### Preprocessing\n\nSee the [distilbert-base-cased model card](https://huggingface.co/distilbert-base-cased) for further details.\n\n##### Pretraining\n\nSee the [distilbert-base-cased model card](https://huggingface.co/distilbert-base-cased) for further details. \n\n## Evaluation\n\nAs discussed in the [model repository](https://github.com/huggingface/transformers/blob/main/examples/research_projects/distillation/README.md)\n\n> This model reaches a F1 score of 87.1 on the [SQuAD v1.1] dev set (for comparison, BERT bert-base-cased version reaches a F1 score of 88.7).\t\n\n## Environmental Impact\n\nCarbon emissions can be estimated using the [Machine Learning Impact calculator](https://mlco2.github.io/impact#compute) presented in [Lacoste et al. (2019)](https://arxiv.org/abs/1910.09700). We present the hardware type and hours used based on the [associated paper](https://arxiv.org/pdf/1910.01108.pdf). Note that these details are just for training DistilBERT, not including the fine-tuning with SQuAD.\n\n- **Hardware Type:** 8 16GB V100 GPUs\n- **Hours used:** 90 hours\n- **Cloud Provider:** Unknown\n- **Compute Region:** Unknown\n- **Carbon Emitted:** Unknown\n\n## Technical Specifications\n\nSee the [associated paper](https://arxiv.org/abs/1910.01108) for details on the modeling architecture, objective, compute infrastructure, and training details.\n\n## Citation Information\n\n```bibtex\n@inproceedings{sanh2019distilbert,\n  title={DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter},\n  author={Sanh, Victor and Debut, Lysandre and Chaumond, Julien and Wolf, Thomas},\n  booktitle={NeurIPS EMC^2 Workshop},\n  year={2019}\n}\n```\n\nAPA: \n- Sanh, V., Debut, L., Chaumond, J., & Wolf, T. (2019). DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter. arXiv preprint arXiv:1910.01108.\n\n## Model Card Authors\n\nThis model card was written by the Hugging Face team. \n",
+    "card_content": "---\nlanguage: en\nlicense: apache-2.0\ndatasets:\n- squad\nmetrics:\n- squad\nmodel-index:\n- name: distilbert-base-cased-distilled-squad\n  results:\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squad\n      type: squad\n      config: plain_text\n      split: validation\n    metrics:\n    - type: exact_match\n      value: 79.5998\n      name: Exact Match\n      verified: true\n      verifyToken: eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiZTViZDA2Y2E2NjUyMjNjYjkzNTUzODc5OTk2OTNkYjQxMDRmMDhlYjdmYWJjYWQ2N2RlNzY1YmI3OWY1NmRhOSIsInZlcnNpb24iOjF9.ZJHhboAMwsi3pqU-B-XKRCYP_tzpCRb8pEjGr2Oc-TteZeoWHI8CXcpDxugfC3f7d_oBcKWLzh3CClQxBW1iAQ\n    - type: f1\n      value: 86.9965\n      name: F1\n      verified: true\n      verifyToken: eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiZWZlMzY2MmE1NDNhOGNjNWRmODg0YjQ2Zjk5MjUzZDQ2MDYxOTBlMTNhNzQ4NTA2NjRmNDU3MGIzMTYwMmUyOSIsInZlcnNpb24iOjF9.z0ZDir87aT7UEmUeDm8Uw0oUdAqzlBz343gwnsQP3YLfGsaHe-jGlhco0Z7ISUd9NokyCiJCRc4NNxJQ83IuCw\n---\n\n# DistilBERT base cased distilled SQuAD\n\n## Table of Contents\n- [Model Details](#model-details)\n- [How To Get Started With the Model](#how-to-get-started-with-the-model)\n- [Uses](#uses)\n- [Risks, Limitations and Biases](#risks-limitations-and-biases)\n- [Training](#training)\n- [Evaluation](#evaluation)\n- [Environmental Impact](#environmental-impact)\n- [Technical Specifications](#technical-specifications)\n- [Citation Information](#citation-information)\n- [Model Card Authors](#model-card-authors)\n\n## Model Details\n\n**Model Description:** The DistilBERT model was proposed in the blog post [Smaller, faster, cheaper, lighter: Introducing DistilBERT, adistilled version of BERT](https://medium.com/huggingface/distilbert-8cf3380435b5), and the paper [DistilBERT, adistilled version of BERT: smaller, faster, cheaper and lighter](https://arxiv.org/abs/1910.01108). DistilBERT is a small, fast, cheap and light Transformer model trained by distilling BERT base. It has 40% less parameters than *bert-base-uncased*, runs 60% faster while preserving over 95% of BERT's performances as measured on the GLUE language understanding benchmark.\n\nThis model is a fine-tune checkpoint of [DistilBERT-base-cased](https://huggingface.co/distilbert-base-cased), fine-tuned using (a second step of) knowledge distillation on [SQuAD v1.1](https://huggingface.co/datasets/squad). \n\n- **Developed by:** Hugging Face\n- **Model Type:** Transformer-based language model\n- **Language(s):** English \n- **License:** Apache 2.0\n- **Related Models:** [DistilBERT-base-cased](https://huggingface.co/distilbert-base-cased)\n- **Resources for more information:**\n  - See [this repository](https://github.com/huggingface/transformers/tree/main/examples/research_projects/distillation) for more about Distil\\* (a class of compressed models including this model)\n  - See [Sanh et al. (2019)](https://arxiv.org/abs/1910.01108) for more information about knowledge distillation and the training procedure\n\n## How to Get Started with the Model \n\nUse the code below to get started with the model. \n\n```python\n>>> from transformers import pipeline\n>>> question_answerer = pipeline(\"question-answering\", model='distilbert-base-cased-distilled-squad')\n\n>>> context = r\"\"\"\n... Extractive Question Answering is the task of extracting an answer from a text given a question. An example     of a\n... question answering dataset is the SQuAD dataset, which is entirely based on that task. If you would like to fine-tune\n... a model on a SQuAD task, you may leverage the examples/pytorch/question-answering/run_squad.py script.\n... \"\"\"\n\n>>> result = question_answerer(question=\"What is a good example of a question answering dataset?\",     context=context)\n>>> print(\n... f\"Answer: '{result['answer']}', score: {round(result['score'], 4)}, start: {result['start']}, end: {result['end']}\"\n...)\n\nAnswer: 'SQuAD dataset', score: 0.5152, start: 147, end: 160\n```\n\nHere is how to use this model in PyTorch:\n\n```python\nfrom transformers import DistilBertTokenizer, DistilBertModel\nimport torch\ntokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-cased-distilled-squad')\nmodel = DistilBertModel.from_pretrained('distilbert-base-cased-distilled-squad')\n\nquestion, text = \"Who was Jim Henson?\", \"Jim Henson was a nice puppet\"\n\ninputs = tokenizer(question, text, return_tensors=\"pt\")\nwith torch.no_grad():\n    outputs = model(**inputs)\n\nprint(outputs)\n```\n\nAnd in TensorFlow: \n\n```python\nfrom transformers import DistilBertTokenizer, TFDistilBertForQuestionAnswering\nimport tensorflow as tf\n\ntokenizer = DistilBertTokenizer.from_pretrained(\"distilbert-base-cased-distilled-squad\")\nmodel = TFDistilBertForQuestionAnswering.from_pretrained(\"distilbert-base-cased-distilled-squad\")\n\nquestion, text = \"Who was Jim Henson?\", \"Jim Henson was a nice puppet\"\n\ninputs = tokenizer(question, text, return_tensors=\"tf\")\noutputs = model(**inputs)\n\nanswer_start_index = int(tf.math.argmax(outputs.start_logits, axis=-1)[0])\nanswer_end_index = int(tf.math.argmax(outputs.end_logits, axis=-1)[0])\n\npredict_answer_tokens = inputs.input_ids[0, answer_start_index : answer_end_index + 1]\ntokenizer.decode(predict_answer_tokens)\n```\n\n## Uses\n\nThis model can be used for question answering.\n\n#### Misuse and Out-of-scope Use\n\nThe model should not be used to intentionally create hostile or alienating environments for people. In addition, the model was not trained to be factual or true representations of people or events, and therefore using the model to generate such content is out-of-scope for the abilities of this model.\n\n## Risks, Limitations and Biases\n\n**CONTENT WARNING: Readers should be aware that language generated by this model can be disturbing or offensive to some and can propagate historical and current stereotypes.**\n\nSignificant research has explored bias and fairness issues with language models (see, e.g., [Sheng et al. (2021)](https://aclanthology.org/2021.acl-long.330.pdf) and [Bender et al. (2021)](https://dl.acm.org/doi/pdf/10.1145/3442188.3445922)). Predictions generated by the model can include disturbing and harmful stereotypes across protected classes; identity characteristics; and sensitive, social, and occupational groups. For example:\n\n\n```python\n>>> from transformers import pipeline\n>>> question_answerer = pipeline(\"question-answering\", model='distilbert-base-cased-distilled-squad')\n\n>>> context = r\"\"\"\n... Alice is sitting on the bench. Bob is sitting next to her.\n... \"\"\"\n\n>>> result = question_answerer(question=\"Who is the CEO?\", context=context)\n>>> print(\n... f\"Answer: '{result['answer']}', score: {round(result['score'], 4)}, start: {result['start']}, end: {result['end']}\"\n...)\n\nAnswer: 'Bob', score: 0.7527, start: 32, end: 35\n```\n\nUsers (both direct and downstream) should be made aware of the risks, biases and limitations of the model.\n\n## Training\n\n#### Training Data\n\nThe [distilbert-base-cased model](https://huggingface.co/distilbert-base-cased) was trained using the same data as the [distilbert-base-uncased model](https://huggingface.co/distilbert-base-uncased). The [distilbert-base-uncased model](https://huggingface.co/distilbert-base-uncased) model describes it's training data as: \n\n> DistilBERT pretrained on the same data as BERT, which is [BookCorpus](https://yknzhu.wixsite.com/mbweb), a dataset consisting of 11,038 unpublished books and [English Wikipedia](https://en.wikipedia.org/wiki/English_Wikipedia) (excluding lists, tables and headers).\n\nTo learn more about the SQuAD v1.1 dataset, see the [SQuAD v1.1 data card](https://huggingface.co/datasets/squad).\n\n#### Training Procedure\n\n##### Preprocessing\n\nSee the [distilbert-base-cased model card](https://huggingface.co/distilbert-base-cased) for further details.\n\n##### Pretraining\n\nSee the [distilbert-base-cased model card](https://huggingface.co/distilbert-base-cased) for further details. \n\n## Evaluation\n\nAs discussed in the [model repository](https://github.com/huggingface/transformers/blob/main/examples/research_projects/distillation/README.md)\n\n> This model reaches a F1 score of 87.1 on the [SQuAD v1.1] dev set (for comparison, BERT bert-base-cased version reaches a F1 score of 88.7).\t\n\n## Environmental Impact\n\nCarbon emissions can be estimated using the [Machine Learning Impact calculator](https://mlco2.github.io/impact#compute) presented in [Lacoste et al. (2019)](https://arxiv.org/abs/1910.09700). We present the hardware type and hours used based on the [associated paper](https://arxiv.org/pdf/1910.01108.pdf). Note that these details are just for training DistilBERT, not including the fine-tuning with SQuAD.\n\n- **Hardware Type:** 8 16GB V100 GPUs\n- **Hours used:** 90 hours\n- **Cloud Provider:** Unknown\n- **Compute Region:** Unknown\n- **Carbon Emitted:** Unknown\n\n## Technical Specifications\n\nSee the [associated paper](https://arxiv.org/abs/1910.01108) for details on the modeling architecture, objective, compute infrastructure, and training details.\n\n## Citation Information\n\n```bibtex\n@inproceedings{sanh2019distilbert,\n  title={DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter},\n  author={Sanh, Victor and Debut, Lysandre and Chaumond, Julien and Wolf, Thomas},\n  booktitle={NeurIPS EMC^2 Workshop},\n  year={2019}\n}\n```\n\nAPA: \n- Sanh, V., Debut, L., Chaumond, J., & Wolf, T. (2019). DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter. arXiv preprint arXiv:1910.01108.\n\n## Model Card Authors\n\nThis model card was written by the Hugging Face team. \n",
+    "library_name": "transformers"
+  },
+  {
+    "model_id": "deepset/bert-large-uncased-whole-word-masking-squad2",
+    "model_name": "deepset/bert-large-uncased-whole-word-masking-squad2",
+    "author": "deepset",
+    "downloads": 227787,
+    "likes": 30,
+    "tags": [
+      "transformers",
+      "pytorch",
+      "tf",
+      "jax",
+      "safetensors",
+      "bert",
+      "question-answering",
+      "en",
+      "dataset:squad_v2",
+      "license:cc-by-4.0",
+      "model-index",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "card_url": "https://huggingface.co/deepset/bert-large-uncased-whole-word-masking-squad2",
+    "dependencies": [
+      [
+        "haystack-ai",
+        "1.21.2"
+      ],
+      [
+        "transformers",
+        null
+      ]
+    ],
+    "analysis_date": "2025-03-26T00:49:38.721477",
+    "repo_size": null,
+    "repo_stars": null,
+    "repo_visibility": false,
+    "model_type": "bert",
+    "pipeline_tag": "question-answering",
+    "task_categories": null,
+    "license": null,
+    "card_metadata": {
+      "language": "en",
+      "license": "cc-by-4.0",
+      "datasets": [
+        "squad_v2"
+      ],
+      "model-index": [
+        {
+          "name": "deepset/bert-large-uncased-whole-word-masking-squad2",
+          "results": [
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squad_v2",
+                "type": "squad_v2",
+                "config": "squad_v2",
+                "split": "validation"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 80.8846,
+                  "name": "Exact Match",
+                  "verified": true,
+                  "verifyToken": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiY2E5ZGNkY2ExZWViZGEwNWE3OGRmMWM2ZmE4ZDU4ZDQ1OGM3ZWE0NTVmZjFmYmZjZmJmNjJmYTc3NTM3OTk3OSIsInZlcnNpb24iOjF9.aSblF4ywh1fnHHrN6UGL392R5KLaH3FCKQlpiXo_EdQ4XXEAENUCjYm9HWDiFsgfSENL35GkbSyz_GAhnefsAQ"
+                },
+                {
+                  "type": "f1",
+                  "value": 83.8765,
+                  "name": "F1",
+                  "verified": true,
+                  "verifyToken": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiNGFlNmEzMTk2NjRkNTI3ZTk3ZTU1NWNlYzIyN2E0ZDFlNDA2ZjYwZWJlNThkMmRmMmE0YzcwYjIyZDM5NmRiMCIsInZlcnNpb24iOjF9.-rc2_Bsp_B26-o12MFYuAU0Ad2Hg9PDx7Preuk27WlhYJDeKeEr32CW8LLANQABR3Mhw2x8uTYkEUrSDMxxLBw"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squad",
+                "type": "squad",
+                "config": "plain_text",
+                "split": "validation"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 85.904,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 92.586,
+                  "name": "F1"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "adversarial_qa",
+                "type": "adversarial_qa",
+                "config": "adversarialQA",
+                "split": "validation"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 28.233,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 41.17,
+                  "name": "F1"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squad_adversarial",
+                "type": "squad_adversarial",
+                "config": "AddOneSent",
+                "split": "validation"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 78.064,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 83.591,
+                  "name": "F1"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squadshifts amazon",
+                "type": "squadshifts",
+                "config": "amazon",
+                "split": "test"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 65.615,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 80.733,
+                  "name": "F1"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squadshifts new_wiki",
+                "type": "squadshifts",
+                "config": "new_wiki",
+                "split": "test"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 81.57,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 91.199,
+                  "name": "F1"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squadshifts nyt",
+                "type": "squadshifts",
+                "config": "nyt",
+                "split": "test"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 83.279,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 91.09,
+                  "name": "F1"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squadshifts reddit",
+                "type": "squadshifts",
+                "config": "reddit",
+                "split": "test"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 69.305,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 82.405,
+                  "name": "F1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "card_text": "\n# bert-large-uncased-whole-word-masking-squad2 for Extractive QA\n\nThis is a berta-large model, fine-tuned using the SQuAD2.0 dataset for the task of question answering.\n\n## Overview\n**Language model:** bert-large  \n**Language:** English  \n**Downstream-task:** Extractive QA  \n**Training data:** SQuAD 2.0  \n**Eval data:** SQuAD 2.0  \n**Code:**  See [an example extractive QA pipeline built with Haystack](https://haystack.deepset.ai/tutorials/34_extractive_qa_pipeline)  \n\n## Usage\n\n### In Haystack\nHaystack is an AI orchestration framework to build customizable, production-ready LLM applications. You can use this model in Haystack to do extractive question answering on documents. \nTo load and run the model with [Haystack](https://github.com/deepset-ai/haystack/):\n```python\n# After running pip install haystack-ai \"transformers[torch,sentencepiece]\"\n\nfrom haystack import Document\nfrom haystack.components.readers import ExtractiveReader\n\ndocs = [\n    Document(content=\"Python is a popular programming language\"),\n    Document(content=\"python ist eine beliebte Programmiersprache\"),\n]\n\nreader = ExtractiveReader(model=\"deepset/bert-large-uncased-whole-word-masking-squad2\")\nreader.warm_up()\n\nquestion = \"What is a popular programming language?\"\nresult = reader.run(query=question, documents=docs)\n# {'answers': [ExtractedAnswer(query='What is a popular programming language?', score=0.5740374326705933, data='python', document=Document(id=..., content: '...'), context=None, document_offset=ExtractedAnswer.Span(start=0, end=6),...)]}\n```\nFor a complete example with an extractive question answering pipeline that scales over many documents, check out the [corresponding Haystack tutorial](https://haystack.deepset.ai/tutorials/34_extractive_qa_pipeline).\n\n### In Transformers\n```python\nfrom transformers import AutoModelForQuestionAnswering, AutoTokenizer, pipeline\n\nmodel_name = \"deepset/bert-large-uncased-whole-word-masking-squad2\"\n\n# a) Get predictions\nnlp = pipeline('question-answering', model=model_name, tokenizer=model_name)\nQA_input = {\n    'question': 'Why is model conversion important?',\n    'context': 'The option to convert models between FARM and transformers gives freedom to the user and let people easily switch between frameworks.'\n}\nres = nlp(QA_input)\n\n# b) Load model & tokenizer\nmodel = AutoModelForQuestionAnswering.from_pretrained(model_name)\ntokenizer = AutoTokenizer.from_pretrained(model_name)\n```\n\n## About us\n\n<div class=\"grid lg:grid-cols-2 gap-x-4 gap-y-3\">\n    <div class=\"w-full h-40 object-cover mb-2 rounded-lg flex items-center justify-center\">\n         <img alt=\"\" src=\"https://raw.githubusercontent.com/deepset-ai/.github/main/deepset-logo-colored.png\" class=\"w-40\"/>\n     </div>\n     <div class=\"w-full h-40 object-cover mb-2 rounded-lg flex items-center justify-center\">\n         <img alt=\"\" src=\"https://raw.githubusercontent.com/deepset-ai/.github/main/haystack-logo-colored.png\" class=\"w-40\"/>\n     </div>\n</div>\n\n[deepset](http://deepset.ai/) is the company behind the production-ready open-source AI framework [Haystack](https://haystack.deepset.ai/).\n\nSome of our other work: \n- [Distilled roberta-base-squad2 (aka \"tinyroberta-squad2\")](https://huggingface.co/deepset/tinyroberta-squad2)\n- [German BERT](https://deepset.ai/german-bert), [GermanQuAD and GermanDPR](https://deepset.ai/germanquad), [German embedding model](https://huggingface.co/mixedbread-ai/deepset-mxbai-embed-de-large-v1)\n- [deepset Cloud](https://www.deepset.ai/deepset-cloud-product), [deepset Studio](https://www.deepset.ai/deepset-studio)\n\n## Get in touch and join the Haystack community\n\n<p>For more info on Haystack, visit our <strong><a href=\"https://github.com/deepset-ai/haystack\">GitHub</a></strong> repo and <strong><a href=\"https://docs.haystack.deepset.ai\">Documentation</a></strong>. \n\nWe also have a <strong><a class=\"h-7\" href=\"https://haystack.deepset.ai/community\">Discord community open to everyone!</a></strong></p>\n\n[Twitter](https://twitter.com/Haystack_AI) | [LinkedIn](https://www.linkedin.com/company/deepset-ai/) | [Discord](https://haystack.deepset.ai/community) | [GitHub Discussions](https://github.com/deepset-ai/haystack/discussions) | [Website](https://haystack.deepset.ai/) | [YouTube](https://www.youtube.com/@deepset_ai)\n\nBy the way: [we're hiring!](http://www.deepset.ai/jobs)",
+    "card_content": "---\nlanguage: en\nlicense: cc-by-4.0\ndatasets:\n- squad_v2\nmodel-index:\n- name: deepset/bert-large-uncased-whole-word-masking-squad2\n  results:\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squad_v2\n      type: squad_v2\n      config: squad_v2\n      split: validation\n    metrics:\n    - type: exact_match\n      value: 80.8846\n      name: Exact Match\n      verified: true\n      verifyToken: eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiY2E5ZGNkY2ExZWViZGEwNWE3OGRmMWM2ZmE4ZDU4ZDQ1OGM3ZWE0NTVmZjFmYmZjZmJmNjJmYTc3NTM3OTk3OSIsInZlcnNpb24iOjF9.aSblF4ywh1fnHHrN6UGL392R5KLaH3FCKQlpiXo_EdQ4XXEAENUCjYm9HWDiFsgfSENL35GkbSyz_GAhnefsAQ\n    - type: f1\n      value: 83.8765\n      name: F1\n      verified: true\n      verifyToken: eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiNGFlNmEzMTk2NjRkNTI3ZTk3ZTU1NWNlYzIyN2E0ZDFlNDA2ZjYwZWJlNThkMmRmMmE0YzcwYjIyZDM5NmRiMCIsInZlcnNpb24iOjF9.-rc2_Bsp_B26-o12MFYuAU0Ad2Hg9PDx7Preuk27WlhYJDeKeEr32CW8LLANQABR3Mhw2x8uTYkEUrSDMxxLBw\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squad\n      type: squad\n      config: plain_text\n      split: validation\n    metrics:\n    - type: exact_match\n      value: 85.904\n      name: Exact Match\n    - type: f1\n      value: 92.586\n      name: F1\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: adversarial_qa\n      type: adversarial_qa\n      config: adversarialQA\n      split: validation\n    metrics:\n    - type: exact_match\n      value: 28.233\n      name: Exact Match\n    - type: f1\n      value: 41.17\n      name: F1\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squad_adversarial\n      type: squad_adversarial\n      config: AddOneSent\n      split: validation\n    metrics:\n    - type: exact_match\n      value: 78.064\n      name: Exact Match\n    - type: f1\n      value: 83.591\n      name: F1\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squadshifts amazon\n      type: squadshifts\n      config: amazon\n      split: test\n    metrics:\n    - type: exact_match\n      value: 65.615\n      name: Exact Match\n    - type: f1\n      value: 80.733\n      name: F1\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squadshifts new_wiki\n      type: squadshifts\n      config: new_wiki\n      split: test\n    metrics:\n    - type: exact_match\n      value: 81.57\n      name: Exact Match\n    - type: f1\n      value: 91.199\n      name: F1\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squadshifts nyt\n      type: squadshifts\n      config: nyt\n      split: test\n    metrics:\n    - type: exact_match\n      value: 83.279\n      name: Exact Match\n    - type: f1\n      value: 91.09\n      name: F1\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squadshifts reddit\n      type: squadshifts\n      config: reddit\n      split: test\n    metrics:\n    - type: exact_match\n      value: 69.305\n      name: Exact Match\n    - type: f1\n      value: 82.405\n      name: F1\n---\n\n# bert-large-uncased-whole-word-masking-squad2 for Extractive QA\n\nThis is a berta-large model, fine-tuned using the SQuAD2.0 dataset for the task of question answering.\n\n## Overview\n**Language model:** bert-large  \n**Language:** English  \n**Downstream-task:** Extractive QA  \n**Training data:** SQuAD 2.0  \n**Eval data:** SQuAD 2.0  \n**Code:**  See [an example extractive QA pipeline built with Haystack](https://haystack.deepset.ai/tutorials/34_extractive_qa_pipeline)  \n\n## Usage\n\n### In Haystack\nHaystack is an AI orchestration framework to build customizable, production-ready LLM applications. You can use this model in Haystack to do extractive question answering on documents. \nTo load and run the model with [Haystack](https://github.com/deepset-ai/haystack/):\n```python\n# After running pip install haystack-ai \"transformers[torch,sentencepiece]\"\n\nfrom haystack import Document\nfrom haystack.components.readers import ExtractiveReader\n\ndocs = [\n    Document(content=\"Python is a popular programming language\"),\n    Document(content=\"python ist eine beliebte Programmiersprache\"),\n]\n\nreader = ExtractiveReader(model=\"deepset/bert-large-uncased-whole-word-masking-squad2\")\nreader.warm_up()\n\nquestion = \"What is a popular programming language?\"\nresult = reader.run(query=question, documents=docs)\n# {'answers': [ExtractedAnswer(query='What is a popular programming language?', score=0.5740374326705933, data='python', document=Document(id=..., content: '...'), context=None, document_offset=ExtractedAnswer.Span(start=0, end=6),...)]}\n```\nFor a complete example with an extractive question answering pipeline that scales over many documents, check out the [corresponding Haystack tutorial](https://haystack.deepset.ai/tutorials/34_extractive_qa_pipeline).\n\n### In Transformers\n```python\nfrom transformers import AutoModelForQuestionAnswering, AutoTokenizer, pipeline\n\nmodel_name = \"deepset/bert-large-uncased-whole-word-masking-squad2\"\n\n# a) Get predictions\nnlp = pipeline('question-answering', model=model_name, tokenizer=model_name)\nQA_input = {\n    'question': 'Why is model conversion important?',\n    'context': 'The option to convert models between FARM and transformers gives freedom to the user and let people easily switch between frameworks.'\n}\nres = nlp(QA_input)\n\n# b) Load model & tokenizer\nmodel = AutoModelForQuestionAnswering.from_pretrained(model_name)\ntokenizer = AutoTokenizer.from_pretrained(model_name)\n```\n\n## About us\n\n<div class=\"grid lg:grid-cols-2 gap-x-4 gap-y-3\">\n    <div class=\"w-full h-40 object-cover mb-2 rounded-lg flex items-center justify-center\">\n         <img alt=\"\" src=\"https://raw.githubusercontent.com/deepset-ai/.github/main/deepset-logo-colored.png\" class=\"w-40\"/>\n     </div>\n     <div class=\"w-full h-40 object-cover mb-2 rounded-lg flex items-center justify-center\">\n         <img alt=\"\" src=\"https://raw.githubusercontent.com/deepset-ai/.github/main/haystack-logo-colored.png\" class=\"w-40\"/>\n     </div>\n</div>\n\n[deepset](http://deepset.ai/) is the company behind the production-ready open-source AI framework [Haystack](https://haystack.deepset.ai/).\n\nSome of our other work: \n- [Distilled roberta-base-squad2 (aka \"tinyroberta-squad2\")](https://huggingface.co/deepset/tinyroberta-squad2)\n- [German BERT](https://deepset.ai/german-bert), [GermanQuAD and GermanDPR](https://deepset.ai/germanquad), [German embedding model](https://huggingface.co/mixedbread-ai/deepset-mxbai-embed-de-large-v1)\n- [deepset Cloud](https://www.deepset.ai/deepset-cloud-product), [deepset Studio](https://www.deepset.ai/deepset-studio)\n\n## Get in touch and join the Haystack community\n\n<p>For more info on Haystack, visit our <strong><a href=\"https://github.com/deepset-ai/haystack\">GitHub</a></strong> repo and <strong><a href=\"https://docs.haystack.deepset.ai\">Documentation</a></strong>. \n\nWe also have a <strong><a class=\"h-7\" href=\"https://haystack.deepset.ai/community\">Discord community open to everyone!</a></strong></p>\n\n[Twitter](https://twitter.com/Haystack_AI) | [LinkedIn](https://www.linkedin.com/company/deepset-ai/) | [Discord](https://haystack.deepset.ai/community) | [GitHub Discussions](https://github.com/deepset-ai/haystack/discussions) | [Website](https://haystack.deepset.ai/) | [YouTube](https://www.youtube.com/@deepset_ai)\n\nBy the way: [we're hiring!](http://www.deepset.ai/jobs)",
+    "library_name": "transformers"
+  },
+  {
+    "model_id": "google-bert/bert-large-uncased-whole-word-masking-finetuned-squad",
+    "model_name": "google-bert/bert-large-uncased-whole-word-masking-finetuned-squad",
+    "author": "google-bert",
+    "downloads": 220461,
+    "likes": 174,
+    "tags": [
+      "transformers",
+      "pytorch",
+      "tf",
+      "jax",
+      "safetensors",
+      "bert",
+      "question-answering",
+      "en",
+      "dataset:bookcorpus",
+      "dataset:wikipedia",
+      "arxiv:1810.04805",
+      "license:apache-2.0",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "card_url": "https://huggingface.co/google-bert/bert-large-uncased-whole-word-masking-finetuned-squad",
+    "dependencies": [
+      [
+        "torch",
+        "2.0.1"
+      ],
+      [
+        "transformers",
+        "4.30.2"
+      ],
+      [
+        "numpy",
+        "1.24.3"
+      ],
+      [
+        "hf_xet",
+        "0.1.0"
+      ]
+    ],
+    "analysis_date": "2025-03-26T00:49:40.233329",
+    "repo_size": null,
+    "repo_stars": null,
+    "repo_visibility": false,
+    "model_type": "bert",
+    "pipeline_tag": "question-answering",
+    "task_categories": null,
+    "license": null,
+    "card_metadata": {
+      "language": "en",
+      "license": "apache-2.0",
+      "datasets": [
+        "bookcorpus",
+        "wikipedia"
+      ]
+    },
+    "card_text": "\n# BERT large model (uncased) whole word masking finetuned on SQuAD\n\nPretrained model on English language using a masked language modeling (MLM) objective. It was introduced in\n[this paper](https://arxiv.org/abs/1810.04805) and first released in\n[this repository](https://github.com/google-research/bert). This model is uncased: it does not make a difference\nbetween english and English.\n\nDifferently to other BERT models, this model was trained with a new technique: Whole Word Masking. In this case, all of the tokens corresponding to a word are masked at once. The overall masking rate remains the same.\n\nThe training is identical -- each masked WordPiece token is predicted independently. \n\nAfter pre-training, this model was fine-tuned on the SQuAD dataset with one of our fine-tuning scripts. See below for more information regarding this fine-tuning.\n\nDisclaimer: The team releasing BERT did not write a model card for this model so this model card has been written by\nthe Hugging Face team.\n\n## Model description\n\nBERT is a transformers model pretrained on a large corpus of English data in a self-supervised fashion. This means it\nwas pretrained on the raw texts only, with no humans labelling them in any way (which is why it can use lots of\npublicly available data) with an automatic process to generate inputs and labels from those texts. More precisely, it\nwas pretrained with two objectives:\n\n- Masked language modeling (MLM): taking a sentence, the model randomly masks 15% of the words in the input then run\n  the entire masked sentence through the model and has to predict the masked words. This is different from traditional\n  recurrent neural networks (RNNs) that usually see the words one after the other, or from autoregressive models like\n  GPT which internally mask the future tokens. It allows the model to learn a bidirectional representation of the\n  sentence.\n- Next sentence prediction (NSP): the models concatenates two masked sentences as inputs during pretraining. Sometimes\n  they correspond to sentences that were next to each other in the original text, sometimes not. The model then has to\n  predict if the two sentences were following each other or not.\n\nThis way, the model learns an inner representation of the English language that can then be used to extract features\nuseful for downstream tasks: if you have a dataset of labeled sentences for instance, you can train a standard\nclassifier using the features produced by the BERT model as inputs.\n\nThis model has the following configuration:\n\n- 24-layer\n- 1024 hidden dimension\n- 16 attention heads\n- 336M parameters.\n\n## Intended uses & limitations\nThis model should be used as a question-answering model. You may use it in a question answering pipeline, or use it to output raw results given a query and a context. You may see other use cases in the [task summary](https://huggingface.co/transformers/task_summary.html#extractive-question-answering) of the transformers documentation.## Training data\n\nThe BERT model was pretrained on [BookCorpus](https://yknzhu.wixsite.com/mbweb), a dataset consisting of 11,038\nunpublished books and [English Wikipedia](https://en.wikipedia.org/wiki/English_Wikipedia) (excluding lists, tables and\nheaders).\n\n## Training procedure\n\n### Preprocessing\n\nThe texts are lowercased and tokenized using WordPiece and a vocabulary size of 30,000. The inputs of the model are\nthen of the form:\n\n```\n[CLS] Sentence A [SEP] Sentence B [SEP]\n```\n\nWith probability 0.5, sentence A and sentence B correspond to two consecutive sentences in the original corpus and in\nthe other cases, it's another random sentence in the corpus. Note that what is considered a sentence here is a\nconsecutive span of text usually longer than a single sentence. The only constrain is that the result with the two\n\"sentences\" has a combined length of less than 512 tokens.\n\nThe details of the masking procedure for each sentence are the following:\n- 15% of the tokens are masked.\n- In 80% of the cases, the masked tokens are replaced by `[MASK]`.\n- In 10% of the cases, the masked tokens are replaced by a random token (different) from the one they replace.\n- In the 10% remaining cases, the masked tokens are left as is.\n\n### Pretraining\n\nThe model was trained on 4 cloud TPUs in Pod configuration (16 TPU chips total) for one million steps with a batch size\nof 256. The sequence length was limited to 128 tokens for 90% of the steps and 512 for the remaining 10%. The optimizer\nused is Adam with a learning rate of 1e-4, \\\\(\\beta_{1} = 0.9\\\\) and \\\\(\\beta_{2} = 0.999\\\\), a weight decay of 0.01,\nlearning rate warmup for 10,000 steps and linear decay of the learning rate after.\n\n### Fine-tuning\n\nAfter pre-training, this model was fine-tuned on the SQuAD dataset with one of our fine-tuning scripts. In order to reproduce the training, you may use the following command:\n```\npython -m torch.distributed.launch --nproc_per_node=8 ./examples/question-answering/run_qa.py \\\n    --model_name_or_path bert-large-uncased-whole-word-masking \\\n    --dataset_name squad \\\n    --do_train \\\n    --do_eval \\\n    --learning_rate 3e-5 \\\n    --num_train_epochs 2 \\\n    --max_seq_length 384 \\\n    --doc_stride 128 \\\n    --output_dir ./examples/models/wwm_uncased_finetuned_squad/ \\\n    --per_device_eval_batch_size=3   \\\n    --per_device_train_batch_size=3   \\\n```\n\n## Evaluation results\n\nThe results obtained are the following:\n\n```\nf1 = 93.15\nexact_match = 86.91\n```\n\n\n### BibTeX entry and citation info\n\n```bibtex\n@article{DBLP:journals/corr/abs-1810-04805,\n  author    = {Jacob Devlin and\n               Ming{-}Wei Chang and\n               Kenton Lee and\n               Kristina Toutanova},\n  title     = {{BERT:} Pre-training of Deep Bidirectional Transformers for Language\n               Understanding},\n  journal   = {CoRR},\n  volume    = {abs/1810.04805},\n  year      = {2018},\n  url       = {http://arxiv.org/abs/1810.04805},\n  archivePrefix = {arXiv},\n  eprint    = {1810.04805},\n  timestamp = {Tue, 30 Oct 2018 20:39:56 +0100},\n  biburl    = {https://dblp.org/rec/journals/corr/abs-1810-04805.bib},\n  bibsource = {dblp computer science bibliography, https://dblp.org}\n}\n```",
+    "card_content": "---\nlanguage: en\nlicense: apache-2.0\ndatasets:\n- bookcorpus\n- wikipedia\n---\n\n# BERT large model (uncased) whole word masking finetuned on SQuAD\n\nPretrained model on English language using a masked language modeling (MLM) objective. It was introduced in\n[this paper](https://arxiv.org/abs/1810.04805) and first released in\n[this repository](https://github.com/google-research/bert). This model is uncased: it does not make a difference\nbetween english and English.\n\nDifferently to other BERT models, this model was trained with a new technique: Whole Word Masking. In this case, all of the tokens corresponding to a word are masked at once. The overall masking rate remains the same.\n\nThe training is identical -- each masked WordPiece token is predicted independently. \n\nAfter pre-training, this model was fine-tuned on the SQuAD dataset with one of our fine-tuning scripts. See below for more information regarding this fine-tuning.\n\nDisclaimer: The team releasing BERT did not write a model card for this model so this model card has been written by\nthe Hugging Face team.\n\n## Model description\n\nBERT is a transformers model pretrained on a large corpus of English data in a self-supervised fashion. This means it\nwas pretrained on the raw texts only, with no humans labelling them in any way (which is why it can use lots of\npublicly available data) with an automatic process to generate inputs and labels from those texts. More precisely, it\nwas pretrained with two objectives:\n\n- Masked language modeling (MLM): taking a sentence, the model randomly masks 15% of the words in the input then run\n  the entire masked sentence through the model and has to predict the masked words. This is different from traditional\n  recurrent neural networks (RNNs) that usually see the words one after the other, or from autoregressive models like\n  GPT which internally mask the future tokens. It allows the model to learn a bidirectional representation of the\n  sentence.\n- Next sentence prediction (NSP): the models concatenates two masked sentences as inputs during pretraining. Sometimes\n  they correspond to sentences that were next to each other in the original text, sometimes not. The model then has to\n  predict if the two sentences were following each other or not.\n\nThis way, the model learns an inner representation of the English language that can then be used to extract features\nuseful for downstream tasks: if you have a dataset of labeled sentences for instance, you can train a standard\nclassifier using the features produced by the BERT model as inputs.\n\nThis model has the following configuration:\n\n- 24-layer\n- 1024 hidden dimension\n- 16 attention heads\n- 336M parameters.\n\n## Intended uses & limitations\nThis model should be used as a question-answering model. You may use it in a question answering pipeline, or use it to output raw results given a query and a context. You may see other use cases in the [task summary](https://huggingface.co/transformers/task_summary.html#extractive-question-answering) of the transformers documentation.## Training data\n\nThe BERT model was pretrained on [BookCorpus](https://yknzhu.wixsite.com/mbweb), a dataset consisting of 11,038\nunpublished books and [English Wikipedia](https://en.wikipedia.org/wiki/English_Wikipedia) (excluding lists, tables and\nheaders).\n\n## Training procedure\n\n### Preprocessing\n\nThe texts are lowercased and tokenized using WordPiece and a vocabulary size of 30,000. The inputs of the model are\nthen of the form:\n\n```\n[CLS] Sentence A [SEP] Sentence B [SEP]\n```\n\nWith probability 0.5, sentence A and sentence B correspond to two consecutive sentences in the original corpus and in\nthe other cases, it's another random sentence in the corpus. Note that what is considered a sentence here is a\nconsecutive span of text usually longer than a single sentence. The only constrain is that the result with the two\n\"sentences\" has a combined length of less than 512 tokens.\n\nThe details of the masking procedure for each sentence are the following:\n- 15% of the tokens are masked.\n- In 80% of the cases, the masked tokens are replaced by `[MASK]`.\n- In 10% of the cases, the masked tokens are replaced by a random token (different) from the one they replace.\n- In the 10% remaining cases, the masked tokens are left as is.\n\n### Pretraining\n\nThe model was trained on 4 cloud TPUs in Pod configuration (16 TPU chips total) for one million steps with a batch size\nof 256. The sequence length was limited to 128 tokens for 90% of the steps and 512 for the remaining 10%. The optimizer\nused is Adam with a learning rate of 1e-4, \\\\(\\beta_{1} = 0.9\\\\) and \\\\(\\beta_{2} = 0.999\\\\), a weight decay of 0.01,\nlearning rate warmup for 10,000 steps and linear decay of the learning rate after.\n\n### Fine-tuning\n\nAfter pre-training, this model was fine-tuned on the SQuAD dataset with one of our fine-tuning scripts. In order to reproduce the training, you may use the following command:\n```\npython -m torch.distributed.launch --nproc_per_node=8 ./examples/question-answering/run_qa.py \\\n    --model_name_or_path bert-large-uncased-whole-word-masking \\\n    --dataset_name squad \\\n    --do_train \\\n    --do_eval \\\n    --learning_rate 3e-5 \\\n    --num_train_epochs 2 \\\n    --max_seq_length 384 \\\n    --doc_stride 128 \\\n    --output_dir ./examples/models/wwm_uncased_finetuned_squad/ \\\n    --per_device_eval_batch_size=3   \\\n    --per_device_train_batch_size=3   \\\n```\n\n## Evaluation results\n\nThe results obtained are the following:\n\n```\nf1 = 93.15\nexact_match = 86.91\n```\n\n\n### BibTeX entry and citation info\n\n```bibtex\n@article{DBLP:journals/corr/abs-1810-04805,\n  author    = {Jacob Devlin and\n               Ming{-}Wei Chang and\n               Kenton Lee and\n               Kristina Toutanova},\n  title     = {{BERT:} Pre-training of Deep Bidirectional Transformers for Language\n               Understanding},\n  journal   = {CoRR},\n  volume    = {abs/1810.04805},\n  year      = {2018},\n  url       = {http://arxiv.org/abs/1810.04805},\n  archivePrefix = {arXiv},\n  eprint    = {1810.04805},\n  timestamp = {Tue, 30 Oct 2018 20:39:56 +0100},\n  biburl    = {https://dblp.org/rec/journals/corr/abs-1810-04805.bib},\n  bibsource = {dblp computer science bibliography, https://dblp.org}\n}\n```",
+    "library_name": "transformers"
+  },
+  {
+    "model_id": "deepset/minilm-uncased-squad2",
+    "model_name": "deepset/minilm-uncased-squad2",
+    "author": "deepset",
+    "downloads": 153902,
+    "likes": 44,
+    "tags": [
+      "transformers",
+      "pytorch",
+      "jax",
+      "safetensors",
+      "bert",
+      "question-answering",
+      "en",
+      "dataset:squad_v2",
+      "license:cc-by-4.0",
+      "model-index",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "card_url": "https://huggingface.co/deepset/minilm-uncased-squad2",
+    "dependencies": [
+      [
+        "haystack-ai",
+        "1.20.1"
+      ],
+      [
+        "transformers",
+        null
+      ]
+    ],
+    "analysis_date": "2025-03-26T00:49:41.538808",
+    "repo_size": null,
+    "repo_stars": null,
+    "repo_visibility": false,
+    "model_type": "bert",
+    "pipeline_tag": "question-answering",
+    "task_categories": null,
+    "license": null,
+    "card_metadata": {
+      "language": "en",
+      "license": "cc-by-4.0",
+      "datasets": [
+        "squad_v2"
+      ],
+      "model-index": [
+        {
+          "name": "deepset/minilm-uncased-squad2",
+          "results": [
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squad_v2",
+                "type": "squad_v2",
+                "config": "squad_v2",
+                "split": "validation"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 76.1921,
+                  "name": "Exact Match",
+                  "verified": true,
+                  "verifyToken": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiNmViZTQ3YTBjYTc3ZDQzYmI1Mzk3MTAxM2MzNjdmMTc0MWY4Yzg2MWU3NGQ1MDJhZWI2NzY0YWYxZTY2OTgzMiIsInZlcnNpb24iOjF9.s4XCRs_pvW__LJ57dpXAEHD6NRsQ3XaFrM1xaguS6oUs5fCN77wNNc97scnfoPXT18A8RAn0cLTNivfxZm0oBA"
+                },
+                {
+                  "type": "f1",
+                  "value": 79.5483,
+                  "name": "F1",
+                  "verified": true,
+                  "verifyToken": "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiZmJlYTIyOTg2NjMyMzg4NzNlNGIzMTY2NDVkMjg0ODdiOWRmYjVkZDYyZjBjNWNiNTBhNjcwOWUzMDM4ZWJiZiIsInZlcnNpb24iOjF9.gxpwIBBA3_5xPi-TaZcqWNnGgCiHzxaUNgrS2jucxoVWGxhBtnPdwKVCxLleQoDDZenAXB3Yh71zMP3xTSeHCw"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "card_text": "\n# MiniLM-L12-H384-uncased for Extractive QA\n\n## Overview\n**Language model:** microsoft/MiniLM-L12-H384-uncased  \n**Language:** English  \n**Downstream-task:** Extractive QA  \n**Training data:** SQuAD 2.0  \n**Eval data:** SQuAD 2.0  \n**Code:**  See [an example extractive QA pipeline built with Haystack](https://haystack.deepset.ai/tutorials/34_extractive_qa_pipeline) \n**Infrastructure**: 1x Tesla v100  \n\n## Hyperparameters\n\n```\nseed=42\nbatch_size = 12\nn_epochs = 4\nbase_LM_model = \"microsoft/MiniLM-L12-H384-uncased\"\nmax_seq_len = 384\nlearning_rate = 4e-5\nlr_schedule = LinearWarmup\nwarmup_proportion = 0.2\ndoc_stride=128\nmax_query_length=64\ngrad_acc_steps=4\n```\n\n## Usage\n\n### In Haystack\nHaystack is an AI orchestration framework to build customizable, production-ready LLM applications. You can use this model in Haystack to do extractive question answering on documents. \nTo load and run the model with [Haystack](https://github.com/deepset-ai/haystack/):\n```python\n# After running pip install haystack-ai \"transformers[torch,sentencepiece]\"\n\nfrom haystack import Document\nfrom haystack.components.readers import ExtractiveReader\n\ndocs = [\n    Document(content=\"Python is a popular programming language\"),\n    Document(content=\"python ist eine beliebte Programmiersprache\"),\n]\n\nreader = ExtractiveReader(model=\"deepset/minilm-uncased-squad2\")\nreader.warm_up()\n\nquestion = \"What is a popular programming language?\"\nresult = reader.run(query=question, documents=docs)\n# {'answers': [ExtractedAnswer(query='What is a popular programming language?', score=0.5740374326705933, data='python', document=Document(id=..., content: '...'), context=None, document_offset=ExtractedAnswer.Span(start=0, end=6),...)]}\n```\nFor a complete example with an extractive question answering pipeline that scales over many documents, check out the [corresponding Haystack tutorial](https://haystack.deepset.ai/tutorials/34_extractive_qa_pipeline).\n\n### In Transformers\n```python\nfrom transformers import AutoModelForQuestionAnswering, AutoTokenizer, pipeline\n\nmodel_name = \"deepset/minilm-uncased-squad2\"\n\n# a) Get predictions\nnlp = pipeline('question-answering', model=model_name, tokenizer=model_name)\nQA_input = {\n    'question': 'Why is model conversion important?',\n    'context': 'The option to convert models between FARM and transformers gives freedom to the user and let people easily switch between frameworks.'\n}\nres = nlp(QA_input)\n\n# b) Load model & tokenizer\nmodel = AutoModelForQuestionAnswering.from_pretrained(model_name)\ntokenizer = AutoTokenizer.from_pretrained(model_name)\n```\n\n## Performance\nEvaluated on the SQuAD 2.0 dev set with the [official eval script](https://worksheets.codalab.org/rest/bundles/0x6b567e1cf2e041ec80d7098f031c5c9e/contents/blob/).\n```\n\"exact\": 76.13071675229513,\n\"f1\": 79.49786500219953,\n\"total\": 11873,\n\"HasAns_exact\": 78.35695006747639,\n\"HasAns_f1\": 85.10090269418276,\n\"HasAns_total\": 5928,\n\"NoAns_exact\": 73.91084945332211,\n\"NoAns_f1\": 73.91084945332211,\n\"NoAns_total\": 5945\n```\n\n## Authors\n**Vaishali Pal:** vaishali.pal@deepset.ai  \n**Branden Chan:** branden.chan@deepset.ai  \n**Timo M\u00f6ller:** timo.moeller@deepset.ai  \n**Malte Pietsch:** malte.pietsch@deepset.ai   \n**Tanay Soni:** tanay.soni@deepset.ai  \n\n## About us\n\n<div class=\"grid lg:grid-cols-2 gap-x-4 gap-y-3\">\n    <div class=\"w-full h-40 object-cover mb-2 rounded-lg flex items-center justify-center\">\n         <img alt=\"\" src=\"https://raw.githubusercontent.com/deepset-ai/.github/main/deepset-logo-colored.png\" class=\"w-40\"/>\n     </div>\n     <div class=\"w-full h-40 object-cover mb-2 rounded-lg flex items-center justify-center\">\n         <img alt=\"\" src=\"https://raw.githubusercontent.com/deepset-ai/.github/main/haystack-logo-colored.png\" class=\"w-40\"/>\n     </div>\n</div>\n\n[deepset](http://deepset.ai/) is the company behind the production-ready open-source AI framework [Haystack](https://haystack.deepset.ai/).\n\nSome of our other work: \n- [Distilled roberta-base-squad2 (aka \"tinyroberta-squad2\")](https://huggingface.co/deepset/tinyroberta-squad2)\n- [German BERT](https://deepset.ai/german-bert), [GermanQuAD and GermanDPR](https://deepset.ai/germanquad), [German embedding model](https://huggingface.co/mixedbread-ai/deepset-mxbai-embed-de-large-v1)\n- [deepset Cloud](https://www.deepset.ai/deepset-cloud-product), [deepset Studio](https://www.deepset.ai/deepset-studio)\n\n## Get in touch and join the Haystack community\n\n<p>For more info on Haystack, visit our <strong><a href=\"https://github.com/deepset-ai/haystack\">GitHub</a></strong> repo and <strong><a href=\"https://docs.haystack.deepset.ai\">Documentation</a></strong>. \n\nWe also have a <strong><a class=\"h-7\" href=\"https://haystack.deepset.ai/community\">Discord community open to everyone!</a></strong></p>\n\n[Twitter](https://twitter.com/Haystack_AI) | [LinkedIn](https://www.linkedin.com/company/deepset-ai/) | [Discord](https://haystack.deepset.ai/community) | [GitHub Discussions](https://github.com/deepset-ai/haystack/discussions) | [Website](https://haystack.deepset.ai/) | [YouTube](https://www.youtube.com/@deepset_ai)\n\nBy the way: [we're hiring!](http://www.deepset.ai/jobs)\n",
+    "card_content": "---\nlanguage: en\nlicense: cc-by-4.0\ndatasets:\n- squad_v2\nmodel-index:\n- name: deepset/minilm-uncased-squad2\n  results:\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squad_v2\n      type: squad_v2\n      config: squad_v2\n      split: validation\n    metrics:\n    - type: exact_match\n      value: 76.1921\n      name: Exact Match\n      verified: true\n      verifyToken: eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiNmViZTQ3YTBjYTc3ZDQzYmI1Mzk3MTAxM2MzNjdmMTc0MWY4Yzg2MWU3NGQ1MDJhZWI2NzY0YWYxZTY2OTgzMiIsInZlcnNpb24iOjF9.s4XCRs_pvW__LJ57dpXAEHD6NRsQ3XaFrM1xaguS6oUs5fCN77wNNc97scnfoPXT18A8RAn0cLTNivfxZm0oBA\n    - type: f1\n      value: 79.5483\n      name: F1\n      verified: true\n      verifyToken: eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJoYXNoIjoiZmJlYTIyOTg2NjMyMzg4NzNlNGIzMTY2NDVkMjg0ODdiOWRmYjVkZDYyZjBjNWNiNTBhNjcwOWUzMDM4ZWJiZiIsInZlcnNpb24iOjF9.gxpwIBBA3_5xPi-TaZcqWNnGgCiHzxaUNgrS2jucxoVWGxhBtnPdwKVCxLleQoDDZenAXB3Yh71zMP3xTSeHCw\n---\n\n# MiniLM-L12-H384-uncased for Extractive QA\n\n## Overview\n**Language model:** microsoft/MiniLM-L12-H384-uncased  \n**Language:** English  \n**Downstream-task:** Extractive QA  \n**Training data:** SQuAD 2.0  \n**Eval data:** SQuAD 2.0  \n**Code:**  See [an example extractive QA pipeline built with Haystack](https://haystack.deepset.ai/tutorials/34_extractive_qa_pipeline) \n**Infrastructure**: 1x Tesla v100  \n\n## Hyperparameters\n\n```\nseed=42\nbatch_size = 12\nn_epochs = 4\nbase_LM_model = \"microsoft/MiniLM-L12-H384-uncased\"\nmax_seq_len = 384\nlearning_rate = 4e-5\nlr_schedule = LinearWarmup\nwarmup_proportion = 0.2\ndoc_stride=128\nmax_query_length=64\ngrad_acc_steps=4\n```\n\n## Usage\n\n### In Haystack\nHaystack is an AI orchestration framework to build customizable, production-ready LLM applications. You can use this model in Haystack to do extractive question answering on documents. \nTo load and run the model with [Haystack](https://github.com/deepset-ai/haystack/):\n```python\n# After running pip install haystack-ai \"transformers[torch,sentencepiece]\"\n\nfrom haystack import Document\nfrom haystack.components.readers import ExtractiveReader\n\ndocs = [\n    Document(content=\"Python is a popular programming language\"),\n    Document(content=\"python ist eine beliebte Programmiersprache\"),\n]\n\nreader = ExtractiveReader(model=\"deepset/minilm-uncased-squad2\")\nreader.warm_up()\n\nquestion = \"What is a popular programming language?\"\nresult = reader.run(query=question, documents=docs)\n# {'answers': [ExtractedAnswer(query='What is a popular programming language?', score=0.5740374326705933, data='python', document=Document(id=..., content: '...'), context=None, document_offset=ExtractedAnswer.Span(start=0, end=6),...)]}\n```\nFor a complete example with an extractive question answering pipeline that scales over many documents, check out the [corresponding Haystack tutorial](https://haystack.deepset.ai/tutorials/34_extractive_qa_pipeline).\n\n### In Transformers\n```python\nfrom transformers import AutoModelForQuestionAnswering, AutoTokenizer, pipeline\n\nmodel_name = \"deepset/minilm-uncased-squad2\"\n\n# a) Get predictions\nnlp = pipeline('question-answering', model=model_name, tokenizer=model_name)\nQA_input = {\n    'question': 'Why is model conversion important?',\n    'context': 'The option to convert models between FARM and transformers gives freedom to the user and let people easily switch between frameworks.'\n}\nres = nlp(QA_input)\n\n# b) Load model & tokenizer\nmodel = AutoModelForQuestionAnswering.from_pretrained(model_name)\ntokenizer = AutoTokenizer.from_pretrained(model_name)\n```\n\n## Performance\nEvaluated on the SQuAD 2.0 dev set with the [official eval script](https://worksheets.codalab.org/rest/bundles/0x6b567e1cf2e041ec80d7098f031c5c9e/contents/blob/).\n```\n\"exact\": 76.13071675229513,\n\"f1\": 79.49786500219953,\n\"total\": 11873,\n\"HasAns_exact\": 78.35695006747639,\n\"HasAns_f1\": 85.10090269418276,\n\"HasAns_total\": 5928,\n\"NoAns_exact\": 73.91084945332211,\n\"NoAns_f1\": 73.91084945332211,\n\"NoAns_total\": 5945\n```\n\n## Authors\n**Vaishali Pal:** vaishali.pal@deepset.ai  \n**Branden Chan:** branden.chan@deepset.ai  \n**Timo M\u00f6ller:** timo.moeller@deepset.ai  \n**Malte Pietsch:** malte.pietsch@deepset.ai   \n**Tanay Soni:** tanay.soni@deepset.ai  \n\n## About us\n\n<div class=\"grid lg:grid-cols-2 gap-x-4 gap-y-3\">\n    <div class=\"w-full h-40 object-cover mb-2 rounded-lg flex items-center justify-center\">\n         <img alt=\"\" src=\"https://raw.githubusercontent.com/deepset-ai/.github/main/deepset-logo-colored.png\" class=\"w-40\"/>\n     </div>\n     <div class=\"w-full h-40 object-cover mb-2 rounded-lg flex items-center justify-center\">\n         <img alt=\"\" src=\"https://raw.githubusercontent.com/deepset-ai/.github/main/haystack-logo-colored.png\" class=\"w-40\"/>\n     </div>\n</div>\n\n[deepset](http://deepset.ai/) is the company behind the production-ready open-source AI framework [Haystack](https://haystack.deepset.ai/).\n\nSome of our other work: \n- [Distilled roberta-base-squad2 (aka \"tinyroberta-squad2\")](https://huggingface.co/deepset/tinyroberta-squad2)\n- [German BERT](https://deepset.ai/german-bert), [GermanQuAD and GermanDPR](https://deepset.ai/germanquad), [German embedding model](https://huggingface.co/mixedbread-ai/deepset-mxbai-embed-de-large-v1)\n- [deepset Cloud](https://www.deepset.ai/deepset-cloud-product), [deepset Studio](https://www.deepset.ai/deepset-studio)\n\n## Get in touch and join the Haystack community\n\n<p>For more info on Haystack, visit our <strong><a href=\"https://github.com/deepset-ai/haystack\">GitHub</a></strong> repo and <strong><a href=\"https://docs.haystack.deepset.ai\">Documentation</a></strong>. \n\nWe also have a <strong><a class=\"h-7\" href=\"https://haystack.deepset.ai/community\">Discord community open to everyone!</a></strong></p>\n\n[Twitter](https://twitter.com/Haystack_AI) | [LinkedIn](https://www.linkedin.com/company/deepset-ai/) | [Discord](https://haystack.deepset.ai/community) | [GitHub Discussions](https://github.com/deepset-ai/haystack/discussions) | [Website](https://haystack.deepset.ai/) | [YouTube](https://www.youtube.com/@deepset_ai)\n\nBy the way: [we're hiring!](http://www.deepset.ai/jobs)\n",
+    "library_name": "transformers"
+  },
+  {
+    "model_id": "sjrhuschlee/flan-t5-large-squad2",
+    "model_name": "sjrhuschlee/flan-t5-large-squad2",
+    "author": "sjrhuschlee",
+    "downloads": 132490,
+    "likes": 4,
+    "tags": [
+      "transformers",
+      "pytorch",
+      "safetensors",
+      "t5",
+      "question-answering",
+      "squad",
+      "squad_v2",
+      "lora",
+      "peft",
+      "custom_code",
+      "en",
+      "dataset:squad_v2",
+      "dataset:squad",
+      "base_model:google/flan-t5-large",
+      "base_model:adapter:google/flan-t5-large",
+      "license:mit",
+      "model-index",
+      "text-generation-inference",
+      "endpoints_compatible",
+      "region:us"
+    ],
+    "card_url": "https://huggingface.co/sjrhuschlee/flan-t5-large-squad2",
+    "dependencies": [
+      [
+        "transformers",
+        "4.30.2"
+      ],
+      [
+        "torch",
+        "2.0.1"
+      ],
+      [
+        "peft",
+        "0.5.0"
+      ],
+      [
+        "numpy",
+        "1.24.3"
+      ]
+    ],
+    "analysis_date": "2025-03-26T00:49:44.051639",
+    "repo_size": null,
+    "repo_stars": null,
+    "repo_visibility": false,
+    "model_type": "t5",
+    "pipeline_tag": "question-answering",
+    "task_categories": null,
+    "license": null,
+    "card_metadata": {
+      "language": [
+        "en"
+      ],
+      "license": "mit",
+      "library_name": "transformers",
+      "tags": [
+        "question-answering",
+        "squad",
+        "squad_v2",
+        "t5",
+        "lora",
+        "peft"
+      ],
+      "datasets": [
+        "squad_v2",
+        "squad"
+      ],
+      "base_model": "google/flan-t5-large",
+      "model-index": [
+        {
+          "name": "sjrhuschlee/flan-t5-large-squad2",
+          "results": [
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squad_v2",
+                "type": "squad_v2",
+                "config": "squad_v2",
+                "split": "validation"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 86.819,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 89.569,
+                  "name": "F1"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squad",
+                "type": "squad",
+                "config": "plain_text",
+                "split": "validation"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 89.357,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 95.06,
+                  "name": "F1"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "adversarial_qa",
+                "type": "adversarial_qa",
+                "config": "adversarialQA",
+                "split": "validation"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 48.833,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 62.555,
+                  "name": "F1"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squad_adversarial",
+                "type": "squad_adversarial",
+                "config": "AddOneSent",
+                "split": "validation"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 84.835,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 90.245,
+                  "name": "F1"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squadshifts amazon",
+                "type": "squadshifts",
+                "config": "amazon",
+                "split": "test"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 76.722,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 89.68,
+                  "name": "F1"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squadshifts new_wiki",
+                "type": "squadshifts",
+                "config": "new_wiki",
+                "split": "test"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 84.316,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 92.967,
+                  "name": "F1"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squadshifts nyt",
+                "type": "squadshifts",
+                "config": "nyt",
+                "split": "test"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 86.925,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 94.064,
+                  "name": "F1"
+                }
+              ]
+            },
+            {
+              "task": {
+                "type": "question-answering",
+                "name": "Question Answering"
+              },
+              "dataset": {
+                "name": "squadshifts reddit",
+                "type": "squadshifts",
+                "config": "reddit",
+                "split": "test"
+              },
+              "metrics": [
+                {
+                  "type": "exact_match",
+                  "value": 78.241,
+                  "name": "Exact Match"
+                },
+                {
+                  "type": "f1",
+                  "value": 89.243,
+                  "name": "F1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "card_text": "\n# flan-t5-large for Extractive QA\n\nThis is the [flan-t5-large](https://huggingface.co/google/flan-t5-large) model, fine-tuned using the [SQuAD2.0](https://huggingface.co/datasets/squad_v2) dataset. It's been trained on question-answer pairs, including unanswerable questions, for the task of Extractive Question Answering.\n\n**UPDATE:** With transformers version 4.31.0 the `use_remote_code=True` is no longer necessary.\n\nThis model was trained using LoRA available through the [PEFT library](https://github.com/huggingface/peft).\n\n**NOTE:** The `<cls>` token must be manually added to the beginning of the question for this model to work properly. It uses the `<cls>` token to be able to make \"no answer\" predictions. The t5 tokenizer does not automatically add this special token which is why it is added manually.\n\n## Overview\n**Language model:** flan-t5-large  \n**Language:** English  \n**Downstream-task:** Extractive QA  \n**Training data:** SQuAD 2.0  \n**Eval data:** SQuAD 2.0  \n**Infrastructure**: 1x NVIDIA 3070  \n\n## Model Usage\n\n### Using Transformers\nThis uses the merged weights (base model weights + LoRA weights) to allow for simple use in Transformers pipelines. It has the same performance as using the weights separately when using the PEFT library.\n```python\nimport torch\nfrom transformers import(\n  AutoModelForQuestionAnswering,\n  AutoTokenizer,\n  pipeline\n)\nmodel_name = \"sjrhuschlee/flan-t5-large-squad2\"\n\n# a) Using pipelines\nnlp = pipeline(\n  'question-answering',\n  model=model_name,\n  tokenizer=model_name,\n  # trust_remote_code=True, # Do not use if version transformers>=4.31.0\n)\nqa_input = {\n'question': f'{nlp.tokenizer.cls_token}Where do I live?',  # '<cls>Where do I live?'\n'context': 'My name is Sarah and I live in London'\n}\nres = nlp(qa_input)\n# {'score': 0.984, 'start': 30, 'end': 37, 'answer': ' London'}\n\n# b) Load model & tokenizer\nmodel = AutoModelForQuestionAnswering.from_pretrained(\n  model_name,\n  # trust_remote_code=True # Do not use if version transformers>=4.31.0\n)\ntokenizer = AutoTokenizer.from_pretrained(model_name)\n\nquestion = f'{tokenizer.cls_token}Where do I live?'  # '<cls>Where do I live?'\ncontext = 'My name is Sarah and I live in London'\nencoding = tokenizer(question, context, return_tensors=\"pt\")\noutput = model(\n  encoding[\"input_ids\"],\n  attention_mask=encoding[\"attention_mask\"]\n)\n\nall_tokens = tokenizer.convert_ids_to_tokens(encoding[\"input_ids\"][0].tolist())\nanswer_tokens = all_tokens[torch.argmax(output[\"start_logits\"]):torch.argmax(output[\"end_logits\"]) + 1]\nanswer = tokenizer.decode(tokenizer.convert_tokens_to_ids(answer_tokens))\n# 'London'\n```\n\n## Metrics\n\n```bash\n# Squad v2\n{\n    \"eval_HasAns_exact\": 85.08771929824562,\n    \"eval_HasAns_f1\": 90.598422845031,\n    \"eval_HasAns_total\": 5928,\n    \"eval_NoAns_exact\": 88.47771236333053,\n    \"eval_NoAns_f1\": 88.47771236333053,\n    \"eval_NoAns_total\": 5945,\n    \"eval_best_exact\": 86.78514276088605,\n    \"eval_best_exact_thresh\": 0.0,\n    \"eval_best_f1\": 89.53654936623764,\n    \"eval_best_f1_thresh\": 0.0,\n    \"eval_exact\": 86.78514276088605,\n    \"eval_f1\": 89.53654936623776,\n    \"eval_runtime\": 1908.3189,\n    \"eval_samples\": 12001,\n    \"eval_samples_per_second\": 6.289,\n    \"eval_steps_per_second\": 0.787,\n    \"eval_total\": 11873\n}\n\n# Squad\n{\n    \"eval_HasAns_exact\": 85.99810785241249,\n    \"eval_HasAns_f1\": 91.296119057944,\n    \"eval_HasAns_total\": 10570,\n    \"eval_best_exact\": 85.99810785241249,\n    \"eval_best_exact_thresh\": 0.0,\n    \"eval_best_f1\": 91.296119057944,\n    \"eval_best_f1_thresh\": 0.0,\n    \"eval_exact\": 85.99810785241249,\n    \"eval_f1\": 91.296119057944,\n    \"eval_runtime\": 1508.9596,\n    \"eval_samples\": 10657,\n    \"eval_samples_per_second\": 7.062,\n    \"eval_steps_per_second\": 0.883,\n    \"eval_total\": 10570\n}\n```\n\n### Using with Peft\n**NOTE**: This requires code in the PR https://github.com/huggingface/peft/pull/473 for the PEFT library.\n```python\n#!pip install peft\n\nfrom peft import LoraConfig, PeftModelForQuestionAnswering\nfrom transformers import AutoModelForQuestionAnswering, AutoTokenizer\nmodel_name = \"sjrhuschlee/flan-t5-large-squad2\"\n```",
+    "card_content": "---\nlanguage:\n- en\nlicense: mit\nlibrary_name: transformers\ntags:\n- question-answering\n- squad\n- squad_v2\n- t5\n- lora\n- peft\ndatasets:\n- squad_v2\n- squad\nbase_model: google/flan-t5-large\nmodel-index:\n- name: sjrhuschlee/flan-t5-large-squad2\n  results:\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squad_v2\n      type: squad_v2\n      config: squad_v2\n      split: validation\n    metrics:\n    - type: exact_match\n      value: 86.819\n      name: Exact Match\n    - type: f1\n      value: 89.569\n      name: F1\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squad\n      type: squad\n      config: plain_text\n      split: validation\n    metrics:\n    - type: exact_match\n      value: 89.357\n      name: Exact Match\n    - type: f1\n      value: 95.06\n      name: F1\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: adversarial_qa\n      type: adversarial_qa\n      config: adversarialQA\n      split: validation\n    metrics:\n    - type: exact_match\n      value: 48.833\n      name: Exact Match\n    - type: f1\n      value: 62.555\n      name: F1\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squad_adversarial\n      type: squad_adversarial\n      config: AddOneSent\n      split: validation\n    metrics:\n    - type: exact_match\n      value: 84.835\n      name: Exact Match\n    - type: f1\n      value: 90.245\n      name: F1\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squadshifts amazon\n      type: squadshifts\n      config: amazon\n      split: test\n    metrics:\n    - type: exact_match\n      value: 76.722\n      name: Exact Match\n    - type: f1\n      value: 89.68\n      name: F1\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squadshifts new_wiki\n      type: squadshifts\n      config: new_wiki\n      split: test\n    metrics:\n    - type: exact_match\n      value: 84.316\n      name: Exact Match\n    - type: f1\n      value: 92.967\n      name: F1\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squadshifts nyt\n      type: squadshifts\n      config: nyt\n      split: test\n    metrics:\n    - type: exact_match\n      value: 86.925\n      name: Exact Match\n    - type: f1\n      value: 94.064\n      name: F1\n  - task:\n      type: question-answering\n      name: Question Answering\n    dataset:\n      name: squadshifts reddit\n      type: squadshifts\n      config: reddit\n      split: test\n    metrics:\n    - type: exact_match\n      value: 78.241\n      name: Exact Match\n    - type: f1\n      value: 89.243\n      name: F1\n---\n\n# flan-t5-large for Extractive QA\n\nThis is the [flan-t5-large](https://huggingface.co/google/flan-t5-large) model, fine-tuned using the [SQuAD2.0](https://huggingface.co/datasets/squad_v2) dataset. It's been trained on question-answer pairs, including unanswerable questions, for the task of Extractive Question Answering.\n\n**UPDATE:** With transformers version 4.31.0 the `use_remote_code=True` is no longer necessary.\n\nThis model was trained using LoRA available through the [PEFT library](https://github.com/huggingface/peft).\n\n**NOTE:** The `<cls>` token must be manually added to the beginning of the question for this model to work properly. It uses the `<cls>` token to be able to make \"no answer\" predictions. The t5 tokenizer does not automatically add this special token which is why it is added manually.\n\n## Overview\n**Language model:** flan-t5-large  \n**Language:** English  \n**Downstream-task:** Extractive QA  \n**Training data:** SQuAD 2.0  \n**Eval data:** SQuAD 2.0  \n**Infrastructure**: 1x NVIDIA 3070  \n\n## Model Usage\n\n### Using Transformers\nThis uses the merged weights (base model weights + LoRA weights) to allow for simple use in Transformers pipelines. It has the same performance as using the weights separately when using the PEFT library.\n```python\nimport torch\nfrom transformers import(\n  AutoModelForQuestionAnswering,\n  AutoTokenizer,\n  pipeline\n)\nmodel_name = \"sjrhuschlee/flan-t5-large-squad2\"\n\n# a) Using pipelines\nnlp = pipeline(\n  'question-answering',\n  model=model_name,\n  tokenizer=model_name,\n  # trust_remote_code=True, # Do not use if version transformers>=4.31.0\n)\nqa_input = {\n'question': f'{nlp.tokenizer.cls_token}Where do I live?',  # '<cls>Where do I live?'\n'context': 'My name is Sarah and I live in London'\n}\nres = nlp(qa_input)\n# {'score': 0.984, 'start': 30, 'end': 37, 'answer': ' London'}\n\n# b) Load model & tokenizer\nmodel = AutoModelForQuestionAnswering.from_pretrained(\n  model_name,\n  # trust_remote_code=True # Do not use if version transformers>=4.31.0\n)\ntokenizer = AutoTokenizer.from_pretrained(model_name)\n\nquestion = f'{tokenizer.cls_token}Where do I live?'  # '<cls>Where do I live?'\ncontext = 'My name is Sarah and I live in London'\nencoding = tokenizer(question, context, return_tensors=\"pt\")\noutput = model(\n  encoding[\"input_ids\"],\n  attention_mask=encoding[\"attention_mask\"]\n)\n\nall_tokens = tokenizer.convert_ids_to_tokens(encoding[\"input_ids\"][0].tolist())\nanswer_tokens = all_tokens[torch.argmax(output[\"start_logits\"]):torch.argmax(output[\"end_logits\"]) + 1]\nanswer = tokenizer.decode(tokenizer.convert_tokens_to_ids(answer_tokens))\n# 'London'\n```\n\n## Metrics\n\n```bash\n# Squad v2\n{\n    \"eval_HasAns_exact\": 85.08771929824562,\n    \"eval_HasAns_f1\": 90.598422845031,\n    \"eval_HasAns_total\": 5928,\n    \"eval_NoAns_exact\": 88.47771236333053,\n    \"eval_NoAns_f1\": 88.47771236333053,\n    \"eval_NoAns_total\": 5945,\n    \"eval_best_exact\": 86.78514276088605,\n    \"eval_best_exact_thresh\": 0.0,\n    \"eval_best_f1\": 89.53654936623764,\n    \"eval_best_f1_thresh\": 0.0,\n    \"eval_exact\": 86.78514276088605,\n    \"eval_f1\": 89.53654936623776,\n    \"eval_runtime\": 1908.3189,\n    \"eval_samples\": 12001,\n    \"eval_samples_per_second\": 6.289,\n    \"eval_steps_per_second\": 0.787,\n    \"eval_total\": 11873\n}\n\n# Squad\n{\n    \"eval_HasAns_exact\": 85.99810785241249,\n    \"eval_HasAns_f1\": 91.296119057944,\n    \"eval_HasAns_total\": 10570,\n    \"eval_best_exact\": 85.99810785241249,\n    \"eval_best_exact_thresh\": 0.0,\n    \"eval_best_f1\": 91.296119057944,\n    \"eval_best_f1_thresh\": 0.0,\n    \"eval_exact\": 85.99810785241249,\n    \"eval_f1\": 91.296119057944,\n    \"eval_runtime\": 1508.9596,\n    \"eval_samples\": 10657,\n    \"eval_samples_per_second\": 7.062,\n    \"eval_steps_per_second\": 0.883,\n    \"eval_total\": 10570\n}\n```\n\n### Using with Peft\n**NOTE**: This requires code in the PR https://github.com/huggingface/peft/pull/473 for the PEFT library.\n```python\n#!pip install peft\n\nfrom peft import LoraConfig, PeftModelForQuestionAnswering\nfrom transformers import AutoModelForQuestionAnswering, AutoTokenizer\nmodel_name = \"sjrhuschlee/flan-t5-large-squad2\"\n```",
+    "library_name": "transformers"
+  }
+]

@@ -1,0 +1,37 @@
+Version Conflicts Analysis
+=======================
+
+
+transformers:
+  4.7.0: 7 occurrences
+  4.30.2: 97 occurrences
+  4.12.5: 6 occurrences
+  4.28.1: 6 occurrences
+  4.10.2: 6 occurrences
+
+torch:
+  1.8.0: 7 occurrences
+  2.0.1: 95 occurrences
+  1.10.0: 6 occurrences
+  2.0.0: 6 occurrences
+  1.9.0: 6 occurrences
+
+datasets:
+  1.4.1: 7 occurrences
+  1.15.1: 6 occurrences
+  2.11.0: 6 occurrences
+  1.12.1: 6 occurrences
+  2.14.5: 3 occurrences
+
+tokenizers:
+  0.10.2: 7 occurrences
+  0.10.3: 12 occurrences
+  0.13.3: 6 occurrences
+
+numpy:
+  1.26.1: 7 occurrences
+  1.24.3: 115 occurrences
+
+xformers:
+  0.0.22: 20 occurrences
+  0.0.20: 30 occurrences

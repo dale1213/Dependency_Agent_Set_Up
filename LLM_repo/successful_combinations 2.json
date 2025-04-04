@@ -1,0 +1,119 @@
+{
+  "bigwiz83/sapbert-from-pubmedbert-squad2": [
+    {
+      "transformers": "4.7.0",
+      "torch": "1.8.0",
+      "datasets": "1.4.1",
+      "tokenizers": "0.10.2",
+      "huggingface-hub": "0.0.8",
+      "numpy": "1.26.1"
+    }
+  ],
+  "deepset/roberta-base-squad2": [
+    {
+      "haystack-ai": "2.11.1",
+      "transformers": "4.30.2",
+      "torch": "2.0.1",
+      "numpy": "1.24.3"
+    }
+  ],
+  "distilbert/distilbert-base-cased-distilled-squad": [
+    {
+      "transformers": "4.30.2",
+      "torch": "2.0.1",
+      "numpy": "1.24.3",
+      "hf_xet": "0.1.0"
+    }
+  ],
+  "deepset/bert-large-uncased-whole-word-masking-squad2": [],
+  "google-bert/bert-large-uncased-whole-word-masking-finetuned-squad": [
+    {
+      "torch": "2.0.1",
+      "transformers": "4.30.2",
+      "numpy": "1.24.3",
+      "hf_xet": "0.1.0"
+    }
+  ],
+  "deepset/minilm-uncased-squad2": [],
+  "sjrhuschlee/flan-t5-large-squad2": [],
+  "cross-encoder/ms-marco-MiniLM-L6-v2": [],
+  "distilbert/distilbert-base-uncased-finetuned-sst-2-english": [],
+  "papluca/xlm-roberta-base-language-detection": [
+    {
+      "transformers": "4.12.5",
+      "torch": "1.10.0",
+      "datasets": "1.15.1",
+      "tokenizers": "0.10.3",
+      "numpy": "1.24.3"
+    }
+  ],
+  "facebook/bart-large-mnli": [],
+  "ProsusAI/finbert": [],
+  "microsoft/deberta-xlarge-mnli": [],
+  "cardiffnlp/twitter-roberta-base-sentiment": [],
+  "cardiffnlp/twitter-roberta-base-sentiment-latest": [],
+  "cross-encoder/ms-marco-MiniLM-L4-v2": [],
+  "cardiffnlp/twitter-xlm-roberta-base-sentiment": [],
+  "lucadiliello/BLEURT-20-D12": [],
+  "nlptown/bert-base-multilingual-uncased-sentiment": [],
+  "BAAI/bge-reranker-v2-m3": [],
+  "cardiffnlp/twitter-roberta-base-emotion": [],
+  "yiyanghkust/finbert-tone": [],
+  "pysentimiento/robertuito-sentiment-analysis": [
+    {
+      "pysentimiento": "0.7.2"
+    }
+  ],
+  "michellejieli/emotion_text_classifier": [],
+  "j-hartmann/emotion-english-distilroberta-base": [],
+  "TieIncred/distilbert-base-uncased-finetuned-emotional": [],
+  "lxyuan/distilbert-base-multilingual-cased-sentiments-student": [
+    {
+      "transformers": "4.28.1",
+      "torch": "2.0.0",
+      "datasets": "2.11.0",
+      "tokenizers": "0.13.3",
+      "numpy": "1.24.3"
+    }
+  ],
+  "microsoft/deberta-large-mnli": [],
+  "unitary/toxic-bert": [],
+  "facebook/fasttext-language-identification": [],
+  "Elron/bleurt-tiny-512": [],
+  "cross-encoder/ms-marco-MiniLM-L12-v2": [],
+  "finiteautomata/beto-sentiment-analysis": [
+    {
+      "pysentimiento": "0.7.2"
+    }
+  ],
+  "martin-ha/toxic-comment-model": [],
+  "nbroad/ESG-BERT": [],
+  "SamLowe/roberta-base-go_emotions": [],
+  "tals/albert-xlarge-vitaminc-mnli": [],
+  "mrm8488/distilroberta-finetuned-financial-news-sentiment-analysis": [
+    {
+      "transformers": "4.10.2",
+      "torch": "1.9.0",
+      "datasets": "1.12.1",
+      "tokenizers": "0.10.3",
+      "numpy": "1.24.3"
+    }
+  ],
+  "cross-encoder/ms-marco-electra-base": [],
+  "jinaai/jina-reranker-v2-base-multilingual": [],
+  "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli": [],
+  "oliverguhr/german-sentiment-bert": [],
+  "madhurjindal/autonlp-Gibberish-Detector-492513457": [],
+  "WebOrganizer/TopicClassifier-NoURL": [],
+  "cross-encoder/ms-marco-MiniLM-L2-v2": [],
+  "sadickam/sdgBERT": [],
+  "finiteautomata/bertweet-base-sentiment-analysis": [
+    {
+      "pysentimiento": "0.7.2"
+    }
+  ],
+  "Alibaba-NLP/gte-multilingual-reranker-base": [],
+  "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1": [],
+  "tabularisai/multilingual-sentiment-analysis": [],
+  "jpwahle/longformer-base-plagiarism-detection": []
+}
