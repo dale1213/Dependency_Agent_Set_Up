@@ -1,0 +1,2751 @@
+{
+  "bigwiz83/sapbert-from-pubmedbert-squad2": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:42:46.199007",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for 'transformers' package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 1,
+      "categories": {
+        "installation_failure": 1
+      },
+      "missing_dependencies": {
+        "transformers": 1
+      }
+    }
+  },
+  "cross-encoder/ms-marco-MiniLM-L6-v2": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:45:16.513229",
+        "category": "version_conflict",
+        "description": "Invalid version specifier for sentence_transformers package",
+        "missing_dependencies": [
+          "sentence_transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:00:28.473577",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for transformers package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:38:21.772640",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T21:49:32.709622",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch package",
+        "missing_dependencies": [
+          "torch==2.0.1"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 4,
+      "categories": {
+        "version_conflict": 2,
+        "installation_failure": 2
+      },
+      "missing_dependencies": {
+        "sentence_transformers": 1,
+        "transformers": 1,
+        "torch": 1,
+        "torch==2.0.1": 1
+      }
+    }
+  },
+  "distilbert/distilbert-base-uncased-finetuned-sst-2-english": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:45:25.651893",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:00:37.707184",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch",
+        "missing_dependencies": [
+          "torch==2.1.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:39:39.122235",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for 'transformers' package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T21:52:05.224954",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T22:45:43.488956",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T23:20:25.116368",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-07T00:41:01.263812",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-07T02:11:19.195723",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-07T20:36:04.600359",
+        "category": "version_conflict",
+        "description": "Incompatible version of tokenizers package",
+        "missing_dependencies": [
+          "tokenizers>=0.10.1,<0.11"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T20:36:05.022693",
+        "category": "version_conflict",
+        "description": "Incompatible version of tokenizers package",
+        "missing_dependencies": [
+          "tokenizers>=0.10.1,<0.11"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T20:36:57.959552",
+        "category": "version_conflict",
+        "description": "Incompatible version of tokenizers package",
+        "missing_dependencies": [
+          "tokenizers>=0.10.1,<0.11"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T20:36:57.982713",
+        "category": "version_conflict",
+        "description": "Incompatible version of tokenizers package",
+        "missing_dependencies": [
+          "tokenizers>=0.10.1,<0.11"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T20:38:30.442994",
+        "category": "version_conflict",
+        "description": "Incompatible version of tokenizers package",
+        "missing_dependencies": [
+          "tokenizers>=0.10.1,<0.11"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 13,
+      "categories": {
+        "installation_failure": 7,
+        "version_conflict": 6
+      },
+      "missing_dependencies": {
+        "torch": 1,
+        "torch==2.1.0": 1,
+        "transformers": 1,
+        "tokenizers>=0.10.1,<0.11": 5
+      }
+    }
+  },
+  "papluca/xlm-roberta-base-language-detection": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:46:04.245924",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package due to Rust compilation error",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T20:01:18.005372",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package due to Rust compilation error",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T20:40:16.838434",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package due to Rust compilation error",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T21:52:42.725301",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package during compilation",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T22:46:23.531392",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package due to Rust compilation error",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T23:21:03.993065",
+        "category": "installation_failure",
+        "description": "Failed to build tokenizers wheel due to Rust compilation error",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-07T00:41:38.918941",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package due to Rust compilation error",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-07T02:11:57.196400",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package due to Rust compilation error",
+        "missing_dependencies": []
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "installation_failure": 8
+      },
+      "missing_dependencies": {}
+    }
+  },
+  "facebook/bart-large-mnli": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:46:13.416010",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for 'transformers' package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:01:37.988013",
+        "category": "package_missing",
+        "description": "The PyTorch package is not installed in the environment",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:40:36.184485",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch package",
+        "missing_dependencies": [
+          "torch==2.1.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T21:53:02.312824",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch==2.6.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:46:43.706458",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch",
+        "missing_dependencies": [
+          "torch==2.0.1"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:21:23.795307",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch==2.6.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T00:41:58.654880",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch",
+        "missing_dependencies": [
+          "torch==2.1.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T02:12:17.243421",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch==2.6.0"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "installation_failure": 4,
+        "package_missing": 1,
+        "version_conflict": 3
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "torch": 1,
+        "torch==2.1.0": 2,
+        "torch==2.6.0": 3,
+        "torch==2.0.1": 1
+      }
+    }
+  },
+  "ProsusAI/finbert": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:46:22.950401",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for 'transformers' package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:01:58.454530",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:42:12.890121",
+        "category": "version_conflict",
+        "description": "Incompatibility between NumPy versions and compiled modules",
+        "missing_dependencies": [
+          "numpy<2.0.0"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 3,
+      "categories": {
+        "installation_failure": 2,
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "torch": 1,
+        "numpy<2.0.0": 1
+      }
+    }
+  },
+  "microsoft/deberta-xlarge-mnli": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:46:32.899126",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for transformers package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:02:18.147120",
+        "category": "package_missing",
+        "description": "The PyTorch package is not installed in the environment",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:42:34.123966",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch",
+        "missing_dependencies": [
+          "torch==2.1.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T21:55:04.282781",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch==2.6.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:47:04.547350",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch",
+        "missing_dependencies": [
+          "torch==2.0.1"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 5,
+      "categories": {
+        "installation_failure": 2,
+        "package_missing": 1,
+        "version_conflict": 2
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "torch": 1,
+        "torch==2.1.0": 1,
+        "torch==2.6.0": 1,
+        "torch==2.0.1": 1
+      }
+    }
+  },
+  "cardiffnlp/twitter-roberta-base-sentiment": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:46:42.040690",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for transformers package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:02:38.684417",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for numpy package",
+        "missing_dependencies": [
+          "numpy"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:42:58.096149",
+        "category": "version_conflict",
+        "description": "Invalid version specifier for scipy package",
+        "missing_dependencies": [
+          "scipy"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T21:55:32.725249",
+        "category": "dependency_error",
+        "description": "Invalid requirement specification for urllib package",
+        "missing_dependencies": [
+          "urllib"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:47:33.385648",
+        "category": "dependency_error",
+        "description": "Invalid requirement specification for urllib package",
+        "missing_dependencies": [
+          "urllib"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:23:44.522147",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for urllib package",
+        "missing_dependencies": [
+          "urllib"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T00:42:27.339709",
+        "category": "dependency_error",
+        "description": "Invalid requirement specification for urllib package",
+        "missing_dependencies": [
+          "urllib"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T02:12:45.810482",
+        "category": "dependency_error",
+        "description": "Invalid requirement specification for urllib package",
+        "missing_dependencies": [
+          "urllib"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "installation_failure": 3,
+        "version_conflict": 1,
+        "dependency_error": 4
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "numpy": 1,
+        "scipy": 1,
+        "urllib": 5
+      }
+    }
+  },
+  "cardiffnlp/twitter-roberta-base-sentiment-latest": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:46:51.162380",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for transformers package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:02:58.998594",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for numpy package",
+        "missing_dependencies": [
+          "numpy"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:43:21.540906",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for scipy package",
+        "missing_dependencies": [
+          "scipy"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T21:56:01.183933",
+        "category": "package_missing",
+        "description": "The PyTorch package is not installed in the environment",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:48:02.462252",
+        "category": "version_conflict",
+        "description": "Requested version of torch package is not available",
+        "missing_dependencies": [
+          "torch==2.1.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:24:12.359454",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch==2.6.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T00:42:57.429582",
+        "category": "version_conflict",
+        "description": "Unable to find a compatible version of torch",
+        "missing_dependencies": [
+          "torch==2.0.1"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T02:13:14.680378",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch==2.6.0"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "installation_failure": 5,
+        "package_missing": 1,
+        "version_conflict": 2
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "numpy": 1,
+        "scipy": 1,
+        "torch": 1,
+        "torch==2.1.0": 1,
+        "torch==2.6.0": 2,
+        "torch==2.0.1": 1
+      }
+    }
+  },
+  "cross-encoder/ms-marco-MiniLM-L4-v2": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:47:02.628197",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for sentence_transformers package",
+        "missing_dependencies": [
+          "sentence_transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:04:42.975372",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for 'transformers' package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:45:14.192107",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T21:59:02.420750",
+        "category": "version_conflict",
+        "description": "Incompatibility between NumPy versions and compiled modules",
+        "missing_dependencies": [
+          "numpy<2.0.0"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 4,
+      "categories": {
+        "installation_failure": 3,
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "sentence_transformers": 1,
+        "transformers": 1,
+        "torch": 1,
+        "numpy<2.0.0": 1
+      }
+    }
+  },
+  "cardiffnlp/twitter-xlm-roberta-base-sentiment": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:47:11.903175",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for transformers package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:05:03.394923",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for numpy package",
+        "missing_dependencies": [
+          "numpy"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:45:38.166994",
+        "category": "version_conflict",
+        "description": "Invalid version specifier for scipy package",
+        "missing_dependencies": [
+          "scipy"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T21:59:30.677302",
+        "category": "package_missing",
+        "description": "The PyTorch package is not installed in the environment",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:51:32.344616",
+        "category": "version_conflict",
+        "description": "Requested version of torch package is not available",
+        "missing_dependencies": [
+          "torch==2.1.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:24:40.926499",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch==2.6.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T00:43:26.853665",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch",
+        "missing_dependencies": [
+          "torch==2.0.1"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T02:15:12.813719",
+        "category": "dependency_error",
+        "description": "Failed to instantiate the tokenizer due to missing sentencepiece dependency",
+        "missing_dependencies": [
+          "sentencepiece"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "installation_failure": 3,
+        "version_conflict": 3,
+        "package_missing": 1,
+        "dependency_error": 1
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "numpy": 1,
+        "scipy": 1,
+        "torch": 1,
+        "torch==2.1.0": 1,
+        "torch==2.6.0": 1,
+        "torch==2.0.1": 1,
+        "sentencepiece": 1
+      }
+    }
+  },
+  "lucadiliello/BLEURT-20-D12": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:47:21.545220",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:05:12.802782",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch",
+        "missing_dependencies": [
+          "torch==2.1.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:47:02.266650",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for bleurt_pytorch package",
+        "missing_dependencies": [
+          "bleurt_pytorch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:00:51.090035",
+        "category": "version_conflict",
+        "description": "No version of bleurt_pytorch satisfies the specified version constraint",
+        "missing_dependencies": [
+          "bleurt_pytorch==0.1.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:52:56.923645",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for bleurt_pytorch package",
+        "missing_dependencies": [
+          "bleurt_pytorch==0.0.1"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:26:22.680623",
+        "category": "model_inherent",
+        "description": "The model architecture 'bleurt' is not recognized by the current version of Transformers",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-07T00:45:05.059597",
+        "category": "model_inherent",
+        "description": "The model architecture 'bleurt' is not recognized by the current version of Transformers",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-07T02:16:58.529813",
+        "category": "model_inherent",
+        "description": "The model architecture 'bleurt' is not recognized by the current version of Transformers",
+        "missing_dependencies": []
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "installation_failure": 3,
+        "version_conflict": 2,
+        "model_inherent": 3
+      },
+      "missing_dependencies": {
+        "torch": 1,
+        "torch==2.1.0": 1,
+        "bleurt_pytorch": 1,
+        "bleurt_pytorch==0.1.0": 1,
+        "bleurt_pytorch==0.0.1": 1
+      }
+    }
+  },
+  "nlptown/bert-base-multilingual-uncased-sentiment": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:47:31.484009",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for 'transformers' package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:05:31.679281",
+        "category": "package_missing",
+        "description": "The PyTorch package is not installed in the environment",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:47:22.270568",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch package",
+        "missing_dependencies": [
+          "torch==2.1.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:01:11.487810",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch==2.6.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:53:17.086235",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch",
+        "missing_dependencies": [
+          "torch==2.0.1"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 5,
+      "categories": {
+        "installation_failure": 2,
+        "package_missing": 1,
+        "version_conflict": 2
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "torch": 1,
+        "torch==2.1.0": 1,
+        "torch==2.6.0": 1,
+        "torch==2.0.1": 1
+      }
+    }
+  },
+  "BAAI/bge-reranker-v2-m3": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:47:44.086088",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for FlagEmbedding package",
+        "missing_dependencies": [
+          "FlagEmbedding"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:06:11.671275",
+        "category": "dependency_error",
+        "description": "Failed to install build dependencies for pyarrow due to missing 'distutils' module",
+        "missing_dependencies": [
+          "distutils"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:48:02.313922",
+        "category": "dependency_error",
+        "description": "Failed to install build dependencies due to missing 'distutils' module",
+        "missing_dependencies": [
+          "distutils"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:01:51.162534",
+        "category": "dependency_error",
+        "description": "Failed to install build dependencies for pyarrow due to missing 'distutils' module",
+        "missing_dependencies": [
+          "distutils"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:53:55.576430",
+        "category": "dependency_error",
+        "description": "Failed to install build dependencies for pyarrow due to missing 'distutils' module",
+        "missing_dependencies": [
+          "distutils"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:28:37.103992",
+        "category": "dependency_error",
+        "description": "Failed to install build dependencies for pyarrow due to missing 'distutils' module",
+        "missing_dependencies": [
+          "distutils"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T00:45:45.138888",
+        "category": "dependency_error",
+        "description": "Failed to install build dependencies for pyarrow due to missing 'distutils' module",
+        "missing_dependencies": [
+          "distutils"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T02:17:38.845473",
+        "category": "dependency_error",
+        "description": "Unable to install build dependencies due to missing 'distutils' module",
+        "missing_dependencies": [
+          "distutils"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "installation_failure": 1,
+        "dependency_error": 7
+      },
+      "missing_dependencies": {
+        "FlagEmbedding": 1,
+        "distutils": 7
+      }
+    }
+  },
+  "cardiffnlp/twitter-roberta-base-emotion": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:47:54.162104",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for transformers package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:06:33.416918",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for numpy package",
+        "missing_dependencies": [
+          "numpy"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:48:26.894232",
+        "category": "version_conflict",
+        "description": "Invalid version specifier for scipy package",
+        "missing_dependencies": [
+          "scipy"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:02:20.778355",
+        "category": "dependency_error",
+        "description": "Invalid requirement specification for 'csv' package",
+        "missing_dependencies": [
+          "csv"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:54:24.718546",
+        "category": "package_missing",
+        "description": "The specified package 'csv' version 1.0 is not available",
+        "missing_dependencies": [
+          "csv==1.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:29:07.650668",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for 'csv' package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-07T00:46:16.192279",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for 'csv' package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-07T02:18:08.657985",
+        "category": "dependency_error",
+        "description": "Invalid requirement specification for 'csv' package",
+        "missing_dependencies": []
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "installation_failure": 4,
+        "version_conflict": 1,
+        "dependency_error": 2,
+        "package_missing": 1
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "numpy": 1,
+        "scipy": 1,
+        "csv": 1,
+        "csv==1.0": 1
+      }
+    }
+  },
+  "yiyanghkust/finbert-tone": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:48:03.657738",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for 'transformers' package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:06:52.522205",
+        "category": "package_missing",
+        "description": "The PyTorch package is not installed in the environment",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:48:47.482656",
+        "category": "version_conflict",
+        "description": "Requested version of torch package is not available",
+        "missing_dependencies": [
+          "torch==2.1.2"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 3,
+      "categories": {
+        "installation_failure": 1,
+        "package_missing": 1,
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "torch": 1,
+        "torch==2.1.2": 1
+      }
+    }
+  },
+  "pysentimiento/robertuito-sentiment-analysis": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:48:13.633505",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for pysentimiento package",
+        "missing_dependencies": [
+          "pysentimiento"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 1,
+      "categories": {
+        "installation_failure": 1
+      },
+      "missing_dependencies": {
+        "pysentimiento": 1
+      }
+    }
+  },
+  "michellejieli/emotion_text_classifier": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:48:22.312426",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for transformers package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:09:08.604622",
+        "category": "package_missing",
+        "description": "The PyTorch package is not installed in the environment",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:49:06.775383",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch",
+        "missing_dependencies": [
+          "torch==2.1.0"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 3,
+      "categories": {
+        "installation_failure": 1,
+        "package_missing": 1,
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "torch": 1,
+        "torch==2.1.0": 1
+      }
+    }
+  },
+  "j-hartmann/emotion-english-distilroberta-base": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:48:30.598702",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for transformers package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:09:27.500195",
+        "category": "package_missing",
+        "description": "The 'torch' module is not installed in the Python environment",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:49:26.599712",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch",
+        "missing_dependencies": [
+          "torch==2.1.0"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 3,
+      "categories": {
+        "installation_failure": 1,
+        "package_missing": 1,
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "torch": 1,
+        "torch==2.1.0": 1
+      }
+    }
+  },
+  "TieIncred/distilbert-base-uncased-finetuned-emotional": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:48:47.853602",
+        "category": "version_conflict",
+        "description": "No compatible version of pytorch found for the specified version and CUDA requirement",
+        "missing_dependencies": [
+          "pytorch==2.1.0+cu118"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:09:44.545161",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for pytorch package",
+        "missing_dependencies": [
+          "pytorch==1.0.2"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:49:43.477085",
+        "category": "version_conflict",
+        "description": "No compatible version of pytorch 1.13.1 found",
+        "missing_dependencies": [
+          "pytorch==1.13.1"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:07:19.423158",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for pytorch package",
+        "missing_dependencies": [
+          "pytorch==1.0.2"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:54:41.673856",
+        "category": "version_conflict",
+        "description": "No compatible version of pytorch 1.13.1 found",
+        "missing_dependencies": [
+          "pytorch==1.13.1"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:29:23.340467",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for pytorch package",
+        "missing_dependencies": [
+          "pytorch==1.0.2"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T00:46:32.026843",
+        "category": "version_conflict",
+        "description": "No compatible version of pytorch 1.13.1 found",
+        "missing_dependencies": [
+          "pytorch==1.13.1"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T02:18:24.915248",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for pytorch package",
+        "missing_dependencies": [
+          "pytorch==1.0.2"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "version_conflict": 4,
+        "installation_failure": 4
+      },
+      "missing_dependencies": {
+        "pytorch==2.1.0+cu118": 1,
+        "pytorch==1.0.2": 4,
+        "pytorch==1.13.1": 3
+      }
+    }
+  },
+  "lxyuan/distilbert-base-multilingual-cased-sentiments-student": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:50:05.011636",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T20:11:03.964663",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T20:50:58.701711",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T22:08:38.691658",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T22:55:56.480863",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T23:30:38.064211",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-07T00:47:48.283038",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-07T02:19:40.175108",
+        "category": "installation_failure",
+        "description": "Failed to build the tokenizers package due to a Rust compilation error",
+        "missing_dependencies": []
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "installation_failure": 8
+      },
+      "missing_dependencies": {}
+    }
+  },
+  "microsoft/deberta-large-mnli": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:50:13.518784",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for transformers package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:11:22.931880",
+        "category": "package_missing",
+        "description": "The PyTorch package is not installed in the environment",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:51:18.472522",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch package",
+        "missing_dependencies": [
+          "torch==2.1.1"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 3,
+      "categories": {
+        "installation_failure": 1,
+        "package_missing": 1,
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "torch": 1,
+        "torch==2.1.1": 1
+      }
+    }
+  },
+  "unitary/toxic-bert": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:50:22.738424",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for 'detoxify' package",
+        "missing_dependencies": [
+          "detoxify"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:13:05.180499",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package during compilation",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T20:52:59.579184",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package due to Rust compilation error",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T22:12:02.190916",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T22:57:33.305073",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package during compilation",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T23:32:27.036579",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package due to Rust compilation error",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-07T00:49:47.427945",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-07T02:21:22.818345",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package during compilation",
+        "missing_dependencies": []
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "installation_failure": 8
+      },
+      "missing_dependencies": {
+        "detoxify": 1
+      }
+    }
+  },
+  "facebook/fasttext-language-identification": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:50:31.660465",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for fasttext package",
+        "missing_dependencies": [
+          "fasttext"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:13:15.231522",
+        "category": "dependency_error",
+        "description": "Failed to build wheel due to missing pybind11 module",
+        "missing_dependencies": [
+          "pybind11"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:53:09.591105",
+        "category": "dependency_error",
+        "description": "Failed to build wheel due to missing pybind11 module",
+        "missing_dependencies": [
+          "pybind11"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:12:12.463588",
+        "category": "dependency_error",
+        "description": "Failed to build wheel due to missing pybind11 module",
+        "missing_dependencies": [
+          "pybind11"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:57:43.437759",
+        "category": "dependency_error",
+        "description": "Failed to build wheel due to missing pybind11 module",
+        "missing_dependencies": [
+          "pybind11"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:32:36.870359",
+        "category": "dependency_error",
+        "description": "Failed to build wheel due to missing pybind11 module",
+        "missing_dependencies": [
+          "pybind11"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T00:49:57.669624",
+        "category": "dependency_error",
+        "description": "Failed to build wheel due to missing pybind11 module",
+        "missing_dependencies": [
+          "pybind11"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T02:21:33.179562",
+        "category": "dependency_error",
+        "description": "Failed to build wheel due to missing pybind11 module",
+        "missing_dependencies": [
+          "pybind11"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "installation_failure": 1,
+        "dependency_error": 7
+      },
+      "missing_dependencies": {
+        "fasttext": 1,
+        "pybind11": 7
+      }
+    }
+  },
+  "Elron/bleurt-tiny-512": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:50:41.313156",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for 'transformers' package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:13:35.245741",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:54:45.024982",
+        "category": "version_conflict",
+        "description": "Incompatibility between NumPy 2.2.4 and modules compiled with NumPy 1.x",
+        "missing_dependencies": [
+          "numpy<2"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 3,
+      "categories": {
+        "installation_failure": 2,
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "torch": 1,
+        "numpy<2": 1
+      }
+    }
+  },
+  "cross-encoder/ms-marco-MiniLM-L12-v2": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:50:52.729177",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for sentence_transformers package",
+        "missing_dependencies": [
+          "sentence_transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:15:21.841283",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for 'transformers' package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:56:39.864084",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:16:38.246393",
+        "category": "version_conflict",
+        "description": "Incompatibility between NumPy versions causing module compilation issues",
+        "missing_dependencies": [
+          "numpy<2.0.0"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 4,
+      "categories": {
+        "installation_failure": 3,
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "sentence_transformers": 1,
+        "transformers": 1,
+        "torch": 1,
+        "numpy<2.0.0": 1
+      }
+    }
+  },
+  "finiteautomata/beto-sentiment-analysis": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:51:02.132174",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for pysentimiento package",
+        "missing_dependencies": [
+          "pysentimiento"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:17:14.177548",
+        "category": "model_inherent",
+        "description": "Function 'init_empty_weights' is not defined in the transformers library",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T20:58:34.983993",
+        "category": "dependency_error",
+        "description": "Missing or incompatible function 'init_empty_weights' in the transformers library",
+        "missing_dependencies": [
+          "transformers>=4.0.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:20:12.215842",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T23:02:32.378838",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T23:34:36.199467",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-07T00:52:30.538034",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-07T02:23:34.997107",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "installation_failure": 6,
+        "model_inherent": 1,
+        "dependency_error": 1
+      },
+      "missing_dependencies": {
+        "pysentimiento": 1,
+        "transformers>=4.0.0": 1
+      }
+    }
+  },
+  "martin-ha/toxic-comment-model": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:51:11.347253",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for 'transformers' package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:17:33.178636",
+        "category": "package_missing",
+        "description": "The PyTorch package is not installed in the environment",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:58:54.880628",
+        "category": "version_conflict",
+        "description": "Requested version of torch package is not available",
+        "missing_dependencies": [
+          "torch==2.1.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:20:33.872326",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch==2.6.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:02:52.173817",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch package",
+        "missing_dependencies": [
+          "torch==2.1.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:34:55.391053",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch==2.6.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T00:52:50.472551",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch",
+        "missing_dependencies": [
+          "torch==2.1.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T02:25:13.508126",
+        "category": "version_conflict",
+        "description": "Incompatibility between NumPy 2.2.4 and modules compiled with NumPy 1.x",
+        "missing_dependencies": [
+          "numpy<2"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "installation_failure": 3,
+        "package_missing": 1,
+        "version_conflict": 4
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "torch": 1,
+        "torch==2.1.0": 3,
+        "torch==2.6.0": 2,
+        "numpy<2": 1
+      }
+    }
+  },
+  "nbroad/ESG-BERT": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:51:20.643878",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torchserve package",
+        "missing_dependencies": [
+          "torchserve"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:17:44.855020",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch-model-archiver package",
+        "missing_dependencies": [
+          "torch-model-archiver"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:59:07.380300",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torchvision package",
+        "missing_dependencies": [
+          "torchvision"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:20:46.262712",
+        "category": "version_conflict",
+        "description": "Unable to find a compatible version of torchvision",
+        "missing_dependencies": [
+          "torchvision==0.13.1"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:04:18.222046",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for transformers package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 5,
+      "categories": {
+        "installation_failure": 4,
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "torchserve": 1,
+        "torch-model-archiver": 1,
+        "torchvision": 1,
+        "torchvision==0.13.1": 1,
+        "transformers": 1
+      }
+    }
+  },
+  "SamLowe/roberta-base-go_emotions": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:51:29.351705",
+        "category": "version_conflict",
+        "description": "Invalid version specifier for the 'transformers' package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:18:04.287021",
+        "category": "package_missing",
+        "description": "The PyTorch package is not installed in the environment",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:59:27.228795",
+        "category": "version_conflict",
+        "description": "Requested version of torch package is not available",
+        "missing_dependencies": [
+          "torch==2.1.2"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 3,
+      "categories": {
+        "version_conflict": 2,
+        "package_missing": 1
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "torch": 1,
+        "torch==2.1.2": 1
+      }
+    }
+  },
+  "tals/albert-xlarge-vitaminc-mnli": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:51:40.819351",
+        "category": "version_conflict",
+        "description": "Invalid version specifier for 'datasets' package",
+        "missing_dependencies": [
+          "datasets"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:18:27.892189",
+        "category": "package_missing",
+        "description": "The PyTorch package is not installed in the environment",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:59:50.858424",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch package",
+        "missing_dependencies": [
+          "torch==2.0.1"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:22:45.316996",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch==2.6.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:04:42.090037",
+        "category": "version_conflict",
+        "description": "Requested version of torch package is not available",
+        "missing_dependencies": [
+          "torch==2.0.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:37:00.941797",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch==2.6.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T00:53:15.453904",
+        "category": "version_conflict",
+        "description": "Requested version of torch package is not available",
+        "missing_dependencies": [
+          "torch==2.0.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T02:25:37.523442",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch==2.6.0"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "version_conflict": 4,
+        "package_missing": 1,
+        "installation_failure": 3
+      },
+      "missing_dependencies": {
+        "datasets": 1,
+        "torch": 1,
+        "torch==2.0.1": 1,
+        "torch==2.6.0": 3,
+        "torch==2.0.0": 2
+      }
+    }
+  },
+  "mrm8488/distilroberta-finetuned-financial-news-sentiment-analysis": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:52:19.988463",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package during compilation",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T20:19:07.577553",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package due to Rust compilation error",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T21:00:29.813956",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package due to Rust compilation error",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T22:23:24.116539",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T23:05:20.466152",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package during Rust compilation",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T23:37:40.834580",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package during compilation",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-07T00:53:54.466330",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": [
+          "tokenizers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T02:26:18.815222",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "installation_failure": 8
+      },
+      "missing_dependencies": {
+        "tokenizers": 1
+      }
+    }
+  },
+  "cross-encoder/ms-marco-electra-base": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:52:28.780982",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for sentence_transformers package",
+        "missing_dependencies": [
+          "sentence_transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:20:52.680668",
+        "category": "version_conflict",
+        "description": "Invalid version specifier for 'transformers' package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T21:02:20.997294",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:26:22.065112",
+        "category": "version_conflict",
+        "description": "Incompatibility between NumPy versions and compiled modules",
+        "missing_dependencies": [
+          "numpy<2.0.0"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 4,
+      "categories": {
+        "installation_failure": 2,
+        "version_conflict": 2
+      },
+      "missing_dependencies": {
+        "sentence_transformers": 1,
+        "transformers": 1,
+        "torch": 1,
+        "numpy<2.0.0": 1
+      }
+    }
+  },
+  "jinaai/jina-reranker-v2-base-multilingual": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:52:41.044155",
+        "category": "version_conflict",
+        "description": "Invalid version specifier for the 'transformers' package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:21:15.680114",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for einops package",
+        "missing_dependencies": [
+          "einops"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T21:02:43.535514",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for einops package",
+        "missing_dependencies": [
+          "einops"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:26:46.159918",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for sentence-transformers package",
+        "missing_dependencies": [
+          "sentence-transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:10:20.480166",
+        "category": "model_inherent",
+        "description": "Custom code execution required for model loading",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T23:39:36.187482",
+        "category": "model_inherent",
+        "description": "Error in loading the tokenizer due to incompatible or corrupted tokenizer file",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-07T00:56:07.823920",
+        "category": "model_inherent",
+        "description": "Custom code execution required for model loading",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-07T02:28:04.142554",
+        "category": "model_inherent",
+        "description": "Custom code execution required for model loading, but not authorized",
+        "missing_dependencies": []
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "version_conflict": 1,
+        "installation_failure": 3,
+        "model_inherent": 4
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "einops": 2,
+        "sentence-transformers": 1
+      }
+    }
+  },
+  "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:52:49.997019",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for transformers package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:21:39.425795",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T21:04:11.414090",
+        "category": "version_conflict",
+        "description": "Incompatibility between NumPy 2.2.4 and modules compiled with NumPy 1.x",
+        "missing_dependencies": [
+          "numpy<2"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 3,
+      "categories": {
+        "installation_failure": 2,
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "torch": 1,
+        "numpy<2": 1
+      }
+    }
+  },
+  "oliverguhr/german-sentiment-bert": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:52:59.578520",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for 'germansentiment' package",
+        "missing_dependencies": [
+          "germansentiment"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:21:49.299863",
+        "category": "version_conflict",
+        "description": "Specified version of germansentiment package not found",
+        "missing_dependencies": [
+          "germansentiment==1.1.1"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T21:04:21.444867",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for germansentiment package",
+        "missing_dependencies": [
+          "germansentiment==1.1.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:29:55.463251",
+        "category": "model_inherent",
+        "description": "Function 'init_empty_weights' is not defined in the model initialization process",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-06T23:12:00.811197",
+        "category": "dependency_error",
+        "description": "Missing or incompatible function 'init_empty_weights' in the transformers library",
+        "missing_dependencies": [
+          "transformers>=4.0.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:41:19.313856",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-07T00:57:56.724122",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      },
+      {
+        "timestamp": "2025-04-07T02:29:45.056309",
+        "category": "installation_failure",
+        "description": "Failed to build wheel for tokenizers package",
+        "missing_dependencies": []
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "installation_failure": 5,
+        "version_conflict": 1,
+        "model_inherent": 1,
+        "dependency_error": 1
+      },
+      "missing_dependencies": {
+        "germansentiment": 1,
+        "germansentiment==1.1.1": 1,
+        "germansentiment==1.1.0": 1,
+        "transformers>=4.0.0": 1
+      }
+    }
+  },
+  "madhurjindal/autonlp-Gibberish-Detector-492513457": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:53:08.981195",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:21:58.853674",
+        "category": "version_conflict",
+        "description": "Requested version of torch package is not available",
+        "missing_dependencies": [
+          "torch==2.0.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T21:04:30.770808",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch==2.6.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:30:04.681613",
+        "category": "version_conflict",
+        "description": "Requested version of torch package is not available",
+        "missing_dependencies": [
+          "torch==2.0.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:12:10.785652",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch==2.6.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:41:27.854252",
+        "category": "version_conflict",
+        "description": "Requested version of torch package is not available",
+        "missing_dependencies": [
+          "torch==2.0.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T00:58:05.473008",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch==2.6.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T02:29:54.872930",
+        "category": "version_conflict",
+        "description": "Requested version of torch package is not available",
+        "missing_dependencies": [
+          "torch==2.0.0"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "installation_failure": 4,
+        "version_conflict": 4
+      },
+      "missing_dependencies": {
+        "torch": 1,
+        "torch==2.0.0": 4,
+        "torch==2.6.0": 3
+      }
+    }
+  },
+  "WebOrganizer/TopicClassifier-NoURL": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:53:18.421379",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for 'transformers' package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:22:18.902250",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for xformers package",
+        "missing_dependencies": [
+          "xformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T21:04:54.018662",
+        "category": "dependency_error",
+        "description": "Missing required dependency for building xformers package",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:30:28.146974",
+        "category": "dependency_error",
+        "description": "Missing required dependency for building xformers package",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:12:33.252566",
+        "category": "dependency_error",
+        "description": "Missing required dependency for xformers installation",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:41:50.885940",
+        "category": "dependency_error",
+        "description": "Missing required dependency for building xformers package",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T00:58:28.508808",
+        "category": "dependency_error",
+        "description": "Failed to build xformers package due to missing torch dependency",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T02:30:18.870186",
+        "category": "dependency_error",
+        "description": "Missing required dependency for building xformers package",
+        "missing_dependencies": [
+          "torch"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "installation_failure": 2,
+        "dependency_error": 6
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "xformers": 1,
+        "torch": 6
+      }
+    }
+  },
+  "cross-encoder/ms-marco-MiniLM-L2-v2": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:53:30.278451",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for sentence_transformers package",
+        "missing_dependencies": [
+          "sentence_transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:24:07.004342",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T21:06:41.705459",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch",
+        "missing_dependencies": [
+          "torch==2.1.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:32:09.401200",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch==2.6.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:14:18.131116",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch",
+        "missing_dependencies": [
+          "torch==2.0.1"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:44:28.014546",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for 'transformers' package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 6,
+      "categories": {
+        "installation_failure": 4,
+        "version_conflict": 2
+      },
+      "missing_dependencies": {
+        "sentence_transformers": 1,
+        "torch": 1,
+        "torch==2.1.0": 1,
+        "torch==2.6.0": 1,
+        "torch==2.0.1": 1,
+        "transformers": 1
+      }
+    }
+  },
+  "sadickam/sdgBERT": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:53:39.420144",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for 'transformers' package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:24:27.701986",
+        "category": "package_missing",
+        "description": "The PyTorch package is not installed in the environment",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T21:07:02.357705",
+        "category": "version_conflict",
+        "description": "Requested version of torch package is not available",
+        "missing_dependencies": [
+          "torch==2.1.2"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 3,
+      "categories": {
+        "installation_failure": 1,
+        "package_missing": 1,
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "torch": 1,
+        "torch==2.1.2": 1
+      }
+    }
+  },
+  "finiteautomata/bertweet-base-sentiment-analysis": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:53:49.005891",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for pysentimiento package",
+        "missing_dependencies": [
+          "pysentimiento"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:26:26.119323",
+        "category": "dependency_error",
+        "description": "Missing or incompatible function 'init_empty_weights' in the transformers library",
+        "missing_dependencies": [
+          "transformers>=4.0.0"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 2,
+      "categories": {
+        "installation_failure": 1,
+        "dependency_error": 1
+      },
+      "missing_dependencies": {
+        "pysentimiento": 1,
+        "transformers>=4.0.0": 1
+      }
+    }
+  },
+  "Alibaba-NLP/gte-multilingual-reranker-base": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:54:11.873500",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:26:49.985501",
+        "category": "version_conflict",
+        "description": "Requested version of torch package is not available",
+        "missing_dependencies": [
+          "torch==2.1.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T21:10:44.477953",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for xformers package",
+        "missing_dependencies": [
+          "xformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:35:23.447744",
+        "category": "dependency_error",
+        "description": "Missing required dependency for xformers installation",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:14:41.936628",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch",
+        "missing_dependencies": [
+          "torch==2.1.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:46:10.566349",
+        "category": "dependency_error",
+        "description": "Failed to build wheel due to missing torch module",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T01:01:50.011498",
+        "category": "version_conflict",
+        "description": "Requested version of torch package is not available",
+        "missing_dependencies": [
+          "torch==2.1.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T02:31:57.570691",
+        "category": "dependency_error",
+        "description": "Missing required dependency for building xformers package",
+        "missing_dependencies": [
+          "torch"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "installation_failure": 2,
+        "version_conflict": 3,
+        "dependency_error": 3
+      },
+      "missing_dependencies": {
+        "torch": 4,
+        "torch==2.1.0": 3,
+        "xformers": 1
+      }
+    }
+  },
+  "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:54:23.066899",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for sentence_transformers package",
+        "missing_dependencies": [
+          "sentence_transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:27:00.699461",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for sentence_transformers package",
+        "missing_dependencies": [
+          "sentence_transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T21:10:55.768522",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for sentence_transformers package",
+        "missing_dependencies": [
+          "sentence_transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T22:37:09.340518",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for 'transformers' package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:16:36.075230",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T23:48:08.667872",
+        "category": "version_conflict",
+        "description": "Requested version of torch package is not available",
+        "missing_dependencies": [
+          "torch==2.1.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T01:04:05.957676",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch==2.6.0"
+        ]
+      },
+      {
+        "timestamp": "2025-04-07T02:33:56.556146",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch",
+        "missing_dependencies": [
+          "torch==2.0.1"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 8,
+      "categories": {
+        "installation_failure": 6,
+        "version_conflict": 2
+      },
+      "missing_dependencies": {
+        "sentence_transformers": 3,
+        "transformers": 1,
+        "torch": 1,
+        "torch==2.1.0": 1,
+        "torch==2.6.0": 1,
+        "torch==2.0.1": 1
+      }
+    }
+  },
+  "tabularisai/multilingual-sentiment-analysis": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:54:33.767401",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for transformers package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:27:22.204685",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for torch package",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T21:12:29.263866",
+        "category": "version_conflict",
+        "description": "Incompatibility between NumPy versions causing module compilation issues",
+        "missing_dependencies": [
+          "numpy<2.0.0"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 3,
+      "categories": {
+        "installation_failure": 2,
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "torch": 1,
+        "numpy<2.0.0": 1
+      }
+    }
+  },
+  "jpwahle/longformer-base-plagiarism-detection": {
+    "errors": [
+      {
+        "timestamp": "2025-04-06T18:54:43.526794",
+        "category": "installation_failure",
+        "description": "Invalid requirement specification for transformers package",
+        "missing_dependencies": [
+          "transformers"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T20:27:42.147992",
+        "category": "package_missing",
+        "description": "The 'torch' module is not installed in the Python environment",
+        "missing_dependencies": [
+          "torch"
+        ]
+      },
+      {
+        "timestamp": "2025-04-06T21:12:51.234006",
+        "category": "version_conflict",
+        "description": "Unable to find the specified version of torch",
+        "missing_dependencies": [
+          "torch==2.1.0"
+        ]
+      }
+    ],
+    "error_statistics": {
+      "total_errors": 3,
+      "categories": {
+        "installation_failure": 1,
+        "package_missing": 1,
+        "version_conflict": 1
+      },
+      "missing_dependencies": {
+        "transformers": 1,
+        "torch": 1,
+        "torch==2.1.0": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "bigwiz83/sapbert-from-pubmedbert-squad2": [],
+  "cross-encoder/ms-marco-MiniLM-L6-v2": [
+    {
+      "sentence_transformers": "2.2.2",
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "distilbert/distilbert-base-uncased-finetuned-sst-2-english": [],
+  "papluca/xlm-roberta-base-language-detection": [],
+  "facebook/bart-large-mnli": [],
+  "ProsusAI/finbert": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.2.0",
+      "numpy": "1.26.4"
+    }
+  ],
+  "microsoft/deberta-xlarge-mnli": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "cardiffnlp/twitter-roberta-base-sentiment": [],
+  "cardiffnlp/twitter-roberta-base-sentiment-latest": [],
+  "cross-encoder/ms-marco-MiniLM-L4-v2": [
+    {
+      "sentence_transformers": "2.2.2",
+      "transformers": "4.36.2",
+      "torch": "2.2.1",
+      "numpy": "1.26.4"
+    }
+  ],
+  "cardiffnlp/twitter-xlm-roberta-base-sentiment": [],
+  "lucadiliello/BLEURT-20-D12": [],
+  "nlptown/bert-base-multilingual-uncased-sentiment": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "BAAI/bge-reranker-v2-m3": [],
+  "cardiffnlp/twitter-roberta-base-emotion": [],
+  "yiyanghkust/finbert-tone": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "pysentimiento/robertuito-sentiment-analysis": [
+    {
+      "pysentimiento": "0.7.3"
+    }
+  ],
+  "michellejieli/emotion_text_classifier": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "j-hartmann/emotion-english-distilroberta-base": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "TieIncred/distilbert-base-uncased-finetuned-emotional": [],
+  "lxyuan/distilbert-base-multilingual-cased-sentiments-student": [],
+  "microsoft/deberta-large-mnli": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "unitary/toxic-bert": [],
+  "facebook/fasttext-language-identification": [],
+  "Elron/bleurt-tiny-512": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.2.1",
+      "numpy": "1.26.3"
+    }
+  ],
+  "cross-encoder/ms-marco-MiniLM-L12-v2": [
+    {
+      "sentence_transformers": "2.2.2",
+      "transformers": "4.36.2",
+      "torch": "2.2.1",
+      "numpy": "1.26.4"
+    }
+  ],
+  "finiteautomata/beto-sentiment-analysis": [],
+  "martin-ha/toxic-comment-model": [],
+  "nbroad/ESG-BERT": [
+    {
+      "torchserve": "0.8.2",
+      "torch-model-archiver": "0.9.0",
+      "torchvision": "0.20.1",
+      "transformers": "4.36.2"
+    }
+  ],
+  "SamLowe/roberta-base-go_emotions": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "tals/albert-xlarge-vitaminc-mnli": [],
+  "mrm8488/distilroberta-finetuned-financial-news-sentiment-analysis": [],
+  "cross-encoder/ms-marco-electra-base": [
+    {
+      "sentence_transformers": "2.2.2",
+      "transformers": "4.36.2",
+      "torch": "2.2.0",
+      "numpy": "1.26.4"
+    }
+  ],
+  "jinaai/jina-reranker-v2-base-multilingual": [],
+  "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.2.1",
+      "numpy": "1.26.3"
+    }
+  ],
+  "oliverguhr/german-sentiment-bert": [],
+  "madhurjindal/autonlp-Gibberish-Detector-492513457": [],
+  "WebOrganizer/TopicClassifier-NoURL": [],
+  "cross-encoder/ms-marco-MiniLM-L2-v2": [],
+  "sadickam/sdgBERT": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "finiteautomata/bertweet-base-sentiment-analysis": [
+    {
+      "pysentimiento": "0.7.2",
+      "transformers": "4.36.2"
+    }
+  ],
+  "Alibaba-NLP/gte-multilingual-reranker-base": [],
+  "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1": [],
+  "tabularisai/multilingual-sentiment-analysis": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.2.1",
+      "numpy": "1.26.3"
+    }
+  ],
+  "jpwahle/longformer-base-plagiarism-detection": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ]
+}

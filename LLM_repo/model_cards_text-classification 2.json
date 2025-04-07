@@ -20,16 +20,16 @@
     "card_url": "https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2",
     "dependencies": [
       [
+        "sentence_transformers",
+        "2.2.2"
+      ],
+      [
         "transformers",
         "4.36.2"
       ],
       [
         "torch",
         "2.5.1"
-      ],
-      [
-        "sentence-transformers",
-        "2.2.2"
       ]
     ],
     "analysis_date": "2025-03-26T00:47:09.948770",
@@ -84,16 +84,8 @@
         "4.30.2"
       ],
       [
-        "numpy",
-        "1.24.3"
-      ],
-      [
-        "xformers",
-        "0.0.22"
-      ],
-      [
-        "hf_xet",
-        "0.1.0"
+        "tokenizers",
+        "0.10.3"
       ]
     ],
     "analysis_date": "2025-03-26T00:47:11.590856",
@@ -332,10 +324,6 @@
       [
         "tokenizers",
         "0.10.3"
-      ],
-      [
-        "numpy",
-        "1.24.3"
       ]
     ],
     "analysis_date": "2025-03-26T00:47:13.179967",
@@ -846,19 +834,11 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "torch",
         "2.0.1"
-      ],
-      [
-        "numpy",
-        "1.24.3"
-      ],
-      [
-        "hf_xet",
-        "0.1.0"
       ]
     ],
     "analysis_date": "2025-03-26T00:47:17.893293",
@@ -906,23 +886,15 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "torch",
-        "2.0.1"
+        "2.2.0"
       ],
       [
         "numpy",
-        "1.24.3"
-      ],
-      [
-        "xformers",
-        "0.0.20"
-      ],
-      [
-        "hf_xet",
-        "0.1.0"
+        "1.26.4"
       ]
     ],
     "analysis_date": "2025-03-26T00:47:18.919330",
@@ -974,15 +946,11 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "torch",
-        "2.0.1"
-      ],
-      [
-        "numpy",
-        "1.24.3"
+        "2.5.1"
       ]
     ],
     "analysis_date": "2025-03-26T00:47:20.264705",
@@ -1036,15 +1004,15 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "numpy",
-        "1.24.3"
+        "1.26.4"
       ],
       [
         "scipy",
-        "1.10.1"
+        "1.11.4"
       ],
       [
         "urllib",
@@ -1056,7 +1024,7 @@
       ],
       [
         "urllib3",
-        "1.26.15"
+        "1.26.18"
       ]
     ],
     "analysis_date": "2025-03-26T00:47:21.841840",
@@ -1102,15 +1070,15 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "numpy",
-        "1.24.3"
+        "1.26.4"
       ],
       [
         "scipy",
-        "1.10.1"
+        "1.11.4"
       ],
       [
         "torch",
@@ -1162,19 +1130,19 @@
     "dependencies": [
       [
         "sentence_transformers",
-        "latest"
+        "2.2.2"
       ],
       [
         "transformers",
-        null
+        "4.36.2"
       ],
       [
         "torch",
-        null
+        "2.2.1"
       ],
       [
-        "sentence-transformers",
-        "2.2.2"
+        "numpy",
+        "1.26.4"
       ]
     ],
     "analysis_date": "2025-03-26T00:47:24.745135",
@@ -1214,27 +1182,23 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "numpy",
-        "1.23.5"
+        "1.26.4"
       ],
       [
         "scipy",
-        "1.10.1"
+        "1.11.4"
       ],
       [
         "torch",
-        "2.0.1"
+        "2.5.1"
       ],
       [
         "sentencepiece",
         "0.1.99"
-      ],
-      [
-        "protobuf",
-        "3.20.3"
       ]
     ],
     "analysis_date": "2025-03-26T00:47:25.877559",
@@ -1336,7 +1300,7 @@
       ],
       [
         "bleurt_pytorch",
-        "1.1.0"
+        "0.0.1"
       ]
     ],
     "analysis_date": "2025-03-26T00:47:27.577597",
@@ -1382,19 +1346,11 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "torch",
-        "2.0.1"
-      ],
-      [
-        "numpy",
-        "1.24.3"
-      ],
-      [
-        "xformers",
-        "0.0.20"
+        "2.5.1"
       ]
     ],
     "analysis_date": "2025-03-26T00:47:28.510294",
@@ -1444,14 +1400,6 @@
       [
         "FlagEmbedding",
         "1.1.9"
-      ],
-      [
-        "huggingface_hub",
-        "0.19.4"
-      ],
-      [
-        "setuptools",
-        "68.2.2"
       ],
       [
         "datasets",
@@ -1504,19 +1452,19 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "numpy",
-        "1.23.5"
+        "1.26.4"
       ],
       [
         "scipy",
-        "1.10.1"
+        "1.11.4"
       ],
       [
         "csv",
-        "1.0"
+        "none)"
       ],
       [
         "urllib",
@@ -1706,19 +1654,11 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "torch",
-        "2.0.1"
-      ],
-      [
-        "numpy",
-        "1.24.3"
-      ],
-      [
-        "xformers",
-        "0.0.22"
+        "2.5.1"
       ]
     ],
     "analysis_date": "2025-03-26T00:47:36.316228",
@@ -1767,11 +1707,7 @@
     "dependencies": [
       [
         "pysentimiento",
-        "0.7.2"
-      ],
-      [
-        "transformers",
-        "4.0.0"
+        "0.7.3"
       ]
     ],
     "analysis_date": "2025-03-26T00:47:37.335268",
@@ -1867,23 +1803,11 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "torch",
-        "2.0.1"
-      ],
-      [
-        "numpy",
-        "1.24.3"
-      ],
-      [
-        "hf_xet",
-        "0.1.0"
-      ],
-      [
-        "xformers",
-        "0.0.20"
+        "2.5.1"
       ]
     ],
     "analysis_date": "2025-03-26T00:47:43.227191",
@@ -2095,23 +2019,11 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "torch",
-        "2.0.1"
-      ],
-      [
-        "numpy",
-        "1.24.3"
-      ],
-      [
-        "xformers",
-        "0.0.20"
-      ],
-      [
-        "hf_xet",
-        "0.1.0"
+        "2.5.1"
       ]
     ],
     "analysis_date": "2025-03-26T00:47:49.145213",
@@ -2186,10 +2098,6 @@
       [
         "tokenizers",
         "0.14.1"
-      ],
-      [
-        "torch",
-        "2.0.1"
       ]
     ],
     "analysis_date": "2025-03-26T00:47:50.448123",
@@ -2302,10 +2210,6 @@
       [
         "tokenizers",
         "0.13.3"
-      ],
-      [
-        "numpy",
-        "1.24.3"
       ]
     ],
     "analysis_date": "2025-03-26T00:47:52.248545",
@@ -2378,15 +2282,11 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "torch",
-        "2.0.1"
-      ],
-      [
-        "numpy",
-        "1.24.3"
+        "2.5.1"
       ]
     ],
     "analysis_date": "2025-03-26T00:47:53.722871",
@@ -2444,23 +2344,23 @@
       ],
       [
         "transformers",
-        "4.30.2"
+        null
       ],
       [
         "pytorch-lightning",
-        "2.0.9"
+        null
       ],
       [
         "kaggle",
-        "1.5.16"
+        null
       ],
       [
         "pandas",
-        "2.0.3"
+        null
       ],
       [
         "torch",
-        "2.0.1"
+        null
       ]
     ],
     "analysis_date": "2025-03-26T00:47:55.444439",
@@ -2510,10 +2410,6 @@
         null
       ],
       [
-        "python3-dev",
-        "3.8.10"
-      ],
-      [
         "pybind11",
         "2.11.1"
       ]
@@ -2558,15 +2454,15 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "torch",
-        "2.0.1"
+        "2.2.1"
       ],
       [
         "numpy",
-        "1.24.3"
+        "1.26.3"
       ]
     ],
     "analysis_date": "2025-03-26T00:47:58.191480",
@@ -2613,15 +2509,15 @@
       ],
       [
         "transformers",
-        null
+        "4.36.2"
       ],
       [
         "torch",
-        null
+        "2.2.1"
       ],
       [
-        "sentence-transformers",
-        "2.2.2"
+        "numpy",
+        "1.26.4"
       ]
     ],
     "analysis_date": "2025-03-26T00:47:59.410108",
@@ -2666,7 +2562,7 @@
       ],
       [
         "transformers",
-        "4.36.2"
+        "4.0.0"
       ]
     ],
     "analysis_date": "2025-03-26T00:48:00.719009",
@@ -2709,19 +2605,15 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "torch",
-        "2.0.1"
+        "2.2.0"
       ],
       [
         "numpy",
-        "1.24.3"
-      ],
-      [
-        "xformers",
-        "0.0.20"
+        "1.26.3"
       ]
     ],
     "analysis_date": "2025-03-26T00:48:01.919488",
@@ -2765,7 +2657,7 @@
       ],
       [
         "torch-model-archiver",
-        "0.8.1"
+        "0.9.0"
       ],
       [
         "torchvision",
@@ -2773,15 +2665,7 @@
       ],
       [
         "transformers",
-        "4.30.2"
-      ],
-      [
-        "numpy",
-        "1.24.3"
-      ],
-      [
-        "xformers",
-        "0.0.20"
+        "4.36.2"
       ]
     ],
     "analysis_date": "2025-03-26T00:48:03.790293",
@@ -2838,23 +2722,11 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "torch",
-        "2.0.1"
-      ],
-      [
-        "numpy",
-        "1.24.3"
-      ],
-      [
-        "hf_xet",
-        "0.1.0"
-      ],
-      [
-        "xformers",
-        "0.0.22"
+        "2.5.1"
       ]
     ],
     "analysis_date": "2025-03-26T00:48:05.566837",
@@ -2917,19 +2789,7 @@
       ],
       [
         "torch",
-        "2.6.0)"
-      ],
-      [
-        "transformers",
-        "4.30.2"
-      ],
-      [
-        "numpy",
-        "1.24.3"
-      ],
-      [
-        "sentencepiece",
-        "0.1.99"
+        "2.0.0"
       ]
     ],
     "analysis_date": "2025-03-26T00:48:06.659893",
@@ -2992,10 +2852,6 @@
       [
         "tokenizers",
         "0.10.3"
-      ],
-      [
-        "numpy",
-        "1.24.3"
       ]
     ],
     "analysis_date": "2025-03-26T00:48:09.126206",
@@ -3077,19 +2933,19 @@
     "dependencies": [
       [
         "sentence_transformers",
-        "latest"
+        "2.2.2"
       ],
       [
         "transformers",
-        null
+        "4.36.2"
       ],
       [
         "torch",
-        null
+        "2.2.0"
       ],
       [
-        "sentence-transformers",
-        "2.2.2"
+        "numpy",
+        "1.26.4"
       ]
     ],
     "analysis_date": "2025-03-26T00:48:11.255143",
@@ -3132,11 +2988,11 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "einops",
-        "0.6.1"
+        "0.7.0"
       ],
       [
         "sentence-transformers",
@@ -3215,15 +3071,15 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "torch",
-        "2.0.1"
+        "2.2.1"
       ],
       [
         "numpy",
-        "1.24.3"
+        "1.26.3"
       ]
     ],
     "analysis_date": "2025-03-26T00:48:14.248483",
@@ -3305,11 +3161,11 @@
     "dependencies": [
       [
         "germansentiment",
-        "1.0.6"
+        "1.1.0"
       ],
       [
         "transformers",
-        "4.36.2"
+        "4.0.0"
       ]
     ],
     "analysis_date": "2025-03-26T00:48:15.382353",
@@ -3418,15 +3274,7 @@
       ],
       [
         "transformers",
-        "4.30.2"
-      ],
-      [
-        "numpy",
-        "1.24.3"
-      ],
-      [
-        "xformers",
-        "0.0.22"
+        null
       ]
     ],
     "analysis_date": "2025-03-26T00:48:21.432934",
@@ -3481,15 +3329,15 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "xformers",
-        "0.0.20"
+        "0.0.23"
       ],
       [
-        "numpy",
-        "1.24.3"
+        "torch",
+        "2.1.0"
       ]
     ],
     "analysis_date": "2025-03-26T00:48:22.866511",
@@ -3540,15 +3388,11 @@
       ],
       [
         "torch",
-        null
+        "2.5.1"
       ],
       [
         "transformers",
-        null
-      ],
-      [
-        "sentence-transformers",
-        "2.2.2"
+        "4.36.2"
       ]
     ],
     "analysis_date": "2025-03-26T00:48:24.160507",
@@ -3587,19 +3431,11 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "torch",
-        "2.0.1"
-      ],
-      [
-        "numpy",
-        "1.24.3"
-      ],
-      [
-        "xformers",
-        "0.0.20"
+        "2.5.1"
       ]
     ],
     "analysis_date": "2025-03-26T00:48:26.369747",
@@ -3659,7 +3495,7 @@
       ],
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ]
     ],
     "analysis_date": "2025-03-26T00:48:27.218160",
@@ -3783,15 +3619,11 @@
       ],
       [
         "torch",
-        "2.0.0"
+        "2.1.0"
       ],
       [
         "xformers",
-        "0.0.22"
-      ],
-      [
-        "numpy",
-        "1.24.3"
+        "0.0.20"
       ]
     ],
     "analysis_date": "2025-03-26T00:48:28.464256",
@@ -3933,15 +3765,11 @@
       ],
       [
         "transformers",
-        null
+        "4.36.2"
       ],
       [
         "torch",
-        null
-      ],
-      [
-        "sentence-transformers",
-        "2.2.2"
+        "2.6.0)"
       ]
     ],
     "analysis_date": "2025-03-26T00:48:29.626058",
@@ -4032,19 +3860,15 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "torch",
-        "2.0.1"
+        "2.2.1"
       ],
       [
         "numpy",
-        "1.24.3"
-      ],
-      [
-        "xformers",
-        "0.0.20"
+        "1.26.3"
       ]
     ],
     "analysis_date": "2025-03-26T00:48:30.949029",
@@ -4127,19 +3951,11 @@
     "dependencies": [
       [
         "transformers",
-        "4.30.2"
+        "4.36.2"
       ],
       [
         "torch",
-        "2.0.1"
-      ],
-      [
-        "numpy",
-        "1.24.3"
-      ],
-      [
-        "xformers",
-        "0.0.22"
+        "2.5.1"
       ]
     ],
     "analysis_date": "2025-03-26T00:48:32.542910",

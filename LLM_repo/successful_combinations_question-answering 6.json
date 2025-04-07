@@ -1,0 +1,172 @@
+{
+  "deepset/roberta-base-squad2": [],
+  "distilbert/distilbert-base-cased-distilled-squad": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "deepset/bert-large-uncased-whole-word-masking-squad2": [
+    {
+      "haystack-ai": "2.11.2",
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "google-bert/bert-large-uncased-whole-word-masking-finetuned-squad": [
+    {
+      "torch": "2.2.0",
+      "transformers": "4.36.2",
+      "numpy": "1.26.2"
+    }
+  ],
+  "deepset/minilm-uncased-squad2": [],
+  "sjrhuschlee/flan-t5-large-squad2": [],
+  "distilbert/distilbert-base-uncased-distilled-squad": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "google-bert/bert-large-cased-whole-word-masking-finetuned-squad": [],
+  "csarron/mobilebert-uncased-squad-v2": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "deepset/bert-base-cased-squad2": [
+    {
+      "haystack-ai": "2.11.2",
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "deepset/roberta-large-squad2": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "Rifky/Indobert-QA": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "SmallDoge/Doge-160M-Instruct": [],
+  "AgentPublic/camembert-base-squadFR-fquad-piaf": [],
+  "philschmid/distilbert-onnx": [],
+  "furiosa-ai/mlperf-bert-large": [],
+  "Rakib/roberta-base-on-cuad": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "qiyuw/WSPAlign-ft-kftt": [],
+  "HPAI-BSC/Llama3-Aloe-8B-Alpha": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.2.1",
+      "numpy": "1.26.3"
+    }
+  ],
+  "deepset/roberta-base-squad2-distilled": [
+    {
+      "haystack-ai": "2.11.2",
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "timpal0l/mdeberta-v3-base-squad2": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "deepset/tinyroberta-squad2": [
+    {
+      "haystack-ai": "2.11.2",
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "ahotrod/electra_large_discriminator_squad2_512": [],
+  "deepset/deberta-v3-base-squad2": [
+    {
+      "haystack-ai": "2.11.2",
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "michiyasunaga/BioLinkBERT-large": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.2.2",
+      "numpy": "1.26.3"
+    }
+  ],
+  "SmallDoge/Doge-160M-Reason-Distill": [],
+  "SmallDoge/Doge-60M-Instruct": [],
+  "SmallDoge/Doge-20M-Instruct": [],
+  "deepset/xlm-roberta-large-squad2": [],
+  "amara16/distilbert-extractive-qa-project": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "umarigan/llama-3.1-openhermes-tr": [],
+  "Backedman/TriviaAnsweringMachineREAL": [],
+  "mrm8488/bert-tiny-finetuned-squadv2": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "Xenova/distilbert-base-cased-distilled-squad": [],
+  "houyu0930/test-demo-qa": [],
+  "nes470/pipeline-as-repo": [],
+  "sahilnishad/Florence-2-FT-DocVQA": [],
+  "qiyuw/WSPAlign-mbert-base": [],
+  "deepset/bert-base-uncased-squad2": [
+    {
+      "haystack-ai": "2.11.2",
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "deepset/deberta-v3-large-squad2": [
+    {
+      "haystack-ai": "2.11.2",
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "michiyasunaga/BioLinkBERT-base": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.2.0",
+      "numpy": "1.26.3"
+    }
+  ],
+  "VietAI/vit5-base": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.2.0"
+    }
+  ],
+  "phiyodr/bert-large-finetuned-squad2": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ],
+  "pierreguillou/bert-base-cased-squad-v1.1-portuguese": [
+    {
+      "transformers": "4.36.2",
+      "torch": "2.5.1"
+    }
+  ]
+}
