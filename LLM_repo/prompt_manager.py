@@ -1,0 +1,109 @@
+from langchain.prompts import (
+    ChatPromptTemplate,
+    SystemMessagePromptTemplate,
+    HumanMessagePromptTemplate,
+)
+
+class LLMPromptManager:
+    def __init__(self, llm_client):
+        self.llm_client = llm_client
+    
+    def create_dep_fix_pipeline(self):
+        """Creates a pipeline for fixing dependency installation errors"""
+        
+        system_prompt = (
+            "You are a helpful DevOps assistant. You receive a bash script that "
+            "installs packages to run a Python script. Your task is to fix "
+            "environment-related errors by modifying the bash script. "
+            "Return only the updated bash script content in your final answer."
+        )
+        
+        human_prompt = (
+            "The current bash script is:\n"
+            "-----\n"
+            "{bash_script_content}\n"
+            "-----\n"
+            "The current command causing an error:\n"
+            "{bash_cmd}\n"
+            "-----\n"
+            "It produced this error:\n"
+            "{error_message}\n"
+            "Please update the bash script to fix the error. If dependencies are missing, "
+            "add installation commands. Return only the updated bash script (no markdown)."
+        )
+        
+        system_message = SystemMessagePromptTemplate.from_template(system_prompt)
+        human_message = HumanMessagePromptTemplate.from_template(human_prompt)
+        chat_prompt = ChatPromptTemplate.from_messages([system_message, human_message])
+        
+        return chat_prompt | self.llm_client
+    
+    def create_error_identifier_pipeline(self, system_prompt=None, human_prompt=None):
+        """Creates a pipeline for identifying the root cause of errors (Python code vs. dependencies)"""
+        
+        system_prompt = system_prompt or (
+            "You are a diagnostic expert for Python development environments. Your task is to analyze "
+            "errors and determine their root cause. When presented with a Python error and the "
+            "environment setup scripts, you will determine if the error is due to dependencies or code issues. "
+            "You must structure your response in a specific JSON format to facilitate automated processing."
+        )
+        
+        human_prompt = human_prompt or (
+            "The Python script that's generating errors is:\n"
+            "-----\n"
+            "{python_script_content}\n"
+            "-----\n"
+            "The current bash script for installing dependencies is:\n"
+            "-----\n"
+            "{bash_script_content}\n"
+            "-----\n\n"
+            "The error that occurred is:\n"
+            "{error_message}\n"
+            "Please analyze this error and determine its root cause. Your response must be in this exact format:\n"
+            "```json\n"
+            "{\n"
+            "  \"root_cause\": \"DEPENDENCY\",  // Use ONLY \"DEPENDENCY\" or \"PYTHON_CODE\"\n"
+            "  \"explanation\": \"brief explanation of the error\",\n"
+            "  \"affected_components\": [\"component1\", \"component2\"],  // List of affected dependencies or code elements\n"
+            "  \"suggested_fix\": \"description of how to fix the issue\"\n"
+            "}\n"
+            "```\n"
+            "Do not include any text outside of this JSON structure."
+        )
+        
+        system_message = SystemMessagePromptTemplate.from_template(system_prompt)
+        human_message = HumanMessagePromptTemplate.from_template(human_prompt)
+        chat_prompt = ChatPromptTemplate.from_messages([system_message, human_message])
+        
+        return chat_prompt | self.llm_client
+    
+    def create_python_error_fix_pipeline(self, system_prompt=None, human_prompt=None):
+        """Creates a pipeline for analyzing Python errors and identifying dependency issues"""
+        
+        system_prompt = system_prompt or (
+            "You are a helpful Python expert. You receive Python code that's generating errors "
+            "along with the current dependency installation script. Your task is to identify "
+            "missing or misconfigured dependencies that are causing the Python errors. "
+            "Return only the updated bash script with the necessary dependency changes."
+        )
+        
+        human_prompt = human_prompt or (
+            "The Python script that's generating errors is:\n\n"
+            "-----\n"
+            "{python_script_content}\n"
+            "-----\n\n"
+            "The current bash script for installing dependencies is:\n\n"
+            "-----\n"
+            "{bash_script_content}\n"
+            "-----\n\n"
+            "The Python error that occurred is:\n\n"
+            "{error_message}\n\n"
+            "Please analyze this error and update the bash script to fix any missing or "
+            "misconfigured dependencies. Return only the updated bash script (no markdown)."
+        )
+        
+        system_message = SystemMessagePromptTemplate.from_template(system_prompt)
+        human_message = HumanMessagePromptTemplate.from_template(human_prompt)
+        chat_prompt = ChatPromptTemplate.from_messages([system_message, human_message])
+        
+        return chat_prompt | self.llm_client
