@@ -1,6 +1,8 @@
 import os
 import re
 import subprocess
+from langchain_aws import ChatBedrock
+from langchain.schema import AIMessage
 from prompt_manager import LLMPromptManager
 
 class PackageDependencyAnalyzer:
@@ -76,8 +78,29 @@ class PackageDependencyAnalyzer:
             text=True
         )
         stdout, _ = process.communicate()
-        return stdout
+        return stdout, package_dir
+
+    def get_dep_info(self, package_name, package_dir, dep_bash):
+        bash_script_path = f"{self.download_dir}/{package_name}-dep-retrieve.sh"
+        script_header = f"#!/bin/bash\ncd {package_dir}\n\n"
+
+        with open(bash_script_path, "w") as f:
+            f.write(script_header + dep_bash)
+        os.chmod(bash_script_path, 0o755)
+
+        process = subprocess.Popen(
+            ["bash", bash_script_path], 
+            stdout=subprocess.PIPE, 
+            stderr=subprocess.STDOUT,
+            text=True
+        )
+        output, _ = process.communicate()
+        # TODO: handle error
+        if process.returncode != 0:
+            raise Exception("Dependency Retrieval Fail")
+        return output
         
+
 if __name__ == "__main__":
     package_name = 'tokenizers'
     version = '0.10.3'
@@ -90,7 +113,34 @@ if __name__ == "__main__":
     }
     dir = 'model_dep_resolution/papluca-xlm-roberta-base-language-detection'
     analyzer = PackageDependencyAnalyzer(dir)
+    llm = ChatBedrock(region="us-east-1", model_id="anthropic.claude-3-5-sonnet-20240620-v1:0")
+    pm = LLMPromptManager(llm)
+    dep_retrieval_pipeline = pm.create_dependency_retrieval_pipeline()
+    dep_analysis_pipeline = pm.create_dependency_analysis_pipeline()
     
-    # Step 1: Download the package
-    message = analyzer.get_dep_setup(package_name, version)
-    print(message)
+    pkg_ver = f"{package_name}=={version}"
+    message, package_dir = analyzer.get_dep_setup(package_name, version)
+    response = dep_retrieval_pipeline.invoke({
+        "package_name": pkg_ver,
+        "file_listing": message
+    })
+
+    if isinstance(response, AIMessage):
+        dep_info_script = response.content
+    else:
+        dep_info_script = str(response)
+    
+    print(f'This is response: {dep_info_script}')
+
+    dep_info = analyzer.get_dep_info(pkg_ver, package_dir, dep_info_script)
+    analyzer_msg = dep_analysis_pipeline.invoke({
+        "package_name": pkg_ver,
+        "file_contents": dep_info
+    })
+
+    if isinstance(analyzer_msg, AIMessage):
+        analyzer_response = analyzer_msg.content
+    else:
+        analyzer_response = str(analyzer_msg)
+
+    print(f"This is analyzer_response:\n {analyzer_response}")
