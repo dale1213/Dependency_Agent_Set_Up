@@ -99,6 +99,9 @@ class PackageDependencyAnalyzer:
         if process.returncode != 0:
             raise Exception("Dependency Retrieval Fail")
         return output
+    
+    def suggest_fix(self, ):
+        pass
         
 
 if __name__ == "__main__":
@@ -125,6 +128,8 @@ if __name__ == "__main__":
         "file_listing": message
     })
 
+    # The dep_info_script is a bunch of 'cat file' that the LLM believes contain information of the
+    # dependency requirments to download the current(new) package
     if isinstance(response, AIMessage):
         dep_info_script = response.content
     else:
@@ -142,5 +147,16 @@ if __name__ == "__main__":
         analyzer_response = analyzer_msg.content
     else:
         analyzer_response = str(analyzer_msg)
-
+    
+    # Currently, the analyzer_response is a bash script suggested by LLM that checks whether existing packages on the system
+    # is compatible with the requirements to download the new package.
     print(f"This is analyzer_response:\n {analyzer_response}")
+
+    # TODO:
+    #  1. Add error handler for bash scripts written by LLM to avoid silly syntax mistakes
+    #  2. Modularize the code such that it will expose usable API -- in the main algorithm, 
+    #  we can easily get suggestions on what on the system is incompatible with installing the current pkg
+    #  3. Pull out the logger from theh model_test.py and make it a separate thing, add logs in the dependency retriever
+    #  write to the same log
+    #  4. The current code just write everything to a temp directory, and the directories are set manually, 
+    #  not sure if it is the best idea here, try to see how to make the design cleaner (Optional)
